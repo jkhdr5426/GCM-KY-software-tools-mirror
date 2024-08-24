@@ -1,0 +1,5 @@
+parm pfoa_dock.prmtop
+trajin fab_unl_prod.nc
+trajout final_structure.pdb pdb onlyframes 100
+run
+

@@ -1,0 +1,21 @@
+source leaprc.protein.ff19SB
+source leaprc.gaff2
+source leaprc.water.opc
+
+# Load the ligand
+UNL = loadmol2 pfoa.mol2
+loadamberparams pfoa.frcmod 
+loadoff unl.lib 
+
+# Load the protein
+protein = loadpdb justFABnoHYDRO.pdb 
+
+# Combine the protein and ligand
+complex = combine {protein UNL}
+
+# Save the combined complex
+saveamberparm complex pfoa_dock.prmtop pfoa_dock.rst7
+savepdb complex pfoa_dock.pdb 
+
+
+quit

@@ -1,0 +1,11 @@
+source leaprc.protein.ff19SB
+source leaprc.gaff2
+source leaprc.water.opc
+
+UNL = loadmol2 pfoa.mol2
+check UNL
+loadamberparams pfoa.frcmod
+
+saveoff UNL unl.lib 
+saveamberparm UNL pfoa.prmtop pfoa.rst7
+quit
