@@ -1,4 +1,4 @@
-# Team TeamName Software Tool
+# Team GCM-KY 2024 Software Tool
 
 If your team competes in the [**Software & AI** village](https://competition.igem.org/participation/villages) or wants to
 apply for the [**Best Software Tool** prize](https://competition.igem.org/judging/awards), you **MUST** host all the
