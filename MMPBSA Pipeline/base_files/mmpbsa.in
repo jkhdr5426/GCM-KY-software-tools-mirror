@@ -1,0 +1,10 @@
+mmpbsa
+&general
+   startframe=601, endframe=2000, keep_files=2,
+/
+&pb
+  istrng=0.100,
+/
+&decomp
+  idecomp=1,
+/

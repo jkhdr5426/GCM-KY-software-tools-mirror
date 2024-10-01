@@ -1,0 +1,9 @@
+# Load topology and trajectory
+parm fab-pfoa_solvated.prmtop
+trajin prod.mdcrd
+
+# Extract last frame
+trajout last_frame.pdb onlyframes 2000
+
+# Run cpptraj
+run
