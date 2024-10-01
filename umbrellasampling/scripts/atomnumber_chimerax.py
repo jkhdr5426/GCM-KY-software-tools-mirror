@@ -14,4 +14,4 @@ if atoms:
 else:
     print("No atom selected.")
 
-# runscript /Users/edwardkim/IGEM/gh_scoresolver/atomnumber_chimerax.py
+# runscript /Users/edwardkim/gcm-ky-2/umbrellasampling/scripts/atomnumber_chimerax.py

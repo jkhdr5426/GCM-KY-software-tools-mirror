@@ -18,7 +18,8 @@ import pathlib
 # & FILE MANAGING ####################################################################################################################################
 masterpath = os.path.join(pathlib.Path().absolute())
 testpath = os.path.join(masterpath, "tests")
-pdbname = "7e25.pdb"
+forcefieldpath = os.path.join(testpath,"forcefields")
+pdbname = "t0_combPDB.pdb" # ! EDITHERE
 pdbpath = os.path.join(testpath,"pdb",pdbname)
 
 if not os.path.exists(os.path.join(testpath, "pdb")):
@@ -73,7 +74,13 @@ pdb = app.PDBFile(pdbpath)
 
 # ? if its PFOA or proteins of superset of PFOA, it might have some missing hydrogens
 modeller = Modeller(pdb.topology, pdb.positions)
-forcefield = app.ForceField('amber14-all.xml','tip3p.xml','UNK_DC9779.xml')
+
+# ? implement force fields here EDITHERE
+pfoa_protonated = os.path.join(forcefieldpath,"pfoa_protonated.xml")
+
+forcefield = app.ForceField('amber14-all.xml','tip3p.xml',pfoa_protonated)
+# ? EDIT HERE
+
 modeller.addHydrogens(forcefield)
 pdb = modeller
 
@@ -84,34 +91,36 @@ simulation = app.Simulation(pdb.topology, system, integrator)
 simulation.context.setPositions(pdb.positions)
 simulation.reporters.append(app.DCDReporter(os.path.join(newpath, 'hist', 'smd_traj.dcd'), 10000))
 simulation.context.setVelocitiesToTemperature(300*unit.kelvin)
+simulation.minimizeEnergy() # prevent nan coordnaites
 simulation.step(1000)
 
 #&##################################################################################################################################
 
-# ~ PARAMETERS ######################################################################################################
+# ~ PARAMETERS ###################################################################################################### 
 
 # * CV := distance betw CAs of two end residues
-L_i = 1.3 # ? start length (nm)
-L_f = 3.3 # ? end length (nm)
-index1 = 1159  # ? atom serial number 
-index2 = 1123 # ? atom serial number
+# TODO make it where you input a text file with arguemtns and inputs as these variables, OR a command that takes in argumetns maybe
+L_i = 3.0 # ? start length (nm) EDIT HERE
+L_f = 3.2 # ? end length (nm) EDIT HERE
+index1 = 14  # ? atom serial number EDIT HERE
+index2 = 5439 # ? atom serial number EDIT HERE
 cv = mm.CustomBondForce('r')
 cv.addBond(index1, index2)
-num_win = 24
+num_win = 100 # ? EDIT HERE
 
 r0 = L_i*unit.nanometers #start value
-fc_pull = 1000.0*unit.kilojoules_per_mole/unit.nanometers**2 #force constnat
-v_pulling = 0.02*unit.nanometers/unit.picosecond #pulling velocity
+fc_pull = 1000.0*unit.kilojoules_per_mole/unit.nanometers**2 #force constnat # ? EDIT HERE
+v_pulling = 0.02*unit.nanometers/unit.picosecond #pulling velocity # ? EDIT HERE
 dt = simulation.integrator.getStepSize() # simulation time step
 
-total_steps = 30000 # ? total steps
-increment_steps = 10 # ? step size
-wTotal = 100000
-wdelta = 1000 # ? record steps
+total_steps = 30000 # ? total steps EDIT HERE
+increment_steps = 10 # ? step size EDIT HERE
+wTotal = 100000 # ? EDIT HERE
+wdelta = 10 # ? record steps EDIT HERE
 
 
 # * Harmonic force definiton
-pullingForce = mm.CustomCVForce('0.5 * fc_pull * (cv-r0)^2') #? maybe add rotational bias as well?
+pullingForce = mm.CustomCVForce('0.5 * fc_pull * (cv-r0)^2') #? maybe add rotational bias as well? 
 pullingForce.addGlobalParameter('fc_pull', fc_pull)
 pullingForce.addGlobalParameter('r0', r0)
 pullingForce.addCollectiveVariable("cv", cv)
@@ -129,10 +138,10 @@ n = index1
 m = index2
 assert n != m
 
-with open(pdbpath, 'r') as pdb_file:
+with open(pdbpath, 'r') as pdb_file: # TODO FIX
     atom_count = 0
     for line in pdb_file:
-        if line.startswith("ATOM"):
+        if line.startswith("ATOM") or line.startswith("HETATM"):
             atom_count += 1
             if atom_count == n or atom_count == m:
                 atom_number = int(line[6:11].strip())  # Atom serial number
@@ -182,6 +191,8 @@ with open('output.log', 'w') as f:
         simulation.step(increment_steps)
         current_cv_value = pullingForce.getCollectiveVariableValues(simulation.context)
         r0 += v_pulling * dt * increment_steps
+        print(current_cv_value)
+        print(current_cv_value)
         simulation.context.setParameter('r0', r0)
         if (window_index < len(windows) and current_cv_value >= windows[window_index]):
             window_coords.append(simulation.context.getState(getPositions=True, enforcePeriodicBox=False).getPositions())
@@ -331,6 +342,8 @@ plt.savefig(os.path.join(output_directory,"pmf.png"), bbox_inches='tight') # TOD
 plt.close()
 
 # & Calculate LIGAND-RECEPTOR EQUI CONSTANT ##########################################################################################################################################
+
+# TODO fix and maybe put this int oa spearate python program
 
 def calculate_kd(pmf_data, bound_range, unbound_range, temperature):
     distances = pmf_data[:, 0]
