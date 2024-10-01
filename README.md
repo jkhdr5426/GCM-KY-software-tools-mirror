@@ -39,12 +39,12 @@ Instructions for useage of OpenMM are available on the team wiki, as well as the
 
 Example command for MMPBSA pipeline:
 ./simulation.sh -r receptor.pdb -l ligand.pdb -c complex.pdb -n THR351_ARG -j 15
-  -r <receptor PDB>
-  -l <ligand PDB>
-  -c <complex PDB>
-  -n <name of directory>
-  -j <number of cores>
-  
+  -r receptor PDB
+  -l ligand PDB
+  -c complex PDB
+  -n name of directory
+  -j number of cores
+
 ## Contributing
 We are accepting contributions via emailing "igemlouisville@gmail.com"
 
