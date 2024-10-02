@@ -1,0 +1,2078 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This biomodel was generated in VCML Version Rel_Version_7.6.0_build_27-->
+<vcml xmlns="http://sourceforge.net/projects/vcell/vcml" Version="Rel_Version_7.6.0_build_27">
+  <BioModel Name="Construct 3_Cycle3_dgl">
+    <Annotation>cloned from 'Construct 3_Cycle 2' owned by user Aryanshah16
+cloned from 'pLex_GFP Construct' owned by user Pillow123
+cloned from 'pRMA_GFP construct 1 v1.1' owned by user seriously
+cloned from 'pRMA_GFP construct' owned by user Pillow123</Annotation>
+    <Model Name="model">
+      <Annotation>cloned from 'model' owned by user Aryanshah16
+cloned from 'model' owned by user Pillow123
+cloned from 'model' owned by user seriously
+cloned from 'model' owned by user Pillow123</Annotation>
+      <Compound Name="s0" />
+      <Compound Name="s1" />
+      <Compound Name="s4" />
+      <Compound Name="s5" />
+      <Compound Name="s3" />
+      <Compound Name="s7" />
+      <Compound Name="s8" />
+      <Compound Name="s2" />
+      <Compound Name="s9" />
+      <Compound Name="s10" />
+      <Compound Name="s11" />
+      <Compound Name="s12" />
+      <Compound Name="s6" />
+      <Compound Name="s13" />
+      <Feature Name="Cell" KeyValue="276691218" />
+      <Feature Name="Enviroment" KeyValue="276691220" />
+      <LocalizedCompound Name="PFAS_Outside" CompoundRef="s0" Structure="Enviroment" OverrideName="true" KeyValue="276691222">
+        <SpeciesPattern>
+          <MolecularTypePattern Index="1">
+            <MolecularType Name="PFAS_Outside" />
+          </MolecularTypePattern>
+        </SpeciesPattern>
+      </LocalizedCompound>
+      <LocalizedCompound Name="PFAS_Inside" CompoundRef="s1" Structure="Cell" OverrideName="true" KeyValue="276691223">
+        <SpeciesPattern>
+          <MolecularTypePattern Index="1">
+            <MolecularType Name="PFAS_Inside" />
+          </MolecularTypePattern>
+        </SpeciesPattern>
+      </LocalizedCompound>
+      <LocalizedCompound Name="GFP" CompoundRef="s4" Structure="Cell" OverrideName="true" KeyValue="276691224">
+        <SpeciesPattern>
+          <MolecularTypePattern Index="1">
+            <MolecularType Name="SF_GFP" />
+          </MolecularTypePattern>
+        </SpeciesPattern>
+      </LocalizedCompound>
+      <LocalizedCompound Name="pLex_Operon" CompoundRef="s5" Structure="Cell" OverrideName="true" KeyValue="276691225">
+        <SpeciesPattern>
+          <MolecularTypePattern Index="1">
+            <MolecularType Name="pRMA_Operon" />
+          </MolecularTypePattern>
+        </SpeciesPattern>
+      </LocalizedCompound>
+      <LocalizedCompound Name="GFP_mRNA" CompoundRef="s3" Structure="Cell" OverrideName="true" KeyValue="276691226">
+        <SpeciesPattern>
+          <MolecularTypePattern Index="1">
+            <MolecularType Name="GFP_mRNA" />
+          </MolecularTypePattern>
+        </SpeciesPattern>
+      </LocalizedCompound>
+      <LocalizedCompound Name="GFP_mRNA_degr" CompoundRef="s7" Structure="Cell" OverrideName="true" KeyValue="276691227">
+        <SpeciesPattern>
+          <MolecularTypePattern Index="1">
+            <MolecularType Name="GFP_mRNA_degr" />
+          </MolecularTypePattern>
+        </SpeciesPattern>
+      </LocalizedCompound>
+      <LocalizedCompound Name="GFP_degr" CompoundRef="s8" Structure="Cell" OverrideName="true" KeyValue="276691228">
+        <SpeciesPattern>
+          <MolecularTypePattern Index="1">
+            <MolecularType Name="SF_GFP_degr" />
+          </MolecularTypePattern>
+        </SpeciesPattern>
+      </LocalizedCompound>
+      <LocalizedCompound Name="Synt_Tran_Gene" CompoundRef="s2" Structure="Cell" OverrideName="true" KeyValue="276691229">
+        <SpeciesPattern>
+          <MolecularTypePattern Index="1">
+            <MolecularType Name="Syn_Tran_Gene" />
+          </MolecularTypePattern>
+        </SpeciesPattern>
+      </LocalizedCompound>
+      <LocalizedCompound Name="Syn_Tran_mRNA" CompoundRef="s9" Structure="Cell" OverrideName="true" KeyValue="276691230">
+        <SpeciesPattern>
+          <MolecularTypePattern Index="1">
+            <MolecularType Name="Syn_Tran_mRNA" />
+          </MolecularTypePattern>
+        </SpeciesPattern>
+      </LocalizedCompound>
+      <LocalizedCompound Name="Syn_Tran_mRNA_degr" CompoundRef="s10" Structure="Cell" OverrideName="true" KeyValue="276691231">
+        <SpeciesPattern>
+          <MolecularTypePattern Index="1">
+            <MolecularType Name="Syn_Tran_mRNA_degr" />
+          </MolecularTypePattern>
+        </SpeciesPattern>
+      </LocalizedCompound>
+      <LocalizedCompound Name="Syn_Tran" CompoundRef="s11" Structure="Cell" OverrideName="true" KeyValue="276691232">
+        <SpeciesPattern>
+          <MolecularTypePattern Index="1">
+            <MolecularType Name="Syn_Tran" />
+          </MolecularTypePattern>
+        </SpeciesPattern>
+      </LocalizedCompound>
+      <LocalizedCompound Name="Syn_Tran_degr" CompoundRef="s12" Structure="Cell" OverrideName="true" KeyValue="276691233">
+        <SpeciesPattern>
+          <MolecularTypePattern Index="1">
+            <MolecularType Name="Syn_Tran_degr" />
+          </MolecularTypePattern>
+        </SpeciesPattern>
+      </LocalizedCompound>
+      <LocalizedCompound Name="Synt_PFAS_cplx" CompoundRef="s6" Structure="Cell" OverrideName="true" KeyValue="276691234">
+        <SpeciesPattern>
+          <MolecularTypePattern Index="1">
+            <MolecularType Name="Synt_PFAS_cplx" />
+          </MolecularTypePattern>
+        </SpeciesPattern>
+      </LocalizedCompound>
+      <LocalizedCompound Name="pLex_GFP_Gene_cplx" CompoundRef="s13" Structure="Cell" OverrideName="true" KeyValue="276691235">
+        <SpeciesPattern>
+          <MolecularTypePattern Index="1">
+            <MolecularType Name="pLex_GFP_Gene_cplx" />
+          </MolecularTypePattern>
+        </SpeciesPattern>
+      </LocalizedCompound>
+      <SimpleReaction Structure="Enviroment" Name="PFAS_DiffusionAndMessenger" Reversible="true" FluxOption="MolecularOnly" KeyValue="276691236">
+        <Reactant LocalizedCompoundRef="PFAS_Outside" Stoichiometry="1" KeyValue="276691237" />
+        <Product LocalizedCompoundRef="PFAS_Inside" Stoichiometry="1" KeyValue="276691238" />
+        <Kinetics KineticsType="MassAction">
+          <Parameter Name="J" Role="reaction rate" Unit="uM.s-1">((Kf * PFAS_Outside) - (Kr * PFAS_Inside))</Parameter>
+          <Parameter Name="Kf" Role="forward rate constant" Unit="s-1">0.001</Parameter>
+          <Parameter Name="Kr" Role="reverse rate constant" Unit="s-1">0.001</Parameter>
+        </Kinetics>
+      </SimpleReaction>
+      <SimpleReaction Structure="Cell" Name="PFAS_Bind_Syntran" Reversible="true" FluxOption="MolecularOnly" KeyValue="276691239">
+        <Reactant LocalizedCompoundRef="PFAS_Inside" Stoichiometry="1" KeyValue="276691240" />
+        <Reactant LocalizedCompoundRef="Syn_Tran" Stoichiometry="1" KeyValue="276691241" />
+        <Product LocalizedCompoundRef="Synt_PFAS_cplx" Stoichiometry="1" KeyValue="276691242" />
+        <Kinetics KineticsType="MassAction">
+          <Parameter Name="J" Role="reaction rate" Unit="uM.s-1">(((Kf * PFAS_Inside) * Syn_Tran) - (Kr * Synt_PFAS_cplx))</Parameter>
+          <Parameter Name="Kf" Role="forward rate constant" Unit="s-1.uM-1">1.0</Parameter>
+          <Parameter Name="Kr" Role="reverse rate constant" Unit="s-1">7.195E-5</Parameter>
+        </Kinetics>
+      </SimpleReaction>
+      <SimpleReaction Structure="Cell" Name="make GFP_mRNA" Reversible="true" FluxOption="MolecularOnly" KeyValue="276691243">
+        <Reactant LocalizedCompoundRef="pLex_GFP_Gene_cplx" Stoichiometry="1" KeyValue="276691244" />
+        <Product LocalizedCompoundRef="GFP_mRNA" Stoichiometry="1" KeyValue="276691245" />
+        <Product LocalizedCompoundRef="pLex_GFP_Gene_cplx" Stoichiometry="1" KeyValue="276691246" />
+        <Kinetics KineticsType="MassAction">
+          <Parameter Name="J" Role="reaction rate" Unit="uM.s-1">((Kf * pLex_GFP_Gene_cplx) - ((Kr * GFP_mRNA) * pLex_GFP_Gene_cplx))</Parameter>
+          <Parameter Name="Kf" Role="forward rate constant" Unit="s-1">0.01821493624</Parameter>
+          <Parameter Name="Kr" Role="reverse rate constant" Unit="s-1.uM-1">0.0</Parameter>
+        </Kinetics>
+      </SimpleReaction>
+      <SimpleReaction Structure="Cell" Name="Degr_GFP_mRNA" Reversible="true" FluxOption="MolecularOnly" KeyValue="276691247">
+        <Reactant LocalizedCompoundRef="GFP_mRNA" Stoichiometry="1" KeyValue="276691248" />
+        <Product LocalizedCompoundRef="GFP_mRNA_degr" Stoichiometry="1" KeyValue="276691249" />
+        <Kinetics KineticsType="MassAction">
+          <Parameter Name="J" Role="reaction rate" Unit="uM.s-1">((Kf * GFP_mRNA) - (Kr * GFP_mRNA_degr))</Parameter>
+          <Parameter Name="Kf" Role="forward rate constant" Unit="s-1">3.85E-4</Parameter>
+          <Parameter Name="Kr" Role="reverse rate constant" Unit="s-1">0.0</Parameter>
+        </Kinetics>
+      </SimpleReaction>
+      <SimpleReaction Structure="Cell" Name="Make_SF_GFP" Reversible="false" FluxOption="MolecularOnly" KeyValue="276691250">
+        <Reactant LocalizedCompoundRef="GFP_mRNA" Stoichiometry="1" KeyValue="276691251" />
+        <Product LocalizedCompoundRef="GFP" Stoichiometry="1" KeyValue="276691252" />
+        <Product LocalizedCompoundRef="GFP_mRNA" Stoichiometry="1" KeyValue="276691253" />
+        <Kinetics KineticsType="MassAction">
+          <Parameter Name="J" Role="reaction rate" Unit="uM.s-1">((Kf * GFP_mRNA) - ((Kr * GFP) * GFP_mRNA))</Parameter>
+          <Parameter Name="Kf" Role="forward rate constant" Unit="s-1">0.0416</Parameter>
+          <Parameter Name="Kr" Role="reverse rate constant" Unit="s-1.uM-1">0.0</Parameter>
+        </Kinetics>
+      </SimpleReaction>
+      <SimpleReaction Structure="Cell" Name="SF_GFP_degr" Reversible="true" FluxOption="MolecularOnly" KeyValue="276691254">
+        <Reactant LocalizedCompoundRef="GFP" Stoichiometry="1" KeyValue="276691255" />
+        <Product LocalizedCompoundRef="GFP_degr" Stoichiometry="1" KeyValue="276691256" />
+        <Kinetics KineticsType="MassAction">
+          <Parameter Name="J" Role="reaction rate" Unit="uM.s-1">((Kf * GFP) - (Kr * GFP_degr))</Parameter>
+          <Parameter Name="Kf" Role="forward rate constant" Unit="s-1">1.83E-5</Parameter>
+          <Parameter Name="Kr" Role="reverse rate constant" Unit="s-1">0.0</Parameter>
+        </Kinetics>
+      </SimpleReaction>
+      <SimpleReaction Structure="Cell" Name="Production" Reversible="true" FluxOption="MolecularOnly" KeyValue="276691257">
+        <Reactant LocalizedCompoundRef="Synt_Tran_Gene" Stoichiometry="1" KeyValue="276691258" />
+        <Product LocalizedCompoundRef="Syn_Tran_mRNA" Stoichiometry="1" KeyValue="276691259" />
+        <Product LocalizedCompoundRef="Synt_Tran_Gene" Stoichiometry="1" KeyValue="276691260" />
+        <Kinetics KineticsType="MassAction">
+          <Parameter Name="J" Role="reaction rate" Unit="uM.s-1">((Kf * Synt_Tran_Gene) - ((Kr * Syn_Tran_mRNA) * Synt_Tran_Gene))</Parameter>
+          <Parameter Name="Kf" Role="forward rate constant" Unit="s-1">0.00763650248</Parameter>
+          <Parameter Name="Kr" Role="reverse rate constant" Unit="s-1.uM-1">0.0</Parameter>
+        </Kinetics>
+      </SimpleReaction>
+      <SimpleReaction Structure="Cell" Name="mRNA_Degr" Reversible="true" FluxOption="MolecularOnly" KeyValue="276691261">
+        <Reactant LocalizedCompoundRef="Syn_Tran_mRNA" Stoichiometry="1" KeyValue="276691262" />
+        <Product LocalizedCompoundRef="Syn_Tran_mRNA_degr" Stoichiometry="1" KeyValue="276691263" />
+        <Kinetics KineticsType="MassAction">
+          <Parameter Name="J" Role="reaction rate" Unit="uM.s-1">((Kf * Syn_Tran_mRNA) - (Kr * Syn_Tran_mRNA_degr))</Parameter>
+          <Parameter Name="Kf" Role="forward rate constant" Unit="s-1">3.85E-4</Parameter>
+          <Parameter Name="Kr" Role="reverse rate constant" Unit="s-1">0.0</Parameter>
+        </Kinetics>
+      </SimpleReaction>
+      <SimpleReaction Structure="Cell" Name="SynTRan_Production" Reversible="true" FluxOption="MolecularOnly" KeyValue="276691264">
+        <Reactant LocalizedCompoundRef="Syn_Tran_mRNA" Stoichiometry="1" KeyValue="276691265" />
+        <Product LocalizedCompoundRef="Syn_Tran" Stoichiometry="1" KeyValue="276691266" />
+        <Product LocalizedCompoundRef="Syn_Tran_mRNA" Stoichiometry="1" KeyValue="276691267" />
+        <Kinetics KineticsType="MassAction">
+          <Parameter Name="J" Role="reaction rate" Unit="uM.s-1">((Kf * Syn_Tran_mRNA) - ((Kr * Syn_Tran) * Syn_Tran_mRNA))</Parameter>
+          <Parameter Name="Kf" Role="forward rate constant" Unit="s-1">0.00155709342561</Parameter>
+          <Parameter Name="Kr" Role="reverse rate constant" Unit="s-1.uM-1">0.0</Parameter>
+        </Kinetics>
+      </SimpleReaction>
+      <SimpleReaction Structure="Cell" Name="Syntran_Degr" Reversible="true" FluxOption="MolecularOnly" KeyValue="276691268">
+        <Reactant LocalizedCompoundRef="Syn_Tran" Stoichiometry="1" KeyValue="276691269" />
+        <Product LocalizedCompoundRef="Syn_Tran_degr" Stoichiometry="1" KeyValue="276691270" />
+        <Kinetics KineticsType="MassAction">
+          <Parameter Name="J" Role="reaction rate" Unit="uM.s-1">((Kf * Syn_Tran) - (Kr * Syn_Tran_degr))</Parameter>
+          <Parameter Name="Kf" Role="forward rate constant" Unit="s-1">9.62704417444E-6</Parameter>
+          <Parameter Name="Kr" Role="reverse rate constant" Unit="s-1">0.0</Parameter>
+        </Kinetics>
+      </SimpleReaction>
+      <SimpleReaction Structure="Cell" Name="Syntran_bind_pLex" Reversible="true" FluxOption="MolecularOnly" KeyValue="276691271">
+        <Reactant LocalizedCompoundRef="Synt_PFAS_cplx" Stoichiometry="1" KeyValue="276691272" />
+        <Reactant LocalizedCompoundRef="pLex_Operon" Stoichiometry="1" KeyValue="276691273" />
+        <Product LocalizedCompoundRef="pLex_GFP_Gene_cplx" Stoichiometry="1" KeyValue="276691274" />
+        <Kinetics KineticsType="MassAction">
+          <Parameter Name="J" Role="reaction rate" Unit="uM.s-1">(((Kf * Synt_PFAS_cplx) * pLex_Operon) - (Kr * pLex_GFP_Gene_cplx))</Parameter>
+          <Parameter Name="Kf" Role="forward rate constant" Unit="s-1.uM-1">4.0</Parameter>
+          <Parameter Name="Kr" Role="reverse rate constant" Unit="s-1">1.0</Parameter>
+        </Kinetics>
+      </SimpleReaction>
+      <SimpleReaction Structure="Cell" Name="leak" Reversible="true" FluxOption="MolecularOnly" KeyValue="276691275">
+        <Reactant LocalizedCompoundRef="pLex_Operon" Stoichiometry="1" KeyValue="276691276" />
+        <Product LocalizedCompoundRef="GFP_mRNA" Stoichiometry="1" KeyValue="276691277" />
+        <Product LocalizedCompoundRef="pLex_Operon" Stoichiometry="1" KeyValue="276691278" />
+        <Kinetics KineticsType="MassAction">
+          <Parameter Name="J" Role="reaction rate" Unit="uM.s-1">((Kf * pLex_Operon) - ((Kr * GFP_mRNA) * pLex_Operon))</Parameter>
+          <Parameter Name="Kf" Role="forward rate constant" Unit="s-1">4.553734E-4</Parameter>
+          <Parameter Name="Kr" Role="reverse rate constant" Unit="s-1.uM-1">0.0</Parameter>
+        </Kinetics>
+      </SimpleReaction>
+      <SimpleReaction Structure="Cell" Name="degrade_synt_pfas_cplx" Reversible="true" FluxOption="MolecularOnly" KeyValue="276691279">
+        <Reactant LocalizedCompoundRef="Synt_PFAS_cplx" Stoichiometry="1" KeyValue="276691280" />
+        <Product LocalizedCompoundRef="Syn_Tran_degr" Stoichiometry="1" KeyValue="276691281" />
+        <Product LocalizedCompoundRef="PFAS_Inside" Stoichiometry="1" KeyValue="276691282" />
+        <Kinetics KineticsType="MassAction">
+          <Parameter Name="J" Role="reaction rate" Unit="uM.s-1">((Kf * Synt_PFAS_cplx) - ((Kr * Syn_Tran_degr) * PFAS_Inside))</Parameter>
+          <Parameter Name="Kf" Role="forward rate constant" Unit="s-1">9.62704417444E-6</Parameter>
+          <Parameter Name="Kr" Role="reverse rate constant" Unit="s-1.uM-1">0.0</Parameter>
+        </Kinetics>
+      </SimpleReaction>
+      <RbmModelContainer>
+        <MolecularTypeList>
+          <MolecularType Name="PFAS_Outside" AnchorAll="true" />
+          <MolecularType Name="PFAS_Inside" AnchorAll="true" />
+          <MolecularType Name="pRMA_Operon" AnchorAll="true" />
+          <MolecularType Name="PFOA_pRMA_Cplx" AnchorAll="true" />
+          <MolecularType Name="GFP_gene" AnchorAll="true" />
+          <MolecularType Name="GFP_mRNA" AnchorAll="true" />
+          <MolecularType Name="GFP_mRNA_degr" AnchorAll="true" />
+          <MolecularType Name="SF_GFP" AnchorAll="true" />
+          <MolecularType Name="SF_GFP_degr" AnchorAll="true" />
+          <MolecularType Name="SF_GFP_dimer" AnchorAll="true" />
+          <MolecularType Name="SF_GFP_dimer_degr" AnchorAll="true" />
+          <MolecularType Name="Syn_Tran_Gene" AnchorAll="true" />
+          <MolecularType Name="Syn_Tran_mRNA" AnchorAll="true" />
+          <MolecularType Name="Syn_Tran_mRNA_degr" AnchorAll="true" />
+          <MolecularType Name="Syn_Tran" AnchorAll="true" />
+          <MolecularType Name="Syn_Tran_degr" AnchorAll="true" />
+          <MolecularType Name="Synt_PFAS_cplx" AnchorAll="true" />
+          <MolecularType Name="pLex_GFP_Gene_cplx" AnchorAll="true" />
+        </MolecularTypeList>
+        <RbmObservableList>
+          <Observable Name="O0_PFAS_Outside_tot" ObservableType="Molecules" Sequence="Multimolecular" LengthEqual="2" LengthGreater="1" Structure="Enviroment">
+            <SpeciesPattern>
+              <MolecularTypePattern Index="1">
+                <MolecularType Name="PFAS_Outside" />
+              </MolecularTypePattern>
+            </SpeciesPattern>
+          </Observable>
+          <Observable Name="O0_PFAS_Inside_tot" ObservableType="Molecules" Sequence="Multimolecular" LengthEqual="2" LengthGreater="1" Structure="Enviroment">
+            <SpeciesPattern>
+              <MolecularTypePattern Index="1">
+                <MolecularType Name="PFAS_Inside" />
+              </MolecularTypePattern>
+            </SpeciesPattern>
+          </Observable>
+          <Observable Name="O0_pRMA_Operon_tot" ObservableType="Molecules" Sequence="Multimolecular" LengthEqual="2" LengthGreater="1" Structure="Enviroment">
+            <SpeciesPattern>
+              <MolecularTypePattern Index="1">
+                <MolecularType Name="pRMA_Operon" />
+              </MolecularTypePattern>
+            </SpeciesPattern>
+          </Observable>
+          <Observable Name="O0_PFOA_pRMA_Cplx_tot" ObservableType="Molecules" Sequence="Multimolecular" LengthEqual="2" LengthGreater="1" Structure="Enviroment">
+            <SpeciesPattern>
+              <MolecularTypePattern Index="1">
+                <MolecularType Name="PFOA_pRMA_Cplx" />
+              </MolecularTypePattern>
+            </SpeciesPattern>
+          </Observable>
+          <Observable Name="O0_GFP_gene_tot" ObservableType="Molecules" Sequence="Multimolecular" LengthEqual="2" LengthGreater="1" Structure="Enviroment">
+            <SpeciesPattern>
+              <MolecularTypePattern Index="1">
+                <MolecularType Name="GFP_gene" />
+              </MolecularTypePattern>
+            </SpeciesPattern>
+          </Observable>
+          <Observable Name="O0_GFP_mRNA_tot" ObservableType="Molecules" Sequence="Multimolecular" LengthEqual="2" LengthGreater="1" Structure="Enviroment">
+            <SpeciesPattern>
+              <MolecularTypePattern Index="1">
+                <MolecularType Name="GFP_mRNA" />
+              </MolecularTypePattern>
+            </SpeciesPattern>
+          </Observable>
+          <Observable Name="O0_GFP_mRNA_degr_tot" ObservableType="Molecules" Sequence="Multimolecular" LengthEqual="2" LengthGreater="1" Structure="Enviroment">
+            <SpeciesPattern>
+              <MolecularTypePattern Index="1">
+                <MolecularType Name="GFP_mRNA_degr" />
+              </MolecularTypePattern>
+            </SpeciesPattern>
+          </Observable>
+          <Observable Name="O0_SF_GFP_tot" ObservableType="Molecules" Sequence="Multimolecular" LengthEqual="2" LengthGreater="1" Structure="Enviroment">
+            <SpeciesPattern>
+              <MolecularTypePattern Index="1">
+                <MolecularType Name="SF_GFP" />
+              </MolecularTypePattern>
+            </SpeciesPattern>
+          </Observable>
+          <Observable Name="O0_SF_GFP_degr_tot" ObservableType="Molecules" Sequence="Multimolecular" LengthEqual="2" LengthGreater="1" Structure="Enviroment">
+            <SpeciesPattern>
+              <MolecularTypePattern Index="1">
+                <MolecularType Name="SF_GFP_degr" />
+              </MolecularTypePattern>
+            </SpeciesPattern>
+          </Observable>
+          <Observable Name="O0_SF_GFP_dimer_tot" ObservableType="Molecules" Sequence="Multimolecular" LengthEqual="2" LengthGreater="1" Structure="Cell">
+            <SpeciesPattern>
+              <MolecularTypePattern Index="1">
+                <MolecularType Name="SF_GFP_dimer" />
+              </MolecularTypePattern>
+            </SpeciesPattern>
+          </Observable>
+          <Observable Name="O0_SF_GFP_dimer_degr_tot" ObservableType="Molecules" Sequence="Multimolecular" LengthEqual="2" LengthGreater="1" Structure="Cell">
+            <SpeciesPattern>
+              <MolecularTypePattern Index="1">
+                <MolecularType Name="SF_GFP_dimer_degr" />
+              </MolecularTypePattern>
+            </SpeciesPattern>
+          </Observable>
+          <Observable Name="O0_Syn_Tran_Gene_tot" ObservableType="Molecules" Sequence="Multimolecular" LengthEqual="2" LengthGreater="1" Structure="Enviroment">
+            <SpeciesPattern>
+              <MolecularTypePattern Index="1">
+                <MolecularType Name="Syn_Tran_Gene" />
+              </MolecularTypePattern>
+            </SpeciesPattern>
+          </Observable>
+          <Observable Name="O0_Syn_Tran_mRNA_tot" ObservableType="Molecules" Sequence="Multimolecular" LengthEqual="2" LengthGreater="1" Structure="Enviroment">
+            <SpeciesPattern>
+              <MolecularTypePattern Index="1">
+                <MolecularType Name="Syn_Tran_mRNA" />
+              </MolecularTypePattern>
+            </SpeciesPattern>
+          </Observable>
+          <Observable Name="O0_Syn_Tran_mRNA_degr_tot" ObservableType="Molecules" Sequence="Multimolecular" LengthEqual="2" LengthGreater="1" Structure="Enviroment">
+            <SpeciesPattern>
+              <MolecularTypePattern Index="1">
+                <MolecularType Name="Syn_Tran_mRNA_degr" />
+              </MolecularTypePattern>
+            </SpeciesPattern>
+          </Observable>
+          <Observable Name="O0_Syn_Tran_tot" ObservableType="Molecules" Sequence="Multimolecular" LengthEqual="2" LengthGreater="1" Structure="Enviroment">
+            <SpeciesPattern>
+              <MolecularTypePattern Index="1">
+                <MolecularType Name="Syn_Tran" />
+              </MolecularTypePattern>
+            </SpeciesPattern>
+          </Observable>
+          <Observable Name="O0_Syn_Tran_degr_tot" ObservableType="Molecules" Sequence="Multimolecular" LengthEqual="2" LengthGreater="1" Structure="Enviroment">
+            <SpeciesPattern>
+              <MolecularTypePattern Index="1">
+                <MolecularType Name="Syn_Tran_degr" />
+              </MolecularTypePattern>
+            </SpeciesPattern>
+          </Observable>
+          <Observable Name="O0_Synt_PFAS_cplx_tot" ObservableType="Molecules" Sequence="Multimolecular" LengthEqual="2" LengthGreater="1" Structure="Cell">
+            <SpeciesPattern>
+              <MolecularTypePattern Index="1">
+                <MolecularType Name="Synt_PFAS_cplx" />
+              </MolecularTypePattern>
+            </SpeciesPattern>
+          </Observable>
+          <Observable Name="O0_pLex_GFP_Gene_cplx_tot" ObservableType="Molecules" Sequence="Multimolecular" LengthEqual="2" LengthGreater="1" Structure="Cell">
+            <SpeciesPattern>
+              <MolecularTypePattern Index="1">
+                <MolecularType Name="pLex_GFP_Gene_cplx" />
+              </MolecularTypePattern>
+            </SpeciesPattern>
+          </Observable>
+        </RbmObservableList>
+      </RbmModelContainer>
+      <Diagram Name="c0" Structure="Enviroment">
+        <SimpleReactionShape NodeReferenceModeAttrTag="full" SimpleReactionRef="degrade_synt_pfas_cplx" LocationX="161" LocationY="129" />
+        <LocalizedCompoundShape NodeReferenceModeAttrTag="full" LocalizedCompoundRef="Syn_Tran_mRNA_degr" LocationX="347" LocationY="319" />
+        <SimpleReactionShape NodeReferenceModeAttrTag="full" SimpleReactionRef="make GFP_mRNA" LocationX="305" LocationY="97" />
+        <SimpleReactionShape NodeReferenceModeAttrTag="full" SimpleReactionRef="Syntran_bind_pLex" LocationX="214" LocationY="53" />
+        <SimpleReactionShape NodeReferenceModeAttrTag="full" SimpleReactionRef="Syntran_Degr" LocationX="115" LocationY="135" />
+        <LocalizedCompoundShape NodeReferenceModeAttrTag="full" LocalizedCompoundRef="Syn_Tran_degr" LocationX="176" LocationY="160" />
+        <SimpleReactionShape NodeReferenceModeAttrTag="full" SimpleReactionRef="Make_SF_GFP" LocationX="611" LocationY="190" />
+        <SimpleReactionShape NodeReferenceModeAttrTag="full" SimpleReactionRef="PFAS_Bind_Syntran" LocationX="68" LocationY="108" />
+        <SimpleReactionShape NodeReferenceModeAttrTag="full" SimpleReactionRef="Degr_GFP_mRNA" LocationX="582" LocationY="239" />
+        <LocalizedCompoundShape NodeReferenceModeAttrTag="full" LocalizedCompoundRef="Synt_Tran_Gene" LocationX="23" LocationY="249" />
+        <LocalizedCompoundShape NodeReferenceModeAttrTag="full" LocalizedCompoundRef="GFP_mRNA_degr" LocationX="493" LocationY="261" />
+        <LocalizedCompoundShape NodeReferenceModeAttrTag="full" LocalizedCompoundRef="GFP_degr" LocationX="309" LocationY="46" />
+        <LocalizedCompoundShape NodeReferenceModeAttrTag="full" LocalizedCompoundRef="pLex_GFP_Gene_cplx" LocationX="215" LocationY="21" />
+        <SimpleReactionShape NodeReferenceModeAttrTag="full" SimpleReactionRef="PFAS_DiffusionAndMessenger" LocationX="195" LocationY="134" />
+        <LocalizedCompoundShape NodeReferenceModeAttrTag="full" LocalizedCompoundRef="Synt_PFAS_cplx" LocationX="141" LocationY="57" />
+        <SimpleReactionShape NodeReferenceModeAttrTag="full" SimpleReactionRef="leak" LocationX="281" LocationY="163" />
+        <SimpleReactionShape NodeReferenceModeAttrTag="full" SimpleReactionRef="SynTRan_Production" LocationX="149" LocationY="185" />
+        <LocalizedCompoundShape NodeReferenceModeAttrTag="full" LocalizedCompoundRef="GFP_mRNA" LocationX="389" LocationY="149" />
+        <SimpleReactionShape NodeReferenceModeAttrTag="full" SimpleReactionRef="Production" LocationX="105" LocationY="303" />
+        <LocalizedCompoundShape NodeReferenceModeAttrTag="full" LocalizedCompoundRef="PFAS_Outside" LocationX="88" LocationY="75" />
+        <LocalizedCompoundShape NodeReferenceModeAttrTag="full" LocalizedCompoundRef="Syn_Tran_mRNA" LocationX="267" LocationY="298" />
+        <SimpleReactionShape NodeReferenceModeAttrTag="full" SimpleReactionRef="mRNA_Degr" LocationX="328" LocationY="238" />
+        <LocalizedCompoundShape NodeReferenceModeAttrTag="full" LocalizedCompoundRef="Syn_Tran" LocationX="31" LocationY="156" />
+        <SimpleReactionShape NodeReferenceModeAttrTag="full" SimpleReactionRef="SF_GFP_degr" LocationX="400" LocationY="51" />
+        <LocalizedCompoundShape NodeReferenceModeAttrTag="full" LocalizedCompoundRef="pLex_Operon" LocationX="227" LocationY="101" />
+        <LocalizedCompoundShape NodeReferenceModeAttrTag="full" LocalizedCompoundRef="GFP" LocationX="504" LocationY="93" />
+        <LocalizedCompoundShape NodeReferenceModeAttrTag="full" LocalizedCompoundRef="PFAS_Inside" LocationX="58" LocationY="34" />
+      </Diagram>
+      <Diagram Name="c1" Structure="Cell">
+        <SimpleReactionShape NodeReferenceModeAttrTag="full" SimpleReactionRef="degrade_synt_pfas_cplx" LocationX="161" LocationY="129" />
+        <LocalizedCompoundShape NodeReferenceModeAttrTag="full" LocalizedCompoundRef="Syn_Tran_mRNA_degr" LocationX="347" LocationY="319" />
+        <SimpleReactionShape NodeReferenceModeAttrTag="full" SimpleReactionRef="make GFP_mRNA" LocationX="305" LocationY="97" />
+        <SimpleReactionShape NodeReferenceModeAttrTag="full" SimpleReactionRef="Syntran_bind_pLex" LocationX="214" LocationY="53" />
+        <SimpleReactionShape NodeReferenceModeAttrTag="full" SimpleReactionRef="Syntran_Degr" LocationX="115" LocationY="135" />
+        <LocalizedCompoundShape NodeReferenceModeAttrTag="full" LocalizedCompoundRef="Syn_Tran_degr" LocationX="176" LocationY="160" />
+        <SimpleReactionShape NodeReferenceModeAttrTag="full" SimpleReactionRef="Make_SF_GFP" LocationX="611" LocationY="190" />
+        <SimpleReactionShape NodeReferenceModeAttrTag="full" SimpleReactionRef="PFAS_Bind_Syntran" LocationX="68" LocationY="108" />
+        <SimpleReactionShape NodeReferenceModeAttrTag="full" SimpleReactionRef="Degr_GFP_mRNA" LocationX="582" LocationY="239" />
+        <LocalizedCompoundShape NodeReferenceModeAttrTag="full" LocalizedCompoundRef="Synt_Tran_Gene" LocationX="23" LocationY="249" />
+        <LocalizedCompoundShape NodeReferenceModeAttrTag="full" LocalizedCompoundRef="GFP_mRNA_degr" LocationX="493" LocationY="261" />
+        <LocalizedCompoundShape NodeReferenceModeAttrTag="full" LocalizedCompoundRef="GFP_degr" LocationX="309" LocationY="46" />
+        <LocalizedCompoundShape NodeReferenceModeAttrTag="full" LocalizedCompoundRef="pLex_GFP_Gene_cplx" LocationX="215" LocationY="21" />
+        <SimpleReactionShape NodeReferenceModeAttrTag="full" SimpleReactionRef="PFAS_DiffusionAndMessenger" LocationX="195" LocationY="134" />
+        <LocalizedCompoundShape NodeReferenceModeAttrTag="full" LocalizedCompoundRef="Synt_PFAS_cplx" LocationX="141" LocationY="57" />
+        <SimpleReactionShape NodeReferenceModeAttrTag="full" SimpleReactionRef="leak" LocationX="281" LocationY="163" />
+        <SimpleReactionShape NodeReferenceModeAttrTag="full" SimpleReactionRef="SynTRan_Production" LocationX="149" LocationY="185" />
+        <LocalizedCompoundShape NodeReferenceModeAttrTag="full" LocalizedCompoundRef="GFP_mRNA" LocationX="389" LocationY="149" />
+        <SimpleReactionShape NodeReferenceModeAttrTag="full" SimpleReactionRef="Production" LocationX="105" LocationY="303" />
+        <LocalizedCompoundShape NodeReferenceModeAttrTag="full" LocalizedCompoundRef="PFAS_Outside" LocationX="88" LocationY="75" />
+        <LocalizedCompoundShape NodeReferenceModeAttrTag="full" LocalizedCompoundRef="Syn_Tran_mRNA" LocationX="267" LocationY="298" />
+        <SimpleReactionShape NodeReferenceModeAttrTag="full" SimpleReactionRef="mRNA_Degr" LocationX="328" LocationY="238" />
+        <LocalizedCompoundShape NodeReferenceModeAttrTag="full" LocalizedCompoundRef="Syn_Tran" LocationX="31" LocationY="156" />
+        <SimpleReactionShape NodeReferenceModeAttrTag="full" SimpleReactionRef="SF_GFP_degr" LocationX="400" LocationY="51" />
+        <LocalizedCompoundShape NodeReferenceModeAttrTag="full" LocalizedCompoundRef="pLex_Operon" LocationX="227" LocationY="101" />
+        <LocalizedCompoundShape NodeReferenceModeAttrTag="full" LocalizedCompoundRef="GFP" LocationX="504" LocationY="93" />
+        <LocalizedCompoundShape NodeReferenceModeAttrTag="full" LocalizedCompoundRef="PFAS_Inside" LocationX="58" LocationY="34" />
+      </Diagram>
+      <Version Name="model" KeyValue="276691202" BranchId="276500747" Archived="0" Date="01-Oct-2024 04:13:44" FromVersionable="false">
+        <Owner Name="dglVcell" Identifier="202231687" />
+        <GroupAccess Type="1" />
+        <Annotation>cloned from 'model' owned by user Aryanshah16
+cloned from 'model' owned by user Pillow123
+cloned from 'model' owned by user seriously
+cloned from 'model' owned by user Pillow123</Annotation>
+      </Version>
+      <ModelUnitSystem VolumeSubstanceUnit="uM.um3" MembraneSubstanceUnit="molecules" LumpedReactionSubstanceUnit="molecules" VolumeUnit="um3" AreaUnit="um2" LengthUnit="um" TimeUnit="s" />
+    </Model>
+    <SimulationSpec Name="Application1" Stochastic="false" UseConcentration="true" SpringSaLaD="false" RuleBased="false" MassConservationModelReduction="false" InsufficientIterations="false" InsufficientMaxMolecules="false">
+      <NetworkConstraints RbmMaxIteration="1" RbmMaxMoleculesPerSpecies="10" RbmSpeciesLimit="800" RbmReactionsLimit="2500">
+        <MaxStoichiometry MolecularType="PFAS_Outside" Integer="100" />
+        <MaxStoichiometry MolecularType="PFAS_Inside" Integer="100" />
+        <MaxStoichiometry MolecularType="pRMA_Operon" Integer="100" />
+        <MaxStoichiometry MolecularType="PFOA_pRMA_Cplx" Integer="100" />
+        <MaxStoichiometry MolecularType="GFP_gene" Integer="100" />
+        <MaxStoichiometry MolecularType="GFP_mRNA" Integer="100" />
+        <MaxStoichiometry MolecularType="GFP_mRNA_degr" Integer="100" />
+        <MaxStoichiometry MolecularType="SF_GFP" Integer="100" />
+        <MaxStoichiometry MolecularType="SF_GFP_degr" Integer="100" />
+        <MaxStoichiometry MolecularType="SF_GFP_dimer" Integer="100" />
+        <MaxStoichiometry MolecularType="SF_GFP_dimer_degr" Integer="100" />
+        <MaxStoichiometry MolecularType="Syn_Tran_Gene" Integer="100" />
+        <MaxStoichiometry MolecularType="Syn_Tran_mRNA" Integer="100" />
+        <MaxStoichiometry MolecularType="Syn_Tran_mRNA_degr" Integer="100" />
+        <MaxStoichiometry MolecularType="Syn_Tran" Integer="100" />
+        <MaxStoichiometry MolecularType="Syn_Tran_degr" Integer="100" />
+        <MaxStoichiometry MolecularType="Synt_PFAS_cplx" Integer="100" />
+        <MaxStoichiometry MolecularType="pLex_GFP_Gene_cplx" Integer="100" />
+      </NetworkConstraints>
+      <Annotation />
+      <Geometry Name="non-spatial1318377617" Dimension="0">
+        <Extent X="10.0" Y="10.0" Z="10.0" />
+        <Origin X="0.0" Y="0.0" Z="0.0" />
+        <SubVolume Name="Compartment" Handle="0" Type="Compartmental" KeyValue="276565775" />
+        <Version Name="non-spatial1318377617" KeyValue="276565771" BranchId="276565772" Archived="0" Date="29-Sep-2024 02:54:36" FromVersionable="false">
+          <Owner Name="dglVcell" Identifier="202231687" />
+          <GroupAccess Type="1" />
+        </Version>
+      </Geometry>
+      <GeometryContext>
+        <FeatureMapping Feature="Cell" GeometryClass="Compartment" SubVolume="Compartment" Size="3.5">
+          <BoundariesTypes Xm="Flux" Xp="Flux" Ym="Flux" Yp="Flux" Zm="Flux" Zp="Flux" />
+        </FeatureMapping>
+        <FeatureMapping Feature="Enviroment" GeometryClass="Compartment" SubVolume="Compartment" Size="1000.0">
+          <BoundariesTypes Xm="Flux" Xp="Flux" Ym="Flux" Yp="Flux" Zm="Flux" Zp="Flux" />
+        </FeatureMapping>
+      </GeometryContext>
+      <ReactionContext>
+        <LocalizedCompoundSpec LocalizedCompoundRef="PFAS_Inside" ForceConstant="true" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="GFP" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="pLex_Operon" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.47443965233220736</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="GFP_mRNA" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="GFP_mRNA_degr" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="GFP_degr" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="Synt_Tran_Gene" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.47443965233220736</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="Syn_Tran_mRNA" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="Syn_Tran_mRNA_degr" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="Syn_Tran" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="Syn_Tran_degr" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="Synt_PFAS_cplx" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="pLex_GFP_Gene_cplx" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="PFAS_Outside" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <ReactionSpec ReactionStepRef="PFAS_DiffusionAndMessenger" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="PFAS_Bind_Syntran" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="make GFP_mRNA" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="Degr_GFP_mRNA" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="Make_SF_GFP" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="SF_GFP_degr" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="Production" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="mRNA_Degr" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="SynTRan_Production" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="Syntran_Degr" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="Syntran_bind_pLex" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="leak" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="degrade_synt_pfas_cplx" ReactionMapping="included" />
+      </ReactionContext>
+      <MathDescription Name="Application1_generated">
+        <Constant Name="_F_">96485.3321</Constant>
+        <Constant Name="_F_nmol_">9.64853321E-5</Constant>
+        <Constant Name="_K_GHK_">1.0E-9</Constant>
+        <Constant Name="_N_pmol_">6.02214179E11</Constant>
+        <Constant Name="_PI_">3.141592653589793</Constant>
+        <Constant Name="_R_">8314.46261815</Constant>
+        <Constant Name="_T_">300.0</Constant>
+        <Constant Name="GFP_degr_init_uM">0.0</Constant>
+        <Constant Name="GFP_init_uM">0.0</Constant>
+        <Constant Name="GFP_mRNA_degr_init_uM">0.0</Constant>
+        <Constant Name="GFP_mRNA_init_uM">0.0</Constant>
+        <Constant Name="K_millivolts_per_volt">1000.0</Constant>
+        <Constant Name="Kf_Degr_GFP_mRNA">3.85E-4</Constant>
+        <Constant Name="Kf_degrade_synt_pfas_cplx">9.62704417444E-6</Constant>
+        <Constant Name="Kf_leak">4.553734E-4</Constant>
+        <Constant Name="Kf_make_GFP_mRNA">0.01821493624</Constant>
+        <Constant Name="Kf_Make_SF_GFP">0.0416</Constant>
+        <Constant Name="Kf_mRNA_Degr">3.85E-4</Constant>
+        <Constant Name="Kf_PFAS_Bind_Syntran">1.0</Constant>
+        <Constant Name="Kf_PFAS_DiffusionAndMessenger">0.001</Constant>
+        <Constant Name="Kf_Production">0.00763650248</Constant>
+        <Constant Name="Kf_SF_GFP_degr">1.83E-5</Constant>
+        <Constant Name="Kf_Syntran_bind_pLex">4.0</Constant>
+        <Constant Name="Kf_Syntran_Degr">9.62704417444E-6</Constant>
+        <Constant Name="Kf_SynTRan_Production">0.00155709342561</Constant>
+        <Constant Name="KMOLE">0.001660538783162726</Constant>
+        <Constant Name="Kr_Degr_GFP_mRNA">0.0</Constant>
+        <Constant Name="Kr_degrade_synt_pfas_cplx">0.0</Constant>
+        <Constant Name="Kr_leak">0.0</Constant>
+        <Constant Name="Kr_make_GFP_mRNA">0.0</Constant>
+        <Constant Name="Kr_Make_SF_GFP">0.0</Constant>
+        <Constant Name="Kr_mRNA_Degr">0.0</Constant>
+        <Constant Name="Kr_PFAS_Bind_Syntran">7.195E-5</Constant>
+        <Constant Name="Kr_PFAS_DiffusionAndMessenger">0.001</Constant>
+        <Constant Name="Kr_Production">0.0</Constant>
+        <Constant Name="Kr_SF_GFP_degr">0.0</Constant>
+        <Constant Name="Kr_Syntran_bind_pLex">1.0</Constant>
+        <Constant Name="Kr_Syntran_Degr">0.0</Constant>
+        <Constant Name="Kr_SynTRan_Production">0.0</Constant>
+        <Constant Name="PFAS_Inside_init_uM">0.0</Constant>
+        <Constant Name="PFAS_Outside_init_uM">0.0</Constant>
+        <Constant Name="pLex_GFP_Gene_cplx_init_uM">0.0</Constant>
+        <Constant Name="pLex_Operon_init_uM">0.47443965233220736</Constant>
+        <Constant Name="Size_Cell">3.5</Constant>
+        <Constant Name="Size_Enviroment">1000.0</Constant>
+        <Constant Name="Syn_Tran_degr_init_uM">0.0</Constant>
+        <Constant Name="Syn_Tran_init_uM">0.0</Constant>
+        <Constant Name="Syn_Tran_mRNA_degr_init_uM">0.0</Constant>
+        <Constant Name="Syn_Tran_mRNA_init_uM">0.0</Constant>
+        <Constant Name="Synt_PFAS_cplx_init_uM">0.0</Constant>
+        <Constant Name="Synt_Tran_Gene_init_uM">0.47443965233220736</Constant>
+        <VolumeVariable Name="GFP" Domain="Compartment" />
+        <VolumeVariable Name="GFP_degr" Domain="Compartment" />
+        <VolumeVariable Name="GFP_mRNA" Domain="Compartment" />
+        <VolumeVariable Name="GFP_mRNA_degr" Domain="Compartment" />
+        <VolumeVariable Name="PFAS_Outside" Domain="Compartment" />
+        <VolumeVariable Name="pLex_GFP_Gene_cplx" Domain="Compartment" />
+        <VolumeVariable Name="pLex_Operon" Domain="Compartment" />
+        <VolumeVariable Name="Syn_Tran" Domain="Compartment" />
+        <VolumeVariable Name="Syn_Tran_degr" Domain="Compartment" />
+        <VolumeVariable Name="Syn_Tran_mRNA" Domain="Compartment" />
+        <VolumeVariable Name="Syn_Tran_mRNA_degr" Domain="Compartment" />
+        <VolumeVariable Name="Synt_PFAS_cplx" Domain="Compartment" />
+        <VolumeVariable Name="Synt_Tran_Gene" Domain="Compartment" />
+        <Function Name="J_Degr_GFP_mRNA" Domain="Compartment">((Kf_Degr_GFP_mRNA * GFP_mRNA) - (Kr_Degr_GFP_mRNA * GFP_mRNA_degr))</Function>
+        <Function Name="J_degrade_synt_pfas_cplx" Domain="Compartment">((Kf_degrade_synt_pfas_cplx * Synt_PFAS_cplx) - ((Kr_degrade_synt_pfas_cplx * Syn_Tran_degr) * PFAS_Inside))</Function>
+        <Function Name="J_leak" Domain="Compartment">((Kf_leak * pLex_Operon) - ((Kr_leak * GFP_mRNA) * pLex_Operon))</Function>
+        <Function Name="J_make_GFP_mRNA" Domain="Compartment">((Kf_make_GFP_mRNA * pLex_GFP_Gene_cplx) - ((Kr_make_GFP_mRNA * GFP_mRNA) * pLex_GFP_Gene_cplx))</Function>
+        <Function Name="J_Make_SF_GFP" Domain="Compartment">((Kf_Make_SF_GFP * GFP_mRNA) - ((Kr_Make_SF_GFP * GFP) * GFP_mRNA))</Function>
+        <Function Name="J_mRNA_Degr" Domain="Compartment">((Kf_mRNA_Degr * Syn_Tran_mRNA) - (Kr_mRNA_Degr * Syn_Tran_mRNA_degr))</Function>
+        <Function Name="J_PFAS_Bind_Syntran" Domain="Compartment">(((Kf_PFAS_Bind_Syntran * PFAS_Inside) * Syn_Tran) - (Kr_PFAS_Bind_Syntran * Synt_PFAS_cplx))</Function>
+        <Function Name="J_PFAS_DiffusionAndMessenger" Domain="Compartment">((Kf_PFAS_DiffusionAndMessenger * PFAS_Outside) - (Kr_PFAS_DiffusionAndMessenger * PFAS_Inside))</Function>
+        <Function Name="J_Production" Domain="Compartment">((Kf_Production * Synt_Tran_Gene) - ((Kr_Production * Syn_Tran_mRNA) * Synt_Tran_Gene))</Function>
+        <Function Name="J_SF_GFP_degr" Domain="Compartment">((Kf_SF_GFP_degr * GFP) - (Kr_SF_GFP_degr * GFP_degr))</Function>
+        <Function Name="J_Syntran_bind_pLex" Domain="Compartment">(((Kf_Syntran_bind_pLex * Synt_PFAS_cplx) * pLex_Operon) - (Kr_Syntran_bind_pLex * pLex_GFP_Gene_cplx))</Function>
+        <Function Name="J_Syntran_Degr" Domain="Compartment">((Kf_Syntran_Degr * Syn_Tran) - (Kr_Syntran_Degr * Syn_Tran_degr))</Function>
+        <Function Name="J_SynTRan_Production" Domain="Compartment">((Kf_SynTRan_Production * Syn_Tran_mRNA) - ((Kr_SynTRan_Production * Syn_Tran) * Syn_Tran_mRNA))</Function>
+        <Function Name="PFAS_Inside" Domain="Compartment">PFAS_Inside_init_uM</Function>
+        <CompartmentSubDomain Name="Compartment">
+          <BoundaryType Boundary="Xm" Type="Value" />
+          <BoundaryType Boundary="Xp" Type="Value" />
+          <BoundaryType Boundary="Ym" Type="Value" />
+          <BoundaryType Boundary="Yp" Type="Value" />
+          <BoundaryType Boundary="Zm" Type="Value" />
+          <BoundaryType Boundary="Zp" Type="Value" />
+          <OdeEquation Name="GFP" SolutionType="Unknown">
+            <Rate>(J_Make_SF_GFP - J_SF_GFP_degr)</Rate>
+            <Initial>GFP_init_uM</Initial>
+          </OdeEquation>
+          <OdeEquation Name="pLex_Operon" SolutionType="Unknown">
+            <Rate>- J_Syntran_bind_pLex</Rate>
+            <Initial>pLex_Operon_init_uM</Initial>
+          </OdeEquation>
+          <OdeEquation Name="GFP_mRNA" SolutionType="Unknown">
+            <Rate>(J_make_GFP_mRNA - J_Degr_GFP_mRNA + J_leak)</Rate>
+            <Initial>GFP_mRNA_init_uM</Initial>
+          </OdeEquation>
+          <OdeEquation Name="GFP_mRNA_degr" SolutionType="Unknown">
+            <Rate>J_Degr_GFP_mRNA</Rate>
+            <Initial>GFP_mRNA_degr_init_uM</Initial>
+          </OdeEquation>
+          <OdeEquation Name="GFP_degr" SolutionType="Unknown">
+            <Rate>J_SF_GFP_degr</Rate>
+            <Initial>GFP_degr_init_uM</Initial>
+          </OdeEquation>
+          <OdeEquation Name="Synt_Tran_Gene" SolutionType="Unknown">
+            <Rate>0.0</Rate>
+            <Initial>Synt_Tran_Gene_init_uM</Initial>
+          </OdeEquation>
+          <OdeEquation Name="Syn_Tran_mRNA" SolutionType="Unknown">
+            <Rate>(J_Production - J_mRNA_Degr)</Rate>
+            <Initial>Syn_Tran_mRNA_init_uM</Initial>
+          </OdeEquation>
+          <OdeEquation Name="Syn_Tran_mRNA_degr" SolutionType="Unknown">
+            <Rate>J_mRNA_Degr</Rate>
+            <Initial>Syn_Tran_mRNA_degr_init_uM</Initial>
+          </OdeEquation>
+          <OdeEquation Name="Syn_Tran" SolutionType="Unknown">
+            <Rate>( - J_PFAS_Bind_Syntran + J_SynTRan_Production - J_Syntran_Degr)</Rate>
+            <Initial>Syn_Tran_init_uM</Initial>
+          </OdeEquation>
+          <OdeEquation Name="Syn_Tran_degr" SolutionType="Unknown">
+            <Rate>(J_Syntran_Degr + J_degrade_synt_pfas_cplx)</Rate>
+            <Initial>Syn_Tran_degr_init_uM</Initial>
+          </OdeEquation>
+          <OdeEquation Name="Synt_PFAS_cplx" SolutionType="Unknown">
+            <Rate>(J_PFAS_Bind_Syntran - J_Syntran_bind_pLex - J_degrade_synt_pfas_cplx)</Rate>
+            <Initial>Synt_PFAS_cplx_init_uM</Initial>
+          </OdeEquation>
+          <OdeEquation Name="pLex_GFP_Gene_cplx" SolutionType="Unknown">
+            <Rate>J_Syntran_bind_pLex</Rate>
+            <Initial>pLex_GFP_Gene_cplx_init_uM</Initial>
+          </OdeEquation>
+          <OdeEquation Name="PFAS_Outside" SolutionType="Unknown">
+            <Rate>- J_PFAS_DiffusionAndMessenger</Rate>
+            <Initial>PFAS_Outside_init_uM</Initial>
+          </OdeEquation>
+        </CompartmentSubDomain>
+        <Version Name="Application1_generated" KeyValue="276682120" BranchId="276565779" Archived="0" Date="01-Oct-2024 01:30:03" FromVersionable="false">
+          <Owner Name="dglVcell" Identifier="202231687" />
+          <GroupAccess Type="1" />
+        </Version>
+      </MathDescription>
+      <Simulation Name="Simulation0">
+        <SolverTaskDescription TaskType="Unsteady" UseSymbolicJacobian="false" Solver="Combined Stiff Solver (IDA/CVODE)">
+          <TimeBound StartTime="0.0" EndTime="1000.0" />
+          <TimeStep DefaultTime="0.1" MinTime="1.0E-8" MaxTime="1.0" />
+          <ErrorTolerance Absolut="1.0E-9" Relative="1.0E-9" />
+          <OutputOptions KeepEvery="1" KeepAtMost="1000" />
+          <NumberProcessors>1</NumberProcessors>
+        </SolverTaskDescription>
+        <MathOverrides>
+          <Constant Name="PFAS_Inside_init_uM" ConstantArraySpec="1000">"1.0E-4", "0.01", "1.0", "0.0"</Constant>
+        </MathOverrides>
+        <Version Name="Simulation0" KeyValue="276682184" BranchId="276565942" Archived="0" Date="01-Oct-2024 01:30:04" FromVersionable="false">
+          <Owner Name="dglVcell" Identifier="202231687" />
+          <GroupAccess Type="1" />
+        </Version>
+      </Simulation>
+      <Simulation Name="steady-state">
+        <SolverTaskDescription TaskType="Unsteady" UseSymbolicJacobian="false" Solver="Combined Stiff Solver (IDA/CVODE)">
+          <TimeBound StartTime="0.0" EndTime="1000000.0" />
+          <TimeStep DefaultTime="0.1" MinTime="1.0E-8" MaxTime="1.0" />
+          <ErrorTolerance Absolut="1.0E-9" Relative="1.0E-9" />
+          <OutputOptions KeepEvery="1" KeepAtMost="1000" />
+          <NumberProcessors>1</NumberProcessors>
+        </SolverTaskDescription>
+        <MathOverrides>
+          <Constant Name="PFAS_Inside_init_uM" ConstantArraySpec="1000">"1.0E-6", "1.0E-4", "0.01", "1.0", "0.0"</Constant>
+          <Constant Name="Syn_Tran_init_uM">200.0</Constant>
+        </MathOverrides>
+        <Version Name="steady-state" KeyValue="276682186" BranchId="276566158" Archived="0" Date="01-Oct-2024 01:30:04" FromVersionable="false">
+          <Owner Name="dglVcell" Identifier="202231687" />
+          <GroupAccess Type="1" />
+          <ParentSimRef KeyValue="276681705" />
+        </Version>
+      </Simulation>
+      <Version Name="Application1" KeyValue="276695257" BranchId="276565891" Archived="0" Date="01-Oct-2024 05:45:14" FromVersionable="false">
+        <Owner Name="dglVcell" Identifier="202231687" />
+        <GroupAccess Type="1" />
+      </Version>
+      <MicroscopeMeasurement Name="fluor">
+        <ConvolutionKernel Type="ProjectionZKernel" />
+      </MicroscopeMeasurement>
+    </SimulationSpec>
+    <SimulationSpec Name="v3" Stochastic="true" UseConcentration="true" RandomizeInitCondition="false" SpringSaLaD="false" RuleBased="false" MassConservationModelReduction="false" InsufficientIterations="false" InsufficientMaxMolecules="false">
+      <NetworkConstraints RbmMaxIteration="1" RbmMaxMoleculesPerSpecies="10" RbmSpeciesLimit="800" RbmReactionsLimit="2500">
+        <MaxStoichiometry MolecularType="PFAS_Outside" Integer="100" />
+        <MaxStoichiometry MolecularType="PFAS_Inside" Integer="100" />
+        <MaxStoichiometry MolecularType="pRMA_Operon" Integer="100" />
+        <MaxStoichiometry MolecularType="PFOA_pRMA_Cplx" Integer="100" />
+        <MaxStoichiometry MolecularType="GFP_gene" Integer="100" />
+        <MaxStoichiometry MolecularType="GFP_mRNA" Integer="100" />
+        <MaxStoichiometry MolecularType="GFP_mRNA_degr" Integer="100" />
+        <MaxStoichiometry MolecularType="SF_GFP" Integer="100" />
+        <MaxStoichiometry MolecularType="SF_GFP_degr" Integer="100" />
+        <MaxStoichiometry MolecularType="SF_GFP_dimer" Integer="100" />
+        <MaxStoichiometry MolecularType="SF_GFP_dimer_degr" Integer="100" />
+        <MaxStoichiometry MolecularType="Syn_Tran_Gene" Integer="100" />
+        <MaxStoichiometry MolecularType="Syn_Tran_mRNA" Integer="100" />
+        <MaxStoichiometry MolecularType="Syn_Tran_mRNA_degr" Integer="100" />
+        <MaxStoichiometry MolecularType="Syn_Tran" Integer="100" />
+        <MaxStoichiometry MolecularType="Syn_Tran_degr" Integer="100" />
+        <MaxStoichiometry MolecularType="Synt_PFAS_cplx" Integer="100" />
+        <MaxStoichiometry MolecularType="pLex_GFP_Gene_cplx" Integer="100" />
+      </NetworkConstraints>
+      <Annotation>(copied from Application0) cloned from 'Application0' owned by user Aryanshah16</Annotation>
+      <Geometry Name="non-spatial5610662" Dimension="0">
+        <Extent X="10.0" Y="10.0" Z="10.0" />
+        <Origin X="0.0" Y="0.0" Z="0.0" />
+        <SubVolume Name="Compartment" Handle="0" Type="Compartmental" KeyValue="276652964" />
+        <Version Name="non-spatial5610662" KeyValue="276652960" BranchId="276652961" Archived="0" Date="30-Sep-2024 14:44:29" FromVersionable="false">
+          <Owner Name="dglVcell" Identifier="202231687" />
+          <GroupAccess Type="1" />
+        </Version>
+      </Geometry>
+      <GeometryContext>
+        <FeatureMapping Feature="Cell" GeometryClass="Compartment" SubVolume="Compartment" Size="3.5">
+          <BoundariesTypes Xm="Flux" Xp="Flux" Ym="Flux" Yp="Flux" Zm="Flux" Zp="Flux" />
+        </FeatureMapping>
+        <FeatureMapping Feature="Enviroment" GeometryClass="Compartment" SubVolume="Compartment" Size="1000.0">
+          <BoundariesTypes Xm="Flux" Xp="Flux" Ym="Flux" Yp="Flux" Zm="Flux" Zp="Flux" />
+        </FeatureMapping>
+      </GeometryContext>
+      <ReactionContext>
+        <LocalizedCompoundSpec LocalizedCompoundRef="PFAS_Inside" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>4.744396523322074E-4</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="GFP" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="pLex_Operon" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.47443965233220736</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="GFP_mRNA" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="GFP_mRNA_degr" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="GFP_degr" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="Synt_Tran_Gene" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.47443965233220736</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="Syn_Tran_mRNA" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="Syn_Tran_mRNA_degr" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="Syn_Tran" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="Syn_Tran_degr" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="Synt_PFAS_cplx" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="pLex_GFP_Gene_cplx" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="PFAS_Outside" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <ReactionSpec ReactionStepRef="PFAS_DiffusionAndMessenger" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="PFAS_Bind_Syntran" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="make GFP_mRNA" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="Degr_GFP_mRNA" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="Make_SF_GFP" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="SF_GFP_degr" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="Production" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="mRNA_Degr" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="SynTRan_Production" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="Syntran_Degr" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="Syntran_bind_pLex" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="leak" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="degrade_synt_pfas_cplx" ReactionMapping="included" />
+      </ReactionContext>
+      <MathDescription Name="Copy of Application0 1_generated">
+        <Constant Name="_F_">96485.3321</Constant>
+        <Constant Name="_F_nmol_">9.64853321E-5</Constant>
+        <Constant Name="_N_pmol_">6.02214179E11</Constant>
+        <Constant Name="_PI_">3.141592653589793</Constant>
+        <Constant Name="_R_">8314.46261815</Constant>
+        <Constant Name="_T_">300.0</Constant>
+        <Constant Name="GFP_Count_init_uM">0.0</Constant>
+        <Constant Name="GFP_degr_Count_init_uM">0.0</Constant>
+        <Constant Name="GFP_mRNA_Count_init_uM">0.0</Constant>
+        <Constant Name="GFP_mRNA_degr_Count_init_uM">0.0</Constant>
+        <Constant Name="Kf_Degr_GFP_mRNA">3.85E-4</Constant>
+        <Constant Name="Kf_degrade_synt_pfas_cplx">9.62704417444E-6</Constant>
+        <Constant Name="Kf_leak">4.553734E-4</Constant>
+        <Constant Name="Kf_make_GFP_mRNA">0.01821493624</Constant>
+        <Constant Name="Kf_Make_SF_GFP">0.0416</Constant>
+        <Constant Name="Kf_mRNA_Degr">3.85E-4</Constant>
+        <Constant Name="Kf_PFAS_Bind_Syntran">1.0</Constant>
+        <Constant Name="Kf_PFAS_DiffusionAndMessenger">0.001</Constant>
+        <Constant Name="Kf_Production">0.00763650248</Constant>
+        <Constant Name="Kf_SF_GFP_degr">1.83E-5</Constant>
+        <Constant Name="Kf_Syntran_bind_pLex">4.0</Constant>
+        <Constant Name="Kf_Syntran_Degr">9.62704417444E-6</Constant>
+        <Constant Name="Kf_SynTRan_Production">0.00155709342561</Constant>
+        <Constant Name="KMOLE">0.001660538783162726</Constant>
+        <Constant Name="Kr_Degr_GFP_mRNA">0.0</Constant>
+        <Constant Name="Kr_degrade_synt_pfas_cplx">0.0</Constant>
+        <Constant Name="Kr_leak">0.0</Constant>
+        <Constant Name="Kr_make_GFP_mRNA">0.0</Constant>
+        <Constant Name="Kr_Make_SF_GFP">0.0</Constant>
+        <Constant Name="Kr_mRNA_Degr">0.0</Constant>
+        <Constant Name="Kr_PFAS_Bind_Syntran">7.195E-5</Constant>
+        <Constant Name="Kr_PFAS_DiffusionAndMessenger">0.001</Constant>
+        <Constant Name="Kr_Production">0.0</Constant>
+        <Constant Name="Kr_SF_GFP_degr">0.0</Constant>
+        <Constant Name="Kr_Syntran_bind_pLex">1.0</Constant>
+        <Constant Name="Kr_Syntran_Degr">0.0</Constant>
+        <Constant Name="Kr_SynTRan_Production">0.0</Constant>
+        <Constant Name="PFAS_Inside_Count_init_uM">4.744396523322074E-4</Constant>
+        <Constant Name="PFAS_Outside_Count_init_uM">0.0</Constant>
+        <Constant Name="pLex_GFP_Gene_cplx_Count_init_uM">0.0</Constant>
+        <Constant Name="pLex_Operon_Count_init_uM">0.47443965233220736</Constant>
+        <Constant Name="Size_Cell">3.5</Constant>
+        <Constant Name="Size_Enviroment">1000.0</Constant>
+        <Constant Name="Syn_Tran_Count_init_uM">0.0</Constant>
+        <Constant Name="Syn_Tran_degr_Count_init_uM">0.0</Constant>
+        <Constant Name="Syn_Tran_mRNA_Count_init_uM">0.0</Constant>
+        <Constant Name="Syn_Tran_mRNA_degr_Count_init_uM">0.0</Constant>
+        <Constant Name="Synt_PFAS_cplx_Count_init_uM">0.0</Constant>
+        <Constant Name="Synt_Tran_Gene_Count_init_uM">0.47443965233220736</Constant>
+        <Constant Name="UnitFactor_molecules_uM_neg_1_um_neg_3">(1.0 * pow(KMOLE, - 1.0))</Constant>
+        <Constant Name="UnitFactor_uM_um3_molecules_neg_1">(1.0 * pow(KMOLE,1.0))</Constant>
+        <StochasticVolumeVariable Name="GFP_Count" />
+        <StochasticVolumeVariable Name="GFP_degr_Count" />
+        <StochasticVolumeVariable Name="GFP_mRNA_Count" />
+        <StochasticVolumeVariable Name="GFP_mRNA_degr_Count" />
+        <StochasticVolumeVariable Name="PFAS_Inside_Count" />
+        <StochasticVolumeVariable Name="PFAS_Outside_Count" />
+        <StochasticVolumeVariable Name="pLex_GFP_Gene_cplx_Count" />
+        <StochasticVolumeVariable Name="pLex_Operon_Count" />
+        <StochasticVolumeVariable Name="Syn_Tran_Count" />
+        <StochasticVolumeVariable Name="Syn_Tran_degr_Count" />
+        <StochasticVolumeVariable Name="Syn_Tran_mRNA_Count" />
+        <StochasticVolumeVariable Name="Syn_Tran_mRNA_degr_Count" />
+        <StochasticVolumeVariable Name="Synt_PFAS_cplx_Count" />
+        <StochasticVolumeVariable Name="Synt_Tran_Gene_Count" />
+        <Function Name="GFP" Domain="Compartment">((GFP_Count * UnitFactor_uM_um3_molecules_neg_1) / Size_Cell)</Function>
+        <Function Name="GFP_Count_initCount" Domain="Compartment">(Size_Cell * GFP_Count_init_uM * UnitFactor_molecules_uM_neg_1_um_neg_3)</Function>
+        <Function Name="GFP_degr" Domain="Compartment">((GFP_degr_Count * UnitFactor_uM_um3_molecules_neg_1) / Size_Cell)</Function>
+        <Function Name="GFP_degr_Count_initCount" Domain="Compartment">(Size_Cell * GFP_degr_Count_init_uM * UnitFactor_molecules_uM_neg_1_um_neg_3)</Function>
+        <Function Name="GFP_mRNA" Domain="Compartment">((GFP_mRNA_Count * UnitFactor_uM_um3_molecules_neg_1) / Size_Cell)</Function>
+        <Function Name="GFP_mRNA_Count_initCount" Domain="Compartment">(Size_Cell * GFP_mRNA_Count_init_uM * UnitFactor_molecules_uM_neg_1_um_neg_3)</Function>
+        <Function Name="GFP_mRNA_degr" Domain="Compartment">((GFP_mRNA_degr_Count * UnitFactor_uM_um3_molecules_neg_1) / Size_Cell)</Function>
+        <Function Name="GFP_mRNA_degr_Count_initCount" Domain="Compartment">(Size_Cell * GFP_mRNA_degr_Count_init_uM * UnitFactor_molecules_uM_neg_1_um_neg_3)</Function>
+        <Function Name="J_Degr_GFP_mRNA" Domain="Compartment">((Kf_Degr_GFP_mRNA * GFP_mRNA) - (Kr_Degr_GFP_mRNA * GFP_mRNA_degr))</Function>
+        <Function Name="J_degrade_synt_pfas_cplx" Domain="Compartment">((Kf_degrade_synt_pfas_cplx * Synt_PFAS_cplx) - ((Kr_degrade_synt_pfas_cplx * Syn_Tran_degr) * PFAS_Inside))</Function>
+        <Function Name="J_leak" Domain="Compartment">((Kf_leak * pLex_Operon) - ((Kr_leak * GFP_mRNA) * pLex_Operon))</Function>
+        <Function Name="J_make_GFP_mRNA" Domain="Compartment">((Kf_make_GFP_mRNA * pLex_GFP_Gene_cplx) - ((Kr_make_GFP_mRNA * GFP_mRNA) * pLex_GFP_Gene_cplx))</Function>
+        <Function Name="J_Make_SF_GFP" Domain="Compartment">((Kf_Make_SF_GFP * GFP_mRNA) - ((Kr_Make_SF_GFP * GFP) * GFP_mRNA))</Function>
+        <Function Name="J_mRNA_Degr" Domain="Compartment">((Kf_mRNA_Degr * Syn_Tran_mRNA) - (Kr_mRNA_Degr * Syn_Tran_mRNA_degr))</Function>
+        <Function Name="J_PFAS_Bind_Syntran" Domain="Compartment">(((Kf_PFAS_Bind_Syntran * PFAS_Inside) * Syn_Tran) - (Kr_PFAS_Bind_Syntran * Synt_PFAS_cplx))</Function>
+        <Function Name="J_PFAS_DiffusionAndMessenger" Domain="Compartment">((Kf_PFAS_DiffusionAndMessenger * PFAS_Outside) - (Kr_PFAS_DiffusionAndMessenger * PFAS_Inside))</Function>
+        <Function Name="J_Production" Domain="Compartment">((Kf_Production * Synt_Tran_Gene) - ((Kr_Production * Syn_Tran_mRNA) * Synt_Tran_Gene))</Function>
+        <Function Name="J_SF_GFP_degr" Domain="Compartment">((Kf_SF_GFP_degr * GFP) - (Kr_SF_GFP_degr * GFP_degr))</Function>
+        <Function Name="J_Syntran_bind_pLex" Domain="Compartment">(((Kf_Syntran_bind_pLex * Synt_PFAS_cplx) * pLex_Operon) - (Kr_Syntran_bind_pLex * pLex_GFP_Gene_cplx))</Function>
+        <Function Name="J_Syntran_Degr" Domain="Compartment">((Kf_Syntran_Degr * Syn_Tran) - (Kr_Syntran_Degr * Syn_Tran_degr))</Function>
+        <Function Name="J_SynTRan_Production" Domain="Compartment">((Kf_SynTRan_Production * Syn_Tran_mRNA) - ((Kr_SynTRan_Production * Syn_Tran) * Syn_Tran_mRNA))</Function>
+        <Function Name="P_Degr_GFP_mRNA_probabilityRate" Domain="Compartment">(Kf_Degr_GFP_mRNA * GFP_mRNA_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1)</Function>
+        <Function Name="P_Degr_GFP_mRNA_reverse_probabilityRate" Domain="Compartment">(Kr_Degr_GFP_mRNA * GFP_mRNA_degr_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1)</Function>
+        <Function Name="P_degrade_synt_pfas_cplx_probabilityRate" Domain="Compartment">(Kf_degrade_synt_pfas_cplx * Synt_PFAS_cplx_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1)</Function>
+        <Function Name="P_degrade_synt_pfas_cplx_reverse_probabilityRate" Domain="Compartment">(Kr_degrade_synt_pfas_cplx * Syn_Tran_degr_Count * PFAS_Inside_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1 * UnitFactor_uM_um3_molecules_neg_1 / Size_Cell)</Function>
+        <Function Name="P_leak_probabilityRate" Domain="Compartment">(Kf_leak * pLex_Operon_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1)</Function>
+        <Function Name="P_leak_reverse_probabilityRate" Domain="Compartment">(Kr_leak * GFP_mRNA_Count * pLex_Operon_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1 * UnitFactor_uM_um3_molecules_neg_1 / Size_Cell)</Function>
+        <Function Name="P_make_GFP_mRNA_probabilityRate" Domain="Compartment">(Kf_make_GFP_mRNA * pLex_GFP_Gene_cplx_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1)</Function>
+        <Function Name="P_make_GFP_mRNA_reverse_probabilityRate" Domain="Compartment">(Kr_make_GFP_mRNA * GFP_mRNA_Count * pLex_GFP_Gene_cplx_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1 * UnitFactor_uM_um3_molecules_neg_1 / Size_Cell)</Function>
+        <Function Name="P_Make_SF_GFP_probabilityRate" Domain="Compartment">(Kf_Make_SF_GFP * GFP_mRNA_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1)</Function>
+        <Function Name="P_Make_SF_GFP_reverse_probabilityRate" Domain="Compartment">(Kr_Make_SF_GFP * GFP_Count * GFP_mRNA_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1 * UnitFactor_uM_um3_molecules_neg_1 / Size_Cell)</Function>
+        <Function Name="P_mRNA_Degr_probabilityRate" Domain="Compartment">(Kf_mRNA_Degr * Syn_Tran_mRNA_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1)</Function>
+        <Function Name="P_mRNA_Degr_reverse_probabilityRate" Domain="Compartment">(Kr_mRNA_Degr * Syn_Tran_mRNA_degr_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1)</Function>
+        <Function Name="P_PFAS_Bind_Syntran_probabilityRate" Domain="Compartment">(Kf_PFAS_Bind_Syntran * PFAS_Inside_Count * Syn_Tran_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1 * UnitFactor_uM_um3_molecules_neg_1 / Size_Cell)</Function>
+        <Function Name="P_PFAS_Bind_Syntran_reverse_probabilityRate" Domain="Compartment">(Kr_PFAS_Bind_Syntran * Synt_PFAS_cplx_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1)</Function>
+        <Function Name="P_PFAS_DiffusionAndMessenger_probabilityRate" Domain="Compartment">(Kf_PFAS_DiffusionAndMessenger * PFAS_Outside_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1)</Function>
+        <Function Name="P_PFAS_DiffusionAndMessenger_reverse_probabilityRate" Domain="Compartment">(Kr_PFAS_DiffusionAndMessenger * PFAS_Inside_Count * Size_Enviroment * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1 / Size_Cell)</Function>
+        <Function Name="P_Production_probabilityRate" Domain="Compartment">(Kf_Production * Synt_Tran_Gene_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1)</Function>
+        <Function Name="P_Production_reverse_probabilityRate" Domain="Compartment">(Kr_Production * Syn_Tran_mRNA_Count * Synt_Tran_Gene_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1 * UnitFactor_uM_um3_molecules_neg_1 / Size_Cell)</Function>
+        <Function Name="P_SF_GFP_degr_probabilityRate" Domain="Compartment">(Kf_SF_GFP_degr * GFP_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1)</Function>
+        <Function Name="P_SF_GFP_degr_reverse_probabilityRate" Domain="Compartment">(Kr_SF_GFP_degr * GFP_degr_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1)</Function>
+        <Function Name="P_Syntran_bind_pLex_probabilityRate" Domain="Compartment">(Kf_Syntran_bind_pLex * Synt_PFAS_cplx_Count * pLex_Operon_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1 * UnitFactor_uM_um3_molecules_neg_1 / Size_Cell)</Function>
+        <Function Name="P_Syntran_bind_pLex_reverse_probabilityRate" Domain="Compartment">(Kr_Syntran_bind_pLex * pLex_GFP_Gene_cplx_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1)</Function>
+        <Function Name="P_Syntran_Degr_probabilityRate" Domain="Compartment">(Kf_Syntran_Degr * Syn_Tran_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1)</Function>
+        <Function Name="P_Syntran_Degr_reverse_probabilityRate" Domain="Compartment">(Kr_Syntran_Degr * Syn_Tran_degr_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1)</Function>
+        <Function Name="P_SynTRan_Production_probabilityRate" Domain="Compartment">(Kf_SynTRan_Production * Syn_Tran_mRNA_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1)</Function>
+        <Function Name="P_SynTRan_Production_reverse_probabilityRate" Domain="Compartment">(Kr_SynTRan_Production * Syn_Tran_Count * Syn_Tran_mRNA_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1 * UnitFactor_uM_um3_molecules_neg_1 / Size_Cell)</Function>
+        <Function Name="PFAS_Inside" Domain="Compartment">((PFAS_Inside_Count * UnitFactor_uM_um3_molecules_neg_1) / Size_Cell)</Function>
+        <Function Name="PFAS_Inside_Count_initCount" Domain="Compartment">(Size_Cell * PFAS_Inside_Count_init_uM * UnitFactor_molecules_uM_neg_1_um_neg_3)</Function>
+        <Function Name="PFAS_Outside" Domain="Compartment">((PFAS_Outside_Count * UnitFactor_uM_um3_molecules_neg_1) / Size_Enviroment)</Function>
+        <Function Name="PFAS_Outside_Count_initCount" Domain="Compartment">(Size_Enviroment * PFAS_Outside_Count_init_uM * UnitFactor_molecules_uM_neg_1_um_neg_3)</Function>
+        <Function Name="pLex_GFP_Gene_cplx" Domain="Compartment">((UnitFactor_uM_um3_molecules_neg_1 * pLex_GFP_Gene_cplx_Count) / Size_Cell)</Function>
+        <Function Name="pLex_GFP_Gene_cplx_Count_initCount" Domain="Compartment">(Size_Cell * UnitFactor_molecules_uM_neg_1_um_neg_3 * pLex_GFP_Gene_cplx_Count_init_uM)</Function>
+        <Function Name="pLex_Operon" Domain="Compartment">((UnitFactor_uM_um3_molecules_neg_1 * pLex_Operon_Count) / Size_Cell)</Function>
+        <Function Name="pLex_Operon_Count_initCount" Domain="Compartment">(Size_Cell * UnitFactor_molecules_uM_neg_1_um_neg_3 * pLex_Operon_Count_init_uM)</Function>
+        <Function Name="Syn_Tran" Domain="Compartment">((Syn_Tran_Count * UnitFactor_uM_um3_molecules_neg_1) / Size_Cell)</Function>
+        <Function Name="Syn_Tran_Count_initCount" Domain="Compartment">(Size_Cell * Syn_Tran_Count_init_uM * UnitFactor_molecules_uM_neg_1_um_neg_3)</Function>
+        <Function Name="Syn_Tran_degr" Domain="Compartment">((Syn_Tran_degr_Count * UnitFactor_uM_um3_molecules_neg_1) / Size_Cell)</Function>
+        <Function Name="Syn_Tran_degr_Count_initCount" Domain="Compartment">(Size_Cell * Syn_Tran_degr_Count_init_uM * UnitFactor_molecules_uM_neg_1_um_neg_3)</Function>
+        <Function Name="Syn_Tran_mRNA" Domain="Compartment">((Syn_Tran_mRNA_Count * UnitFactor_uM_um3_molecules_neg_1) / Size_Cell)</Function>
+        <Function Name="Syn_Tran_mRNA_Count_initCount" Domain="Compartment">(Size_Cell * Syn_Tran_mRNA_Count_init_uM * UnitFactor_molecules_uM_neg_1_um_neg_3)</Function>
+        <Function Name="Syn_Tran_mRNA_degr" Domain="Compartment">((Syn_Tran_mRNA_degr_Count * UnitFactor_uM_um3_molecules_neg_1) / Size_Cell)</Function>
+        <Function Name="Syn_Tran_mRNA_degr_Count_initCount" Domain="Compartment">(Size_Cell * Syn_Tran_mRNA_degr_Count_init_uM * UnitFactor_molecules_uM_neg_1_um_neg_3)</Function>
+        <Function Name="Synt_PFAS_cplx" Domain="Compartment">((Synt_PFAS_cplx_Count * UnitFactor_uM_um3_molecules_neg_1) / Size_Cell)</Function>
+        <Function Name="Synt_PFAS_cplx_Count_initCount" Domain="Compartment">(Size_Cell * Synt_PFAS_cplx_Count_init_uM * UnitFactor_molecules_uM_neg_1_um_neg_3)</Function>
+        <Function Name="Synt_Tran_Gene" Domain="Compartment">((Synt_Tran_Gene_Count * UnitFactor_uM_um3_molecules_neg_1) / Size_Cell)</Function>
+        <Function Name="Synt_Tran_Gene_Count_initCount" Domain="Compartment">(Size_Cell * Synt_Tran_Gene_Count_init_uM * UnitFactor_molecules_uM_neg_1_um_neg_3)</Function>
+        <CompartmentSubDomain Name="Compartment">
+          <BoundaryType Boundary="Xm" Type="Value" />
+          <BoundaryType Boundary="Xp" Type="Value" />
+          <BoundaryType Boundary="Ym" Type="Value" />
+          <BoundaryType Boundary="Yp" Type="Value" />
+          <BoundaryType Boundary="Zm" Type="Value" />
+          <BoundaryType Boundary="Zp" Type="Value" />
+          <VariableInitialCount Name="PFAS_Inside_Count">PFAS_Inside_Count_initCount</VariableInitialCount>
+          <VariableInitialCount Name="GFP_Count">GFP_Count_initCount</VariableInitialCount>
+          <VariableInitialCount Name="pLex_Operon_Count">pLex_Operon_Count_initCount</VariableInitialCount>
+          <VariableInitialCount Name="GFP_mRNA_Count">GFP_mRNA_Count_initCount</VariableInitialCount>
+          <VariableInitialCount Name="GFP_mRNA_degr_Count">GFP_mRNA_degr_Count_initCount</VariableInitialCount>
+          <VariableInitialCount Name="GFP_degr_Count">GFP_degr_Count_initCount</VariableInitialCount>
+          <VariableInitialCount Name="Synt_Tran_Gene_Count">Synt_Tran_Gene_Count_initCount</VariableInitialCount>
+          <VariableInitialCount Name="Syn_Tran_mRNA_Count">Syn_Tran_mRNA_Count_initCount</VariableInitialCount>
+          <VariableInitialCount Name="Syn_Tran_mRNA_degr_Count">Syn_Tran_mRNA_degr_Count_initCount</VariableInitialCount>
+          <VariableInitialCount Name="Syn_Tran_Count">Syn_Tran_Count_initCount</VariableInitialCount>
+          <VariableInitialCount Name="Syn_Tran_degr_Count">Syn_Tran_degr_Count_initCount</VariableInitialCount>
+          <VariableInitialCount Name="Synt_PFAS_cplx_Count">Synt_PFAS_cplx_Count_initCount</VariableInitialCount>
+          <VariableInitialCount Name="pLex_GFP_Gene_cplx_Count">pLex_GFP_Gene_cplx_Count_initCount</VariableInitialCount>
+          <VariableInitialCount Name="PFAS_Outside_Count">PFAS_Outside_Count_initCount</VariableInitialCount>
+          <JumpProcess Name="PFAS_DiffusionAndMessenger">
+            <ProbabilityRate>P_PFAS_DiffusionAndMessenger_probabilityRate</ProbabilityRate>
+            <Effect VarName="PFAS_Outside_Count" Operation="inc">-1.0</Effect>
+            <Effect VarName="PFAS_Inside_Count" Operation="inc">1.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="PFAS_DiffusionAndMessenger_reverse">
+            <ProbabilityRate>P_PFAS_DiffusionAndMessenger_reverse_probabilityRate</ProbabilityRate>
+            <Effect VarName="PFAS_Outside_Count" Operation="inc">1.0</Effect>
+            <Effect VarName="PFAS_Inside_Count" Operation="inc">-1.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="PFAS_Bind_Syntran">
+            <ProbabilityRate>P_PFAS_Bind_Syntran_probabilityRate</ProbabilityRate>
+            <Effect VarName="PFAS_Inside_Count" Operation="inc">-1.0</Effect>
+            <Effect VarName="Syn_Tran_Count" Operation="inc">-1.0</Effect>
+            <Effect VarName="Synt_PFAS_cplx_Count" Operation="inc">1.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="PFAS_Bind_Syntran_reverse">
+            <ProbabilityRate>P_PFAS_Bind_Syntran_reverse_probabilityRate</ProbabilityRate>
+            <Effect VarName="PFAS_Inside_Count" Operation="inc">1.0</Effect>
+            <Effect VarName="Syn_Tran_Count" Operation="inc">1.0</Effect>
+            <Effect VarName="Synt_PFAS_cplx_Count" Operation="inc">-1.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="make_GFP_mRNA">
+            <ProbabilityRate>P_make_GFP_mRNA_probabilityRate</ProbabilityRate>
+            <Effect VarName="GFP_mRNA_Count" Operation="inc">1.0</Effect>
+            <Effect VarName="pLex_GFP_Gene_cplx_Count" Operation="inc">0.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="make_GFP_mRNA_reverse">
+            <ProbabilityRate>P_make_GFP_mRNA_reverse_probabilityRate</ProbabilityRate>
+            <Effect VarName="GFP_mRNA_Count" Operation="inc">-1.0</Effect>
+            <Effect VarName="pLex_GFP_Gene_cplx_Count" Operation="inc">0.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="Degr_GFP_mRNA">
+            <ProbabilityRate>P_Degr_GFP_mRNA_probabilityRate</ProbabilityRate>
+            <Effect VarName="GFP_mRNA_Count" Operation="inc">-1.0</Effect>
+            <Effect VarName="GFP_mRNA_degr_Count" Operation="inc">1.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="Degr_GFP_mRNA_reverse">
+            <ProbabilityRate>P_Degr_GFP_mRNA_reverse_probabilityRate</ProbabilityRate>
+            <Effect VarName="GFP_mRNA_Count" Operation="inc">1.0</Effect>
+            <Effect VarName="GFP_mRNA_degr_Count" Operation="inc">-1.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="Make_SF_GFP">
+            <ProbabilityRate>P_Make_SF_GFP_probabilityRate</ProbabilityRate>
+            <Effect VarName="GFP_Count" Operation="inc">1.0</Effect>
+            <Effect VarName="GFP_mRNA_Count" Operation="inc">0.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="Make_SF_GFP_reverse">
+            <ProbabilityRate>P_Make_SF_GFP_reverse_probabilityRate</ProbabilityRate>
+            <Effect VarName="GFP_Count" Operation="inc">-1.0</Effect>
+            <Effect VarName="GFP_mRNA_Count" Operation="inc">0.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="SF_GFP_degr">
+            <ProbabilityRate>P_SF_GFP_degr_probabilityRate</ProbabilityRate>
+            <Effect VarName="GFP_Count" Operation="inc">-1.0</Effect>
+            <Effect VarName="GFP_degr_Count" Operation="inc">1.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="SF_GFP_degr_reverse">
+            <ProbabilityRate>P_SF_GFP_degr_reverse_probabilityRate</ProbabilityRate>
+            <Effect VarName="GFP_Count" Operation="inc">1.0</Effect>
+            <Effect VarName="GFP_degr_Count" Operation="inc">-1.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="Production">
+            <ProbabilityRate>P_Production_probabilityRate</ProbabilityRate>
+            <Effect VarName="Syn_Tran_mRNA_Count" Operation="inc">1.0</Effect>
+            <Effect VarName="Synt_Tran_Gene_Count" Operation="inc">0.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="Production_reverse">
+            <ProbabilityRate>P_Production_reverse_probabilityRate</ProbabilityRate>
+            <Effect VarName="Syn_Tran_mRNA_Count" Operation="inc">-1.0</Effect>
+            <Effect VarName="Synt_Tran_Gene_Count" Operation="inc">0.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="mRNA_Degr">
+            <ProbabilityRate>P_mRNA_Degr_probabilityRate</ProbabilityRate>
+            <Effect VarName="Syn_Tran_mRNA_Count" Operation="inc">-1.0</Effect>
+            <Effect VarName="Syn_Tran_mRNA_degr_Count" Operation="inc">1.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="mRNA_Degr_reverse">
+            <ProbabilityRate>P_mRNA_Degr_reverse_probabilityRate</ProbabilityRate>
+            <Effect VarName="Syn_Tran_mRNA_Count" Operation="inc">1.0</Effect>
+            <Effect VarName="Syn_Tran_mRNA_degr_Count" Operation="inc">-1.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="SynTRan_Production">
+            <ProbabilityRate>P_SynTRan_Production_probabilityRate</ProbabilityRate>
+            <Effect VarName="Syn_Tran_Count" Operation="inc">1.0</Effect>
+            <Effect VarName="Syn_Tran_mRNA_Count" Operation="inc">0.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="SynTRan_Production_reverse">
+            <ProbabilityRate>P_SynTRan_Production_reverse_probabilityRate</ProbabilityRate>
+            <Effect VarName="Syn_Tran_Count" Operation="inc">-1.0</Effect>
+            <Effect VarName="Syn_Tran_mRNA_Count" Operation="inc">0.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="Syntran_Degr">
+            <ProbabilityRate>P_Syntran_Degr_probabilityRate</ProbabilityRate>
+            <Effect VarName="Syn_Tran_Count" Operation="inc">-1.0</Effect>
+            <Effect VarName="Syn_Tran_degr_Count" Operation="inc">1.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="Syntran_Degr_reverse">
+            <ProbabilityRate>P_Syntran_Degr_reverse_probabilityRate</ProbabilityRate>
+            <Effect VarName="Syn_Tran_Count" Operation="inc">1.0</Effect>
+            <Effect VarName="Syn_Tran_degr_Count" Operation="inc">-1.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="Syntran_bind_pLex">
+            <ProbabilityRate>P_Syntran_bind_pLex_probabilityRate</ProbabilityRate>
+            <Effect VarName="Synt_PFAS_cplx_Count" Operation="inc">-1.0</Effect>
+            <Effect VarName="pLex_Operon_Count" Operation="inc">-1.0</Effect>
+            <Effect VarName="pLex_GFP_Gene_cplx_Count" Operation="inc">1.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="Syntran_bind_pLex_reverse">
+            <ProbabilityRate>P_Syntran_bind_pLex_reverse_probabilityRate</ProbabilityRate>
+            <Effect VarName="Synt_PFAS_cplx_Count" Operation="inc">1.0</Effect>
+            <Effect VarName="pLex_Operon_Count" Operation="inc">1.0</Effect>
+            <Effect VarName="pLex_GFP_Gene_cplx_Count" Operation="inc">-1.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="leak">
+            <ProbabilityRate>P_leak_probabilityRate</ProbabilityRate>
+            <Effect VarName="GFP_mRNA_Count" Operation="inc">1.0</Effect>
+            <Effect VarName="pLex_Operon_Count" Operation="inc">0.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="leak_reverse">
+            <ProbabilityRate>P_leak_reverse_probabilityRate</ProbabilityRate>
+            <Effect VarName="GFP_mRNA_Count" Operation="inc">-1.0</Effect>
+            <Effect VarName="pLex_Operon_Count" Operation="inc">0.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="degrade_synt_pfas_cplx">
+            <ProbabilityRate>P_degrade_synt_pfas_cplx_probabilityRate</ProbabilityRate>
+            <Effect VarName="Synt_PFAS_cplx_Count" Operation="inc">-1.0</Effect>
+            <Effect VarName="Syn_Tran_degr_Count" Operation="inc">1.0</Effect>
+            <Effect VarName="PFAS_Inside_Count" Operation="inc">1.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="degrade_synt_pfas_cplx_reverse">
+            <ProbabilityRate>P_degrade_synt_pfas_cplx_reverse_probabilityRate</ProbabilityRate>
+            <Effect VarName="Synt_PFAS_cplx_Count" Operation="inc">1.0</Effect>
+            <Effect VarName="Syn_Tran_degr_Count" Operation="inc">-1.0</Effect>
+            <Effect VarName="PFAS_Inside_Count" Operation="inc">-1.0</Effect>
+          </JumpProcess>
+        </CompartmentSubDomain>
+        <Version Name="Copy of Application0 1_generated" KeyValue="276667140" BranchId="276652972" Archived="0" Date="30-Sep-2024 19:36:54" FromVersionable="false">
+          <Owner Name="dglVcell" Identifier="202231687" />
+          <GroupAccess Type="1" />
+        </Version>
+      </MathDescription>
+      <Simulation Name="full-scan_1">
+        <SolverTaskDescription TaskType="Unsteady" UseSymbolicJacobian="false" Solver="Gibson (Next Reaction Stochastic Method)">
+          <TimeBound StartTime="0.0" EndTime="6000.0" />
+          <TimeStep DefaultTime="0.1" MinTime="1.0E-8" MaxTime="1.0" />
+          <ErrorTolerance Absolut="1.0E-9" Relative="1.0E-8" />
+          <StochSimOptions UseCustomSeed="false" NumberOfTrial="1" Histogram="false" />
+          <OutputOptions OutputTimeStep="1.0" />
+          <NumberProcessors>1</NumberProcessors>
+        </SolverTaskDescription>
+        <MathOverrides>
+          <Constant Name="PFAS_Outside_Count_init_uM" ConstantArraySpec="1000">"1.0E-6", "1.0E-5", "1.0E-4", "0.001", "0.01", "0.0"</Constant>
+          <Constant Name="PFAS_Inside_Count_init_uM">0.0</Constant>
+          <Constant Name="Kf_leak" ConstantArraySpec="1000">"0.0", "0.00136612021858"</Constant>
+        </MathOverrides>
+        <Version Name="full-scan_1" KeyValue="276667407" BranchId="276653250" Archived="0" Date="30-Sep-2024 19:36:55" FromVersionable="false">
+          <Owner Name="dglVcell" Identifier="202231687" />
+          <GroupAccess Type="1" />
+        </Version>
+      </Simulation>
+      <Simulation Name="steadyState">
+        <SolverTaskDescription TaskType="Unsteady" UseSymbolicJacobian="false" Solver="Gibson (Next Reaction Stochastic Method)">
+          <TimeBound StartTime="0.0" EndTime="6000.0" />
+          <TimeStep DefaultTime="0.1" MinTime="1.0E-8" MaxTime="1.0" />
+          <ErrorTolerance Absolut="1.0E-9" Relative="1.0E-8" />
+          <StochSimOptions UseCustomSeed="false" NumberOfTrial="1" Histogram="false" />
+          <OutputOptions OutputTimeStep="1.0" />
+          <NumberProcessors>1</NumberProcessors>
+        </SolverTaskDescription>
+        <MathOverrides>
+          <Constant Name="PFAS_Outside_Count_init_uM" ConstantArraySpec="1000">"1.0E-6", "1.0E-5", "1.0E-4", "0.001", "0.01", "0.0"</Constant>
+          <Constant Name="PFAS_Inside_Count_init_uM">0.0</Constant>
+          <Constant Name="Kf_leak" ConstantArraySpec="1000">"0.0", "0.00136612021858"</Constant>
+          <Constant Name="Syn_Tran_mRNA_Count_init_uM" ConstantArraySpec="1000">"0.0", "9.410544367907912"</Constant>
+          <Constant Name="Syn_Tran_Count_init_uM" ConstantArraySpec="1000">"0.0", "1500.872060976102"</Constant>
+        </MathOverrides>
+        <Version Name="steadyState" KeyValue="276682509" BranchId="276682189" Archived="0" Date="01-Oct-2024 01:34:32" FromVersionable="false">
+          <Owner Name="dglVcell" Identifier="202231687" />
+          <GroupAccess Type="1" />
+        </Version>
+      </Simulation>
+      <Version Name="v3" KeyValue="276695288" BranchId="276653151" Archived="0" Date="01-Oct-2024 05:45:14" FromVersionable="false">
+        <Owner Name="dglVcell" Identifier="202231687" />
+        <GroupAccess Type="1" />
+        <Annotation>(copied from Application0) cloned from 'Application0' owned by user Aryanshah16</Annotation>
+      </Version>
+      <MicroscopeMeasurement Name="fluor">
+        <ConvolutionKernel Type="ProjectionZKernel" />
+      </MicroscopeMeasurement>
+    </SimulationSpec>
+    <SimulationSpec Name="smallerCell" Stochastic="true" UseConcentration="true" RandomizeInitCondition="false" SpringSaLaD="false" RuleBased="false" MassConservationModelReduction="false" InsufficientIterations="false" InsufficientMaxMolecules="false">
+      <NetworkConstraints RbmMaxIteration="1" RbmMaxMoleculesPerSpecies="10" RbmSpeciesLimit="800" RbmReactionsLimit="2500">
+        <MaxStoichiometry MolecularType="PFAS_Outside" Integer="100" />
+        <MaxStoichiometry MolecularType="PFAS_Inside" Integer="100" />
+        <MaxStoichiometry MolecularType="pRMA_Operon" Integer="100" />
+        <MaxStoichiometry MolecularType="PFOA_pRMA_Cplx" Integer="100" />
+        <MaxStoichiometry MolecularType="GFP_gene" Integer="100" />
+        <MaxStoichiometry MolecularType="GFP_mRNA" Integer="100" />
+        <MaxStoichiometry MolecularType="GFP_mRNA_degr" Integer="100" />
+        <MaxStoichiometry MolecularType="SF_GFP" Integer="100" />
+        <MaxStoichiometry MolecularType="SF_GFP_degr" Integer="100" />
+        <MaxStoichiometry MolecularType="SF_GFP_dimer" Integer="100" />
+        <MaxStoichiometry MolecularType="SF_GFP_dimer_degr" Integer="100" />
+        <MaxStoichiometry MolecularType="Syn_Tran_Gene" Integer="100" />
+        <MaxStoichiometry MolecularType="Syn_Tran_mRNA" Integer="100" />
+        <MaxStoichiometry MolecularType="Syn_Tran_mRNA_degr" Integer="100" />
+        <MaxStoichiometry MolecularType="Syn_Tran" Integer="100" />
+        <MaxStoichiometry MolecularType="Syn_Tran_degr" Integer="100" />
+        <MaxStoichiometry MolecularType="Synt_PFAS_cplx" Integer="100" />
+        <MaxStoichiometry MolecularType="pLex_GFP_Gene_cplx" Integer="100" />
+      </NetworkConstraints>
+      <Annotation>(copied from v3) (copied from Application0) cloned from 'Application0' owned by user Aryanshah16</Annotation>
+      <Geometry Name="non-spatial1178610736" Dimension="0">
+        <Extent X="10.0" Y="10.0" Z="10.0" />
+        <Origin X="0.0" Y="0.0" Z="0.0" />
+        <SubVolume Name="Compartment" Handle="0" Type="Compartmental" KeyValue="276689031" />
+        <Version Name="non-spatial1178610736" KeyValue="276689027" BranchId="276689028" Archived="0" Date="01-Oct-2024 03:36:12" FromVersionable="false">
+          <Owner Name="dglVcell" Identifier="202231687" />
+          <GroupAccess Type="1" />
+        </Version>
+      </Geometry>
+      <GeometryContext>
+        <FeatureMapping Feature="Cell" GeometryClass="Compartment" SubVolume="Compartment" Size="1.0">
+          <BoundariesTypes Xm="Flux" Xp="Flux" Ym="Flux" Yp="Flux" Zm="Flux" Zp="Flux" />
+        </FeatureMapping>
+        <FeatureMapping Feature="Enviroment" GeometryClass="Compartment" SubVolume="Compartment" Size="1000.0">
+          <BoundariesTypes Xm="Flux" Xp="Flux" Ym="Flux" Yp="Flux" Zm="Flux" Zp="Flux" />
+        </FeatureMapping>
+      </GeometryContext>
+      <ReactionContext>
+        <LocalizedCompoundSpec LocalizedCompoundRef="PFAS_Inside" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>4.744396523322074E-4</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="GFP" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="pLex_Operon" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.47443965233220736</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="GFP_mRNA" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="GFP_mRNA_degr" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="GFP_degr" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="Synt_Tran_Gene" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.47443965233220736</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="Syn_Tran_mRNA" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="Syn_Tran_mRNA_degr" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="Syn_Tran" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="Syn_Tran_degr" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="Synt_PFAS_cplx" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="pLex_GFP_Gene_cplx" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="PFAS_Outside" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <ReactionSpec ReactionStepRef="PFAS_DiffusionAndMessenger" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="PFAS_Bind_Syntran" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="make GFP_mRNA" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="Degr_GFP_mRNA" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="Make_SF_GFP" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="SF_GFP_degr" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="Production" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="mRNA_Degr" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="SynTRan_Production" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="Syntran_Degr" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="Syntran_bind_pLex" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="leak" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="degrade_synt_pfas_cplx" ReactionMapping="included" />
+      </ReactionContext>
+      <MathDescription Name="Copy of v3_generated">
+        <Constant Name="_F_">96485.3321</Constant>
+        <Constant Name="_F_nmol_">9.64853321E-5</Constant>
+        <Constant Name="_N_pmol_">6.02214179E11</Constant>
+        <Constant Name="_PI_">3.141592653589793</Constant>
+        <Constant Name="_R_">8314.46261815</Constant>
+        <Constant Name="_T_">300.0</Constant>
+        <Constant Name="GFP_Count_init_uM">0.0</Constant>
+        <Constant Name="GFP_degr_Count_init_uM">0.0</Constant>
+        <Constant Name="GFP_mRNA_Count_init_uM">0.0</Constant>
+        <Constant Name="GFP_mRNA_degr_Count_init_uM">0.0</Constant>
+        <Constant Name="Kf_Degr_GFP_mRNA">3.85E-4</Constant>
+        <Constant Name="Kf_degrade_synt_pfas_cplx">9.62704417444E-6</Constant>
+        <Constant Name="Kf_leak">4.553734E-4</Constant>
+        <Constant Name="Kf_make_GFP_mRNA">0.01821493624</Constant>
+        <Constant Name="Kf_Make_SF_GFP">0.0416</Constant>
+        <Constant Name="Kf_mRNA_Degr">3.85E-4</Constant>
+        <Constant Name="Kf_PFAS_Bind_Syntran">1.0</Constant>
+        <Constant Name="Kf_PFAS_DiffusionAndMessenger">0.001</Constant>
+        <Constant Name="Kf_Production">0.00763650248</Constant>
+        <Constant Name="Kf_SF_GFP_degr">1.83E-5</Constant>
+        <Constant Name="Kf_Syntran_bind_pLex">4.0</Constant>
+        <Constant Name="Kf_Syntran_Degr">9.62704417444E-6</Constant>
+        <Constant Name="Kf_SynTRan_Production">0.00155709342561</Constant>
+        <Constant Name="KMOLE">0.001660538783162726</Constant>
+        <Constant Name="Kr_Degr_GFP_mRNA">0.0</Constant>
+        <Constant Name="Kr_degrade_synt_pfas_cplx">0.0</Constant>
+        <Constant Name="Kr_leak">0.0</Constant>
+        <Constant Name="Kr_make_GFP_mRNA">0.0</Constant>
+        <Constant Name="Kr_Make_SF_GFP">0.0</Constant>
+        <Constant Name="Kr_mRNA_Degr">0.0</Constant>
+        <Constant Name="Kr_PFAS_Bind_Syntran">7.195E-5</Constant>
+        <Constant Name="Kr_PFAS_DiffusionAndMessenger">0.001</Constant>
+        <Constant Name="Kr_Production">0.0</Constant>
+        <Constant Name="Kr_SF_GFP_degr">0.0</Constant>
+        <Constant Name="Kr_Syntran_bind_pLex">1.0</Constant>
+        <Constant Name="Kr_Syntran_Degr">0.0</Constant>
+        <Constant Name="Kr_SynTRan_Production">0.0</Constant>
+        <Constant Name="PFAS_Inside_Count_init_uM">4.744396523322074E-4</Constant>
+        <Constant Name="PFAS_Outside_Count_init_uM">0.0</Constant>
+        <Constant Name="pLex_GFP_Gene_cplx_Count_init_uM">0.0</Constant>
+        <Constant Name="pLex_Operon_Count_init_uM">0.47443965233220736</Constant>
+        <Constant Name="Size_Cell">1.0</Constant>
+        <Constant Name="Size_Enviroment">1000.0</Constant>
+        <Constant Name="Syn_Tran_Count_init_uM">0.0</Constant>
+        <Constant Name="Syn_Tran_degr_Count_init_uM">0.0</Constant>
+        <Constant Name="Syn_Tran_mRNA_Count_init_uM">0.0</Constant>
+        <Constant Name="Syn_Tran_mRNA_degr_Count_init_uM">0.0</Constant>
+        <Constant Name="Synt_PFAS_cplx_Count_init_uM">0.0</Constant>
+        <Constant Name="Synt_Tran_Gene_Count_init_uM">0.47443965233220736</Constant>
+        <Constant Name="UnitFactor_molecules_uM_neg_1_um_neg_3">(1.0 * pow(KMOLE, - 1.0))</Constant>
+        <Constant Name="UnitFactor_uM_um3_molecules_neg_1">(1.0 * pow(KMOLE,1.0))</Constant>
+        <StochasticVolumeVariable Name="GFP_Count" />
+        <StochasticVolumeVariable Name="GFP_degr_Count" />
+        <StochasticVolumeVariable Name="GFP_mRNA_Count" />
+        <StochasticVolumeVariable Name="GFP_mRNA_degr_Count" />
+        <StochasticVolumeVariable Name="PFAS_Inside_Count" />
+        <StochasticVolumeVariable Name="PFAS_Outside_Count" />
+        <StochasticVolumeVariable Name="pLex_GFP_Gene_cplx_Count" />
+        <StochasticVolumeVariable Name="pLex_Operon_Count" />
+        <StochasticVolumeVariable Name="Syn_Tran_Count" />
+        <StochasticVolumeVariable Name="Syn_Tran_degr_Count" />
+        <StochasticVolumeVariable Name="Syn_Tran_mRNA_Count" />
+        <StochasticVolumeVariable Name="Syn_Tran_mRNA_degr_Count" />
+        <StochasticVolumeVariable Name="Synt_PFAS_cplx_Count" />
+        <StochasticVolumeVariable Name="Synt_Tran_Gene_Count" />
+        <Function Name="GFP" Domain="Compartment">((GFP_Count * UnitFactor_uM_um3_molecules_neg_1) / Size_Cell)</Function>
+        <Function Name="GFP_Count_initCount" Domain="Compartment">(Size_Cell * GFP_Count_init_uM * UnitFactor_molecules_uM_neg_1_um_neg_3)</Function>
+        <Function Name="GFP_degr" Domain="Compartment">((GFP_degr_Count * UnitFactor_uM_um3_molecules_neg_1) / Size_Cell)</Function>
+        <Function Name="GFP_degr_Count_initCount" Domain="Compartment">(Size_Cell * GFP_degr_Count_init_uM * UnitFactor_molecules_uM_neg_1_um_neg_3)</Function>
+        <Function Name="GFP_mRNA" Domain="Compartment">((GFP_mRNA_Count * UnitFactor_uM_um3_molecules_neg_1) / Size_Cell)</Function>
+        <Function Name="GFP_mRNA_Count_initCount" Domain="Compartment">(Size_Cell * GFP_mRNA_Count_init_uM * UnitFactor_molecules_uM_neg_1_um_neg_3)</Function>
+        <Function Name="GFP_mRNA_degr" Domain="Compartment">((GFP_mRNA_degr_Count * UnitFactor_uM_um3_molecules_neg_1) / Size_Cell)</Function>
+        <Function Name="GFP_mRNA_degr_Count_initCount" Domain="Compartment">(Size_Cell * GFP_mRNA_degr_Count_init_uM * UnitFactor_molecules_uM_neg_1_um_neg_3)</Function>
+        <Function Name="J_Degr_GFP_mRNA" Domain="Compartment">((Kf_Degr_GFP_mRNA * GFP_mRNA) - (Kr_Degr_GFP_mRNA * GFP_mRNA_degr))</Function>
+        <Function Name="J_degrade_synt_pfas_cplx" Domain="Compartment">((Kf_degrade_synt_pfas_cplx * Synt_PFAS_cplx) - ((Kr_degrade_synt_pfas_cplx * Syn_Tran_degr) * PFAS_Inside))</Function>
+        <Function Name="J_leak" Domain="Compartment">((Kf_leak * pLex_Operon) - ((Kr_leak * GFP_mRNA) * pLex_Operon))</Function>
+        <Function Name="J_make_GFP_mRNA" Domain="Compartment">((Kf_make_GFP_mRNA * pLex_GFP_Gene_cplx) - ((Kr_make_GFP_mRNA * GFP_mRNA) * pLex_GFP_Gene_cplx))</Function>
+        <Function Name="J_Make_SF_GFP" Domain="Compartment">((Kf_Make_SF_GFP * GFP_mRNA) - ((Kr_Make_SF_GFP * GFP) * GFP_mRNA))</Function>
+        <Function Name="J_mRNA_Degr" Domain="Compartment">((Kf_mRNA_Degr * Syn_Tran_mRNA) - (Kr_mRNA_Degr * Syn_Tran_mRNA_degr))</Function>
+        <Function Name="J_PFAS_Bind_Syntran" Domain="Compartment">(((Kf_PFAS_Bind_Syntran * PFAS_Inside) * Syn_Tran) - (Kr_PFAS_Bind_Syntran * Synt_PFAS_cplx))</Function>
+        <Function Name="J_PFAS_DiffusionAndMessenger" Domain="Compartment">((Kf_PFAS_DiffusionAndMessenger * PFAS_Outside) - (Kr_PFAS_DiffusionAndMessenger * PFAS_Inside))</Function>
+        <Function Name="J_Production" Domain="Compartment">((Kf_Production * Synt_Tran_Gene) - ((Kr_Production * Syn_Tran_mRNA) * Synt_Tran_Gene))</Function>
+        <Function Name="J_SF_GFP_degr" Domain="Compartment">((Kf_SF_GFP_degr * GFP) - (Kr_SF_GFP_degr * GFP_degr))</Function>
+        <Function Name="J_Syntran_bind_pLex" Domain="Compartment">(((Kf_Syntran_bind_pLex * Synt_PFAS_cplx) * pLex_Operon) - (Kr_Syntran_bind_pLex * pLex_GFP_Gene_cplx))</Function>
+        <Function Name="J_Syntran_Degr" Domain="Compartment">((Kf_Syntran_Degr * Syn_Tran) - (Kr_Syntran_Degr * Syn_Tran_degr))</Function>
+        <Function Name="J_SynTRan_Production" Domain="Compartment">((Kf_SynTRan_Production * Syn_Tran_mRNA) - ((Kr_SynTRan_Production * Syn_Tran) * Syn_Tran_mRNA))</Function>
+        <Function Name="P_Degr_GFP_mRNA_probabilityRate" Domain="Compartment">(Kf_Degr_GFP_mRNA * GFP_mRNA_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1)</Function>
+        <Function Name="P_Degr_GFP_mRNA_reverse_probabilityRate" Domain="Compartment">(Kr_Degr_GFP_mRNA * GFP_mRNA_degr_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1)</Function>
+        <Function Name="P_degrade_synt_pfas_cplx_probabilityRate" Domain="Compartment">(Kf_degrade_synt_pfas_cplx * Synt_PFAS_cplx_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1)</Function>
+        <Function Name="P_degrade_synt_pfas_cplx_reverse_probabilityRate" Domain="Compartment">(Kr_degrade_synt_pfas_cplx * Syn_Tran_degr_Count * PFAS_Inside_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1 * UnitFactor_uM_um3_molecules_neg_1 / Size_Cell)</Function>
+        <Function Name="P_leak_probabilityRate" Domain="Compartment">(Kf_leak * pLex_Operon_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1)</Function>
+        <Function Name="P_leak_reverse_probabilityRate" Domain="Compartment">(Kr_leak * GFP_mRNA_Count * pLex_Operon_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1 * UnitFactor_uM_um3_molecules_neg_1 / Size_Cell)</Function>
+        <Function Name="P_make_GFP_mRNA_probabilityRate" Domain="Compartment">(Kf_make_GFP_mRNA * pLex_GFP_Gene_cplx_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1)</Function>
+        <Function Name="P_make_GFP_mRNA_reverse_probabilityRate" Domain="Compartment">(Kr_make_GFP_mRNA * GFP_mRNA_Count * pLex_GFP_Gene_cplx_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1 * UnitFactor_uM_um3_molecules_neg_1 / Size_Cell)</Function>
+        <Function Name="P_Make_SF_GFP_probabilityRate" Domain="Compartment">(Kf_Make_SF_GFP * GFP_mRNA_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1)</Function>
+        <Function Name="P_Make_SF_GFP_reverse_probabilityRate" Domain="Compartment">(Kr_Make_SF_GFP * GFP_Count * GFP_mRNA_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1 * UnitFactor_uM_um3_molecules_neg_1 / Size_Cell)</Function>
+        <Function Name="P_mRNA_Degr_probabilityRate" Domain="Compartment">(Kf_mRNA_Degr * Syn_Tran_mRNA_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1)</Function>
+        <Function Name="P_mRNA_Degr_reverse_probabilityRate" Domain="Compartment">(Kr_mRNA_Degr * Syn_Tran_mRNA_degr_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1)</Function>
+        <Function Name="P_PFAS_Bind_Syntran_probabilityRate" Domain="Compartment">(Kf_PFAS_Bind_Syntran * PFAS_Inside_Count * Syn_Tran_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1 * UnitFactor_uM_um3_molecules_neg_1 / Size_Cell)</Function>
+        <Function Name="P_PFAS_Bind_Syntran_reverse_probabilityRate" Domain="Compartment">(Kr_PFAS_Bind_Syntran * Synt_PFAS_cplx_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1)</Function>
+        <Function Name="P_PFAS_DiffusionAndMessenger_probabilityRate" Domain="Compartment">(Kf_PFAS_DiffusionAndMessenger * PFAS_Outside_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1)</Function>
+        <Function Name="P_PFAS_DiffusionAndMessenger_reverse_probabilityRate" Domain="Compartment">(Kr_PFAS_DiffusionAndMessenger * PFAS_Inside_Count * Size_Enviroment * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1 / Size_Cell)</Function>
+        <Function Name="P_Production_probabilityRate" Domain="Compartment">(Kf_Production * Synt_Tran_Gene_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1)</Function>
+        <Function Name="P_Production_reverse_probabilityRate" Domain="Compartment">(Kr_Production * Syn_Tran_mRNA_Count * Synt_Tran_Gene_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1 * UnitFactor_uM_um3_molecules_neg_1 / Size_Cell)</Function>
+        <Function Name="P_SF_GFP_degr_probabilityRate" Domain="Compartment">(Kf_SF_GFP_degr * GFP_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1)</Function>
+        <Function Name="P_SF_GFP_degr_reverse_probabilityRate" Domain="Compartment">(Kr_SF_GFP_degr * GFP_degr_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1)</Function>
+        <Function Name="P_Syntran_bind_pLex_probabilityRate" Domain="Compartment">(Kf_Syntran_bind_pLex * Synt_PFAS_cplx_Count * pLex_Operon_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1 * UnitFactor_uM_um3_molecules_neg_1 / Size_Cell)</Function>
+        <Function Name="P_Syntran_bind_pLex_reverse_probabilityRate" Domain="Compartment">(Kr_Syntran_bind_pLex * pLex_GFP_Gene_cplx_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1)</Function>
+        <Function Name="P_Syntran_Degr_probabilityRate" Domain="Compartment">(Kf_Syntran_Degr * Syn_Tran_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1)</Function>
+        <Function Name="P_Syntran_Degr_reverse_probabilityRate" Domain="Compartment">(Kr_Syntran_Degr * Syn_Tran_degr_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1)</Function>
+        <Function Name="P_SynTRan_Production_probabilityRate" Domain="Compartment">(Kf_SynTRan_Production * Syn_Tran_mRNA_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1)</Function>
+        <Function Name="P_SynTRan_Production_reverse_probabilityRate" Domain="Compartment">(Kr_SynTRan_Production * Syn_Tran_Count * Syn_Tran_mRNA_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1 * UnitFactor_uM_um3_molecules_neg_1 / Size_Cell)</Function>
+        <Function Name="PFAS_Inside" Domain="Compartment">((PFAS_Inside_Count * UnitFactor_uM_um3_molecules_neg_1) / Size_Cell)</Function>
+        <Function Name="PFAS_Inside_Count_initCount" Domain="Compartment">(Size_Cell * PFAS_Inside_Count_init_uM * UnitFactor_molecules_uM_neg_1_um_neg_3)</Function>
+        <Function Name="PFAS_Outside" Domain="Compartment">((PFAS_Outside_Count * UnitFactor_uM_um3_molecules_neg_1) / Size_Enviroment)</Function>
+        <Function Name="PFAS_Outside_Count_initCount" Domain="Compartment">(Size_Enviroment * PFAS_Outside_Count_init_uM * UnitFactor_molecules_uM_neg_1_um_neg_3)</Function>
+        <Function Name="pLex_GFP_Gene_cplx" Domain="Compartment">((UnitFactor_uM_um3_molecules_neg_1 * pLex_GFP_Gene_cplx_Count) / Size_Cell)</Function>
+        <Function Name="pLex_GFP_Gene_cplx_Count_initCount" Domain="Compartment">(Size_Cell * UnitFactor_molecules_uM_neg_1_um_neg_3 * pLex_GFP_Gene_cplx_Count_init_uM)</Function>
+        <Function Name="pLex_Operon" Domain="Compartment">((UnitFactor_uM_um3_molecules_neg_1 * pLex_Operon_Count) / Size_Cell)</Function>
+        <Function Name="pLex_Operon_Count_initCount" Domain="Compartment">(Size_Cell * UnitFactor_molecules_uM_neg_1_um_neg_3 * pLex_Operon_Count_init_uM)</Function>
+        <Function Name="Syn_Tran" Domain="Compartment">((Syn_Tran_Count * UnitFactor_uM_um3_molecules_neg_1) / Size_Cell)</Function>
+        <Function Name="Syn_Tran_Count_initCount" Domain="Compartment">(Size_Cell * Syn_Tran_Count_init_uM * UnitFactor_molecules_uM_neg_1_um_neg_3)</Function>
+        <Function Name="Syn_Tran_degr" Domain="Compartment">((Syn_Tran_degr_Count * UnitFactor_uM_um3_molecules_neg_1) / Size_Cell)</Function>
+        <Function Name="Syn_Tran_degr_Count_initCount" Domain="Compartment">(Size_Cell * Syn_Tran_degr_Count_init_uM * UnitFactor_molecules_uM_neg_1_um_neg_3)</Function>
+        <Function Name="Syn_Tran_mRNA" Domain="Compartment">((Syn_Tran_mRNA_Count * UnitFactor_uM_um3_molecules_neg_1) / Size_Cell)</Function>
+        <Function Name="Syn_Tran_mRNA_Count_initCount" Domain="Compartment">(Size_Cell * Syn_Tran_mRNA_Count_init_uM * UnitFactor_molecules_uM_neg_1_um_neg_3)</Function>
+        <Function Name="Syn_Tran_mRNA_degr" Domain="Compartment">((Syn_Tran_mRNA_degr_Count * UnitFactor_uM_um3_molecules_neg_1) / Size_Cell)</Function>
+        <Function Name="Syn_Tran_mRNA_degr_Count_initCount" Domain="Compartment">(Size_Cell * Syn_Tran_mRNA_degr_Count_init_uM * UnitFactor_molecules_uM_neg_1_um_neg_3)</Function>
+        <Function Name="Synt_PFAS_cplx" Domain="Compartment">((Synt_PFAS_cplx_Count * UnitFactor_uM_um3_molecules_neg_1) / Size_Cell)</Function>
+        <Function Name="Synt_PFAS_cplx_Count_initCount" Domain="Compartment">(Size_Cell * Synt_PFAS_cplx_Count_init_uM * UnitFactor_molecules_uM_neg_1_um_neg_3)</Function>
+        <Function Name="Synt_Tran_Gene" Domain="Compartment">((Synt_Tran_Gene_Count * UnitFactor_uM_um3_molecules_neg_1) / Size_Cell)</Function>
+        <Function Name="Synt_Tran_Gene_Count_initCount" Domain="Compartment">(Size_Cell * Synt_Tran_Gene_Count_init_uM * UnitFactor_molecules_uM_neg_1_um_neg_3)</Function>
+        <CompartmentSubDomain Name="Compartment">
+          <BoundaryType Boundary="Xm" Type="Value" />
+          <BoundaryType Boundary="Xp" Type="Value" />
+          <BoundaryType Boundary="Ym" Type="Value" />
+          <BoundaryType Boundary="Yp" Type="Value" />
+          <BoundaryType Boundary="Zm" Type="Value" />
+          <BoundaryType Boundary="Zp" Type="Value" />
+          <VariableInitialCount Name="PFAS_Inside_Count">PFAS_Inside_Count_initCount</VariableInitialCount>
+          <VariableInitialCount Name="GFP_Count">GFP_Count_initCount</VariableInitialCount>
+          <VariableInitialCount Name="pLex_Operon_Count">pLex_Operon_Count_initCount</VariableInitialCount>
+          <VariableInitialCount Name="GFP_mRNA_Count">GFP_mRNA_Count_initCount</VariableInitialCount>
+          <VariableInitialCount Name="GFP_mRNA_degr_Count">GFP_mRNA_degr_Count_initCount</VariableInitialCount>
+          <VariableInitialCount Name="GFP_degr_Count">GFP_degr_Count_initCount</VariableInitialCount>
+          <VariableInitialCount Name="Synt_Tran_Gene_Count">Synt_Tran_Gene_Count_initCount</VariableInitialCount>
+          <VariableInitialCount Name="Syn_Tran_mRNA_Count">Syn_Tran_mRNA_Count_initCount</VariableInitialCount>
+          <VariableInitialCount Name="Syn_Tran_mRNA_degr_Count">Syn_Tran_mRNA_degr_Count_initCount</VariableInitialCount>
+          <VariableInitialCount Name="Syn_Tran_Count">Syn_Tran_Count_initCount</VariableInitialCount>
+          <VariableInitialCount Name="Syn_Tran_degr_Count">Syn_Tran_degr_Count_initCount</VariableInitialCount>
+          <VariableInitialCount Name="Synt_PFAS_cplx_Count">Synt_PFAS_cplx_Count_initCount</VariableInitialCount>
+          <VariableInitialCount Name="pLex_GFP_Gene_cplx_Count">pLex_GFP_Gene_cplx_Count_initCount</VariableInitialCount>
+          <VariableInitialCount Name="PFAS_Outside_Count">PFAS_Outside_Count_initCount</VariableInitialCount>
+          <JumpProcess Name="PFAS_DiffusionAndMessenger">
+            <ProbabilityRate>P_PFAS_DiffusionAndMessenger_probabilityRate</ProbabilityRate>
+            <Effect VarName="PFAS_Outside_Count" Operation="inc">-1.0</Effect>
+            <Effect VarName="PFAS_Inside_Count" Operation="inc">1.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="PFAS_DiffusionAndMessenger_reverse">
+            <ProbabilityRate>P_PFAS_DiffusionAndMessenger_reverse_probabilityRate</ProbabilityRate>
+            <Effect VarName="PFAS_Outside_Count" Operation="inc">1.0</Effect>
+            <Effect VarName="PFAS_Inside_Count" Operation="inc">-1.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="PFAS_Bind_Syntran">
+            <ProbabilityRate>P_PFAS_Bind_Syntran_probabilityRate</ProbabilityRate>
+            <Effect VarName="PFAS_Inside_Count" Operation="inc">-1.0</Effect>
+            <Effect VarName="Syn_Tran_Count" Operation="inc">-1.0</Effect>
+            <Effect VarName="Synt_PFAS_cplx_Count" Operation="inc">1.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="PFAS_Bind_Syntran_reverse">
+            <ProbabilityRate>P_PFAS_Bind_Syntran_reverse_probabilityRate</ProbabilityRate>
+            <Effect VarName="PFAS_Inside_Count" Operation="inc">1.0</Effect>
+            <Effect VarName="Syn_Tran_Count" Operation="inc">1.0</Effect>
+            <Effect VarName="Synt_PFAS_cplx_Count" Operation="inc">-1.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="make_GFP_mRNA">
+            <ProbabilityRate>P_make_GFP_mRNA_probabilityRate</ProbabilityRate>
+            <Effect VarName="GFP_mRNA_Count" Operation="inc">1.0</Effect>
+            <Effect VarName="pLex_GFP_Gene_cplx_Count" Operation="inc">0.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="make_GFP_mRNA_reverse">
+            <ProbabilityRate>P_make_GFP_mRNA_reverse_probabilityRate</ProbabilityRate>
+            <Effect VarName="GFP_mRNA_Count" Operation="inc">-1.0</Effect>
+            <Effect VarName="pLex_GFP_Gene_cplx_Count" Operation="inc">0.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="Degr_GFP_mRNA">
+            <ProbabilityRate>P_Degr_GFP_mRNA_probabilityRate</ProbabilityRate>
+            <Effect VarName="GFP_mRNA_Count" Operation="inc">-1.0</Effect>
+            <Effect VarName="GFP_mRNA_degr_Count" Operation="inc">1.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="Degr_GFP_mRNA_reverse">
+            <ProbabilityRate>P_Degr_GFP_mRNA_reverse_probabilityRate</ProbabilityRate>
+            <Effect VarName="GFP_mRNA_Count" Operation="inc">1.0</Effect>
+            <Effect VarName="GFP_mRNA_degr_Count" Operation="inc">-1.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="Make_SF_GFP">
+            <ProbabilityRate>P_Make_SF_GFP_probabilityRate</ProbabilityRate>
+            <Effect VarName="GFP_Count" Operation="inc">1.0</Effect>
+            <Effect VarName="GFP_mRNA_Count" Operation="inc">0.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="Make_SF_GFP_reverse">
+            <ProbabilityRate>P_Make_SF_GFP_reverse_probabilityRate</ProbabilityRate>
+            <Effect VarName="GFP_Count" Operation="inc">-1.0</Effect>
+            <Effect VarName="GFP_mRNA_Count" Operation="inc">0.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="SF_GFP_degr">
+            <ProbabilityRate>P_SF_GFP_degr_probabilityRate</ProbabilityRate>
+            <Effect VarName="GFP_Count" Operation="inc">-1.0</Effect>
+            <Effect VarName="GFP_degr_Count" Operation="inc">1.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="SF_GFP_degr_reverse">
+            <ProbabilityRate>P_SF_GFP_degr_reverse_probabilityRate</ProbabilityRate>
+            <Effect VarName="GFP_Count" Operation="inc">1.0</Effect>
+            <Effect VarName="GFP_degr_Count" Operation="inc">-1.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="Production">
+            <ProbabilityRate>P_Production_probabilityRate</ProbabilityRate>
+            <Effect VarName="Syn_Tran_mRNA_Count" Operation="inc">1.0</Effect>
+            <Effect VarName="Synt_Tran_Gene_Count" Operation="inc">0.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="Production_reverse">
+            <ProbabilityRate>P_Production_reverse_probabilityRate</ProbabilityRate>
+            <Effect VarName="Syn_Tran_mRNA_Count" Operation="inc">-1.0</Effect>
+            <Effect VarName="Synt_Tran_Gene_Count" Operation="inc">0.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="mRNA_Degr">
+            <ProbabilityRate>P_mRNA_Degr_probabilityRate</ProbabilityRate>
+            <Effect VarName="Syn_Tran_mRNA_Count" Operation="inc">-1.0</Effect>
+            <Effect VarName="Syn_Tran_mRNA_degr_Count" Operation="inc">1.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="mRNA_Degr_reverse">
+            <ProbabilityRate>P_mRNA_Degr_reverse_probabilityRate</ProbabilityRate>
+            <Effect VarName="Syn_Tran_mRNA_Count" Operation="inc">1.0</Effect>
+            <Effect VarName="Syn_Tran_mRNA_degr_Count" Operation="inc">-1.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="SynTRan_Production">
+            <ProbabilityRate>P_SynTRan_Production_probabilityRate</ProbabilityRate>
+            <Effect VarName="Syn_Tran_Count" Operation="inc">1.0</Effect>
+            <Effect VarName="Syn_Tran_mRNA_Count" Operation="inc">0.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="SynTRan_Production_reverse">
+            <ProbabilityRate>P_SynTRan_Production_reverse_probabilityRate</ProbabilityRate>
+            <Effect VarName="Syn_Tran_Count" Operation="inc">-1.0</Effect>
+            <Effect VarName="Syn_Tran_mRNA_Count" Operation="inc">0.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="Syntran_Degr">
+            <ProbabilityRate>P_Syntran_Degr_probabilityRate</ProbabilityRate>
+            <Effect VarName="Syn_Tran_Count" Operation="inc">-1.0</Effect>
+            <Effect VarName="Syn_Tran_degr_Count" Operation="inc">1.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="Syntran_Degr_reverse">
+            <ProbabilityRate>P_Syntran_Degr_reverse_probabilityRate</ProbabilityRate>
+            <Effect VarName="Syn_Tran_Count" Operation="inc">1.0</Effect>
+            <Effect VarName="Syn_Tran_degr_Count" Operation="inc">-1.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="Syntran_bind_pLex">
+            <ProbabilityRate>P_Syntran_bind_pLex_probabilityRate</ProbabilityRate>
+            <Effect VarName="Synt_PFAS_cplx_Count" Operation="inc">-1.0</Effect>
+            <Effect VarName="pLex_Operon_Count" Operation="inc">-1.0</Effect>
+            <Effect VarName="pLex_GFP_Gene_cplx_Count" Operation="inc">1.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="Syntran_bind_pLex_reverse">
+            <ProbabilityRate>P_Syntran_bind_pLex_reverse_probabilityRate</ProbabilityRate>
+            <Effect VarName="Synt_PFAS_cplx_Count" Operation="inc">1.0</Effect>
+            <Effect VarName="pLex_Operon_Count" Operation="inc">1.0</Effect>
+            <Effect VarName="pLex_GFP_Gene_cplx_Count" Operation="inc">-1.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="leak">
+            <ProbabilityRate>P_leak_probabilityRate</ProbabilityRate>
+            <Effect VarName="GFP_mRNA_Count" Operation="inc">1.0</Effect>
+            <Effect VarName="pLex_Operon_Count" Operation="inc">0.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="leak_reverse">
+            <ProbabilityRate>P_leak_reverse_probabilityRate</ProbabilityRate>
+            <Effect VarName="GFP_mRNA_Count" Operation="inc">-1.0</Effect>
+            <Effect VarName="pLex_Operon_Count" Operation="inc">0.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="degrade_synt_pfas_cplx">
+            <ProbabilityRate>P_degrade_synt_pfas_cplx_probabilityRate</ProbabilityRate>
+            <Effect VarName="Synt_PFAS_cplx_Count" Operation="inc">-1.0</Effect>
+            <Effect VarName="Syn_Tran_degr_Count" Operation="inc">1.0</Effect>
+            <Effect VarName="PFAS_Inside_Count" Operation="inc">1.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="degrade_synt_pfas_cplx_reverse">
+            <ProbabilityRate>P_degrade_synt_pfas_cplx_reverse_probabilityRate</ProbabilityRate>
+            <Effect VarName="Synt_PFAS_cplx_Count" Operation="inc">1.0</Effect>
+            <Effect VarName="Syn_Tran_degr_Count" Operation="inc">-1.0</Effect>
+            <Effect VarName="PFAS_Inside_Count" Operation="inc">-1.0</Effect>
+          </JumpProcess>
+        </CompartmentSubDomain>
+        <Version Name="Copy of v3_generated" KeyValue="276689032" BranchId="276689033" Archived="0" Date="01-Oct-2024 03:36:12" FromVersionable="false">
+          <Owner Name="dglVcell" Identifier="202231687" />
+          <GroupAccess Type="1" />
+        </Version>
+      </MathDescription>
+      <Simulation Name="full-scan_1_1">
+        <SolverTaskDescription TaskType="Unsteady" UseSymbolicJacobian="false" Solver="Gibson (Next Reaction Stochastic Method)">
+          <TimeBound StartTime="0.0" EndTime="6000.0" />
+          <TimeStep DefaultTime="0.1" MinTime="1.0E-8" MaxTime="1.0" />
+          <ErrorTolerance Absolut="1.0E-9" Relative="1.0E-8" />
+          <StochSimOptions UseCustomSeed="false" NumberOfTrial="1" Histogram="false" />
+          <OutputOptions OutputTimeStep="1.0" />
+          <NumberProcessors>1</NumberProcessors>
+        </SolverTaskDescription>
+        <MathOverrides>
+          <Constant Name="PFAS_Outside_Count_init_uM" ConstantArraySpec="1000">"1.0E-6", "1.0E-5", "1.0E-4", "0.001", "0.01", "0.0"</Constant>
+          <Constant Name="PFAS_Inside_Count_init_uM">0.0</Constant>
+          <Constant Name="Kf_leak" ConstantArraySpec="1000">"0.0", "0.00136612021858"</Constant>
+        </MathOverrides>
+        <Version Name="full-scan_1_1" KeyValue="276689129" BranchId="276689130" Archived="0" Date="01-Oct-2024 03:36:13" FromVersionable="false">
+          <Owner Name="dglVcell" Identifier="202231687" />
+          <GroupAccess Type="1" />
+        </Version>
+      </Simulation>
+      <Simulation Name="steadyState_1">
+        <SolverTaskDescription TaskType="Unsteady" UseSymbolicJacobian="false" Solver="Gibson (Next Reaction Stochastic Method)">
+          <TimeBound StartTime="0.0" EndTime="6000.0" />
+          <TimeStep DefaultTime="0.1" MinTime="1.0E-8" MaxTime="1.0" />
+          <ErrorTolerance Absolut="1.0E-9" Relative="1.0E-8" />
+          <StochSimOptions UseCustomSeed="false" NumberOfTrial="1" Histogram="false" />
+          <OutputOptions OutputTimeStep="1.0" />
+          <NumberProcessors>1</NumberProcessors>
+        </SolverTaskDescription>
+        <MathOverrides>
+          <Constant Name="PFAS_Outside_Count_init_uM" ConstantArraySpec="1000">"1.0E-6", "1.0E-5", "1.0E-4", "0.001", "0.01", "0.0"</Constant>
+          <Constant Name="PFAS_Inside_Count_init_uM">0.0</Constant>
+          <Constant Name="Syn_Tran_mRNA_Count_init_uM" ConstantArraySpec="1000">"0.0", "9.410544367907912"</Constant>
+          <Constant Name="Kf_leak" ConstantArraySpec="1000">"0.0", "0.00136612021858"</Constant>
+          <Constant Name="Syn_Tran_Count_init_uM" ConstantArraySpec="1000">"0.0", "1500.872060976102"</Constant>
+        </MathOverrides>
+        <Version Name="steadyState_1" KeyValue="276689132" BranchId="276689133" Archived="0" Date="01-Oct-2024 03:36:13" FromVersionable="false">
+          <Owner Name="dglVcell" Identifier="202231687" />
+          <GroupAccess Type="1" />
+        </Version>
+      </Simulation>
+      <Version Name="smallerCell" KeyValue="276695319" BranchId="276689098" Archived="0" Date="01-Oct-2024 05:45:14" FromVersionable="false">
+        <Owner Name="dglVcell" Identifier="202231687" />
+        <GroupAccess Type="1" />
+        <Annotation>(copied from v3) (copied from Application0) cloned from 'Application0' owned by user Aryanshah16</Annotation>
+      </Version>
+      <MicroscopeMeasurement Name="fluor">
+        <ConvolutionKernel Type="ProjectionZKernel" />
+      </MicroscopeMeasurement>
+    </SimulationSpec>
+    <SimulationSpec Name="Copy of smallerCell" Stochastic="false" UseConcentration="true" SpringSaLaD="false" RuleBased="false" MassConservationModelReduction="false" InsufficientIterations="false" InsufficientMaxMolecules="false">
+      <NetworkConstraints RbmMaxIteration="1" RbmMaxMoleculesPerSpecies="10" RbmSpeciesLimit="800" RbmReactionsLimit="2500">
+        <MaxStoichiometry MolecularType="PFAS_Outside" Integer="100" />
+        <MaxStoichiometry MolecularType="PFAS_Inside" Integer="100" />
+        <MaxStoichiometry MolecularType="pRMA_Operon" Integer="100" />
+        <MaxStoichiometry MolecularType="PFOA_pRMA_Cplx" Integer="100" />
+        <MaxStoichiometry MolecularType="GFP_gene" Integer="100" />
+        <MaxStoichiometry MolecularType="GFP_mRNA" Integer="100" />
+        <MaxStoichiometry MolecularType="GFP_mRNA_degr" Integer="100" />
+        <MaxStoichiometry MolecularType="SF_GFP" Integer="100" />
+        <MaxStoichiometry MolecularType="SF_GFP_degr" Integer="100" />
+        <MaxStoichiometry MolecularType="SF_GFP_dimer" Integer="100" />
+        <MaxStoichiometry MolecularType="SF_GFP_dimer_degr" Integer="100" />
+        <MaxStoichiometry MolecularType="Syn_Tran_Gene" Integer="100" />
+        <MaxStoichiometry MolecularType="Syn_Tran_mRNA" Integer="100" />
+        <MaxStoichiometry MolecularType="Syn_Tran_mRNA_degr" Integer="100" />
+        <MaxStoichiometry MolecularType="Syn_Tran" Integer="100" />
+        <MaxStoichiometry MolecularType="Syn_Tran_degr" Integer="100" />
+        <MaxStoichiometry MolecularType="Synt_PFAS_cplx" Integer="100" />
+        <MaxStoichiometry MolecularType="pLex_GFP_Gene_cplx" Integer="100" />
+      </NetworkConstraints>
+      <Annotation>(copied from smallerCell) (copied from v3) (copied from Application0) cloned from 'Application0' owned by user Aryanshah16</Annotation>
+      <Geometry Name="non-spatial10116733" Dimension="0">
+        <Extent X="10.0" Y="10.0" Z="10.0" />
+        <Origin X="0.0" Y="0.0" Z="0.0" />
+        <SubVolume Name="Compartment" Handle="0" Type="Compartmental" KeyValue="276689344" />
+        <Version Name="non-spatial10116733" KeyValue="276689340" BranchId="276689341" Archived="0" Date="01-Oct-2024 03:40:07" FromVersionable="false">
+          <Owner Name="dglVcell" Identifier="202231687" />
+          <GroupAccess Type="1" />
+        </Version>
+      </Geometry>
+      <GeometryContext>
+        <FeatureMapping Feature="Cell" GeometryClass="Compartment" SubVolume="Compartment" Size="1.0">
+          <BoundariesTypes Xm="Flux" Xp="Flux" Ym="Flux" Yp="Flux" Zm="Flux" Zp="Flux" />
+        </FeatureMapping>
+        <FeatureMapping Feature="Enviroment" GeometryClass="Compartment" SubVolume="Compartment" Size="1000.0">
+          <BoundariesTypes Xm="Flux" Xp="Flux" Ym="Flux" Yp="Flux" Zm="Flux" Zp="Flux" />
+        </FeatureMapping>
+      </GeometryContext>
+      <ReactionContext>
+        <LocalizedCompoundSpec LocalizedCompoundRef="PFAS_Inside" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>4.744396523322074E-4</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="GFP" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="pLex_Operon" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.47443965233220736</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="GFP_mRNA" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="GFP_mRNA_degr" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="GFP_degr" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="Synt_Tran_Gene" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.47443965233220736</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="Syn_Tran_mRNA" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="Syn_Tran_mRNA_degr" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="Syn_Tran" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="Syn_Tran_degr" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="Synt_PFAS_cplx" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="pLex_GFP_Gene_cplx" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="PFAS_Outside" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <ReactionSpec ReactionStepRef="PFAS_DiffusionAndMessenger" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="PFAS_Bind_Syntran" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="make GFP_mRNA" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="Degr_GFP_mRNA" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="Make_SF_GFP" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="SF_GFP_degr" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="Production" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="mRNA_Degr" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="SynTRan_Production" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="Syntran_Degr" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="Syntran_bind_pLex" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="leak" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="degrade_synt_pfas_cplx" ReactionMapping="included" />
+      </ReactionContext>
+      <MathDescription Name="Copy of smallerCell_generated">
+        <Constant Name="_F_">96485.3321</Constant>
+        <Constant Name="_F_nmol_">9.64853321E-5</Constant>
+        <Constant Name="_K_GHK_">1.0E-9</Constant>
+        <Constant Name="_N_pmol_">6.02214179E11</Constant>
+        <Constant Name="_PI_">3.141592653589793</Constant>
+        <Constant Name="_R_">8314.46261815</Constant>
+        <Constant Name="_T_">300.0</Constant>
+        <Constant Name="GFP_degr_init_uM">0.0</Constant>
+        <Constant Name="GFP_init_uM">0.0</Constant>
+        <Constant Name="GFP_mRNA_degr_init_uM">0.0</Constant>
+        <Constant Name="GFP_mRNA_init_uM">0.0</Constant>
+        <Constant Name="K_millivolts_per_volt">1000.0</Constant>
+        <Constant Name="Kf_Degr_GFP_mRNA">3.85E-4</Constant>
+        <Constant Name="Kf_degrade_synt_pfas_cplx">9.62704417444E-6</Constant>
+        <Constant Name="Kf_leak">4.553734E-4</Constant>
+        <Constant Name="Kf_make_GFP_mRNA">0.01821493624</Constant>
+        <Constant Name="Kf_Make_SF_GFP">0.0416</Constant>
+        <Constant Name="Kf_mRNA_Degr">3.85E-4</Constant>
+        <Constant Name="Kf_PFAS_Bind_Syntran">1.0</Constant>
+        <Constant Name="Kf_PFAS_DiffusionAndMessenger">0.001</Constant>
+        <Constant Name="Kf_Production">0.00763650248</Constant>
+        <Constant Name="Kf_SF_GFP_degr">1.83E-5</Constant>
+        <Constant Name="Kf_Syntran_bind_pLex">4.0</Constant>
+        <Constant Name="Kf_Syntran_Degr">9.62704417444E-6</Constant>
+        <Constant Name="Kf_SynTRan_Production">0.00155709342561</Constant>
+        <Constant Name="KMOLE">0.001660538783162726</Constant>
+        <Constant Name="Kr_Degr_GFP_mRNA">0.0</Constant>
+        <Constant Name="Kr_degrade_synt_pfas_cplx">0.0</Constant>
+        <Constant Name="Kr_leak">0.0</Constant>
+        <Constant Name="Kr_make_GFP_mRNA">0.0</Constant>
+        <Constant Name="Kr_Make_SF_GFP">0.0</Constant>
+        <Constant Name="Kr_mRNA_Degr">0.0</Constant>
+        <Constant Name="Kr_PFAS_Bind_Syntran">7.195E-5</Constant>
+        <Constant Name="Kr_PFAS_DiffusionAndMessenger">0.001</Constant>
+        <Constant Name="Kr_Production">0.0</Constant>
+        <Constant Name="Kr_SF_GFP_degr">0.0</Constant>
+        <Constant Name="Kr_Syntran_bind_pLex">1.0</Constant>
+        <Constant Name="Kr_Syntran_Degr">0.0</Constant>
+        <Constant Name="Kr_SynTRan_Production">0.0</Constant>
+        <Constant Name="PFAS_Inside_init_uM">4.744396523322074E-4</Constant>
+        <Constant Name="PFAS_Outside_init_uM">0.0</Constant>
+        <Constant Name="pLex_GFP_Gene_cplx_init_uM">0.0</Constant>
+        <Constant Name="pLex_Operon_init_uM">0.47443965233220736</Constant>
+        <Constant Name="Size_Cell">1.0</Constant>
+        <Constant Name="Size_Enviroment">1000.0</Constant>
+        <Constant Name="Syn_Tran_degr_init_uM">0.0</Constant>
+        <Constant Name="Syn_Tran_init_uM">0.0</Constant>
+        <Constant Name="Syn_Tran_mRNA_degr_init_uM">0.0</Constant>
+        <Constant Name="Syn_Tran_mRNA_init_uM">0.0</Constant>
+        <Constant Name="Synt_PFAS_cplx_init_uM">0.0</Constant>
+        <Constant Name="Synt_Tran_Gene_init_uM">0.47443965233220736</Constant>
+        <VolumeVariable Name="GFP" Domain="Compartment" />
+        <VolumeVariable Name="GFP_degr" Domain="Compartment" />
+        <VolumeVariable Name="GFP_mRNA" Domain="Compartment" />
+        <VolumeVariable Name="GFP_mRNA_degr" Domain="Compartment" />
+        <VolumeVariable Name="PFAS_Inside" Domain="Compartment" />
+        <VolumeVariable Name="PFAS_Outside" Domain="Compartment" />
+        <VolumeVariable Name="pLex_GFP_Gene_cplx" Domain="Compartment" />
+        <VolumeVariable Name="pLex_Operon" Domain="Compartment" />
+        <VolumeVariable Name="Syn_Tran" Domain="Compartment" />
+        <VolumeVariable Name="Syn_Tran_degr" Domain="Compartment" />
+        <VolumeVariable Name="Syn_Tran_mRNA" Domain="Compartment" />
+        <VolumeVariable Name="Syn_Tran_mRNA_degr" Domain="Compartment" />
+        <VolumeVariable Name="Synt_PFAS_cplx" Domain="Compartment" />
+        <VolumeVariable Name="Synt_Tran_Gene" Domain="Compartment" />
+        <Function Name="J_Degr_GFP_mRNA" Domain="Compartment">((Kf_Degr_GFP_mRNA * GFP_mRNA) - (Kr_Degr_GFP_mRNA * GFP_mRNA_degr))</Function>
+        <Function Name="J_degrade_synt_pfas_cplx" Domain="Compartment">((Kf_degrade_synt_pfas_cplx * Synt_PFAS_cplx) - ((Kr_degrade_synt_pfas_cplx * Syn_Tran_degr) * PFAS_Inside))</Function>
+        <Function Name="J_leak" Domain="Compartment">((Kf_leak * pLex_Operon) - ((Kr_leak * GFP_mRNA) * pLex_Operon))</Function>
+        <Function Name="J_make_GFP_mRNA" Domain="Compartment">((Kf_make_GFP_mRNA * pLex_GFP_Gene_cplx) - ((Kr_make_GFP_mRNA * GFP_mRNA) * pLex_GFP_Gene_cplx))</Function>
+        <Function Name="J_Make_SF_GFP" Domain="Compartment">((Kf_Make_SF_GFP * GFP_mRNA) - ((Kr_Make_SF_GFP * GFP) * GFP_mRNA))</Function>
+        <Function Name="J_mRNA_Degr" Domain="Compartment">((Kf_mRNA_Degr * Syn_Tran_mRNA) - (Kr_mRNA_Degr * Syn_Tran_mRNA_degr))</Function>
+        <Function Name="J_PFAS_Bind_Syntran" Domain="Compartment">(((Kf_PFAS_Bind_Syntran * PFAS_Inside) * Syn_Tran) - (Kr_PFAS_Bind_Syntran * Synt_PFAS_cplx))</Function>
+        <Function Name="J_PFAS_DiffusionAndMessenger" Domain="Compartment">((Kf_PFAS_DiffusionAndMessenger * PFAS_Outside) - (Kr_PFAS_DiffusionAndMessenger * PFAS_Inside))</Function>
+        <Function Name="J_Production" Domain="Compartment">((Kf_Production * Synt_Tran_Gene) - ((Kr_Production * Syn_Tran_mRNA) * Synt_Tran_Gene))</Function>
+        <Function Name="J_SF_GFP_degr" Domain="Compartment">((Kf_SF_GFP_degr * GFP) - (Kr_SF_GFP_degr * GFP_degr))</Function>
+        <Function Name="J_Syntran_bind_pLex" Domain="Compartment">(((Kf_Syntran_bind_pLex * Synt_PFAS_cplx) * pLex_Operon) - (Kr_Syntran_bind_pLex * pLex_GFP_Gene_cplx))</Function>
+        <Function Name="J_Syntran_Degr" Domain="Compartment">((Kf_Syntran_Degr * Syn_Tran) - (Kr_Syntran_Degr * Syn_Tran_degr))</Function>
+        <Function Name="J_SynTRan_Production" Domain="Compartment">((Kf_SynTRan_Production * Syn_Tran_mRNA) - ((Kr_SynTRan_Production * Syn_Tran) * Syn_Tran_mRNA))</Function>
+        <Function Name="KFlux_Enviroment_Cell" Domain="Compartment">(Size_Enviroment / Size_Cell)</Function>
+        <CompartmentSubDomain Name="Compartment">
+          <BoundaryType Boundary="Xm" Type="Value" />
+          <BoundaryType Boundary="Xp" Type="Value" />
+          <BoundaryType Boundary="Ym" Type="Value" />
+          <BoundaryType Boundary="Yp" Type="Value" />
+          <BoundaryType Boundary="Zm" Type="Value" />
+          <BoundaryType Boundary="Zp" Type="Value" />
+          <OdeEquation Name="PFAS_Inside" SolutionType="Unknown">
+            <Rate>((KFlux_Enviroment_Cell * J_PFAS_DiffusionAndMessenger) - J_PFAS_Bind_Syntran + J_degrade_synt_pfas_cplx)</Rate>
+            <Initial>PFAS_Inside_init_uM</Initial>
+          </OdeEquation>
+          <OdeEquation Name="GFP" SolutionType="Unknown">
+            <Rate>(J_Make_SF_GFP - J_SF_GFP_degr)</Rate>
+            <Initial>GFP_init_uM</Initial>
+          </OdeEquation>
+          <OdeEquation Name="pLex_Operon" SolutionType="Unknown">
+            <Rate>- J_Syntran_bind_pLex</Rate>
+            <Initial>pLex_Operon_init_uM</Initial>
+          </OdeEquation>
+          <OdeEquation Name="GFP_mRNA" SolutionType="Unknown">
+            <Rate>(J_make_GFP_mRNA - J_Degr_GFP_mRNA + J_leak)</Rate>
+            <Initial>GFP_mRNA_init_uM</Initial>
+          </OdeEquation>
+          <OdeEquation Name="GFP_mRNA_degr" SolutionType="Unknown">
+            <Rate>J_Degr_GFP_mRNA</Rate>
+            <Initial>GFP_mRNA_degr_init_uM</Initial>
+          </OdeEquation>
+          <OdeEquation Name="GFP_degr" SolutionType="Unknown">
+            <Rate>J_SF_GFP_degr</Rate>
+            <Initial>GFP_degr_init_uM</Initial>
+          </OdeEquation>
+          <OdeEquation Name="Synt_Tran_Gene" SolutionType="Unknown">
+            <Rate>0.0</Rate>
+            <Initial>Synt_Tran_Gene_init_uM</Initial>
+          </OdeEquation>
+          <OdeEquation Name="Syn_Tran_mRNA" SolutionType="Unknown">
+            <Rate>(J_Production - J_mRNA_Degr)</Rate>
+            <Initial>Syn_Tran_mRNA_init_uM</Initial>
+          </OdeEquation>
+          <OdeEquation Name="Syn_Tran_mRNA_degr" SolutionType="Unknown">
+            <Rate>J_mRNA_Degr</Rate>
+            <Initial>Syn_Tran_mRNA_degr_init_uM</Initial>
+          </OdeEquation>
+          <OdeEquation Name="Syn_Tran" SolutionType="Unknown">
+            <Rate>( - J_PFAS_Bind_Syntran + J_SynTRan_Production - J_Syntran_Degr)</Rate>
+            <Initial>Syn_Tran_init_uM</Initial>
+          </OdeEquation>
+          <OdeEquation Name="Syn_Tran_degr" SolutionType="Unknown">
+            <Rate>(J_Syntran_Degr + J_degrade_synt_pfas_cplx)</Rate>
+            <Initial>Syn_Tran_degr_init_uM</Initial>
+          </OdeEquation>
+          <OdeEquation Name="Synt_PFAS_cplx" SolutionType="Unknown">
+            <Rate>(J_PFAS_Bind_Syntran - J_Syntran_bind_pLex - J_degrade_synt_pfas_cplx)</Rate>
+            <Initial>Synt_PFAS_cplx_init_uM</Initial>
+          </OdeEquation>
+          <OdeEquation Name="pLex_GFP_Gene_cplx" SolutionType="Unknown">
+            <Rate>J_Syntran_bind_pLex</Rate>
+            <Initial>pLex_GFP_Gene_cplx_init_uM</Initial>
+          </OdeEquation>
+          <OdeEquation Name="PFAS_Outside" SolutionType="Unknown">
+            <Rate>- J_PFAS_DiffusionAndMessenger</Rate>
+            <Initial>PFAS_Outside_init_uM</Initial>
+          </OdeEquation>
+        </CompartmentSubDomain>
+        <Version Name="Copy of smallerCell_generated" KeyValue="276689345" BranchId="276689346" Archived="0" Date="01-Oct-2024 03:40:07" FromVersionable="false">
+          <Owner Name="dglVcell" Identifier="202231687" />
+          <GroupAccess Type="1" />
+        </Version>
+      </MathDescription>
+      <Simulation Name="Simulation1">
+        <SolverTaskDescription TaskType="Unsteady" UseSymbolicJacobian="false" Solver="Combined Stiff Solver (IDA/CVODE)">
+          <TimeBound StartTime="0.0" EndTime="1000000.0" />
+          <TimeStep DefaultTime="0.1" MinTime="1.0E-8" MaxTime="1.0" />
+          <ErrorTolerance Absolut="1.0E-9" Relative="1.0E-9" />
+          <OutputOptions KeepEvery="1" KeepAtMost="1000" />
+          <NumberProcessors>1</NumberProcessors>
+        </SolverTaskDescription>
+        <MathOverrides>
+          <Constant Name="Syn_Tran_init_uM">200.0</Constant>
+        </MathOverrides>
+        <Version Name="Simulation1" KeyValue="276689616" BranchId="276689474" Archived="0" Date="01-Oct-2024 03:40:49" FromVersionable="false">
+          <Owner Name="dglVcell" Identifier="202231687" />
+          <GroupAccess Type="1" />
+        </Version>
+      </Simulation>
+      <Version Name="Copy of smallerCell" KeyValue="276695350" BranchId="276689442" Archived="0" Date="01-Oct-2024 05:45:15" FromVersionable="false">
+        <Owner Name="dglVcell" Identifier="202231687" />
+        <GroupAccess Type="1" />
+        <Annotation>(copied from smallerCell) (copied from v3) (copied from Application0) cloned from 'Application0' owned by user Aryanshah16</Annotation>
+      </Version>
+      <MicroscopeMeasurement Name="fluor">
+        <ConvolutionKernel Type="ProjectionZKernel" />
+      </MicroscopeMeasurement>
+    </SimulationSpec>
+    <Version Name="Construct 3_Cycle3_dgl" KeyValue="276695381" BranchId="276500885" Archived="0" Date="01-Oct-2024 05:45:15" FromVersionable="false">
+      <Owner Name="dglVcell" Identifier="202231687" />
+      <GroupAccess Type="0" />
+      <Annotation>cloned from 'Construct 3_Cycle 2' owned by user Aryanshah16
+cloned from 'pLex_GFP Construct' owned by user Pillow123
+cloned from 'pRMA_GFP construct 1 v1.1' owned by user seriously
+cloned from 'pRMA_GFP construct' owned by user Pillow123</Annotation>
+    </Version>
+    <pathwayModel>
+      <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" version="3.0" />
+    </pathwayModel>
+    <relationshipModel>
+      <RMNS version="3.0" />
+    </relationshipModel>
+    <vcmetadata>
+      <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" />
+      <nonrdfAnnotationList>
+        <nonrdfAnnotation vcid="ReactionStep(Make_SF_GFP)">
+          <freetext>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    From the paper https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4162443/ GFP 
+    protein production from gene to immature (?) GFP with active promoter was 
+    150/hr and another 3.6 /hr to get to the mature version I will use 150/hr 
+    = 150/hr *1hr/3600 sec= 0.04166/sec
+  &lt;/body&gt;
+&lt;/html&gt;</freetext>
+        </nonrdfAnnotation>
+        <nonrdfAnnotation vcid="ReactionStep(leak)">
+          <freetext>https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5873372/
+inducibility is 40 times leak, so rate of leak transcription is roughly 1/40 of induced
+0.01821493624/40=0.0004553734</freetext>
+        </nonrdfAnnotation>
+        <nonrdfAnnotation vcid="Structure(Cell)">
+          <freetext>&lt;html&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    
+  &lt;/body&gt;
+&lt;/html&gt;</freetext>
+        </nonrdfAnnotation>
+        <nonrdfAnnotation vcid="ReactionStep(Syntran_bind_pLex)">
+          <freetext>https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5873372/
+In figure 4 our promoter has strength of about 80%. assuming that full strength means all DNA is taken, you could roughly approximate K as 80/20 = 4/1=kf/kr</freetext>
+        </nonrdfAnnotation>
+        <nonrdfAnnotation vcid="ReactionStep(mRNA_Degr)">
+          <freetext>https://genomebiology.biomedcentral.com/articles/10.1186/s13059-022-02811-x 
+    https://www.frontiersin.org/journals/microbiology/articles/10.3389/fmicb.2020.02111/full 
+    https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6660218/
+Half life of mRNA is about 0.5 hour, so k=ln(2)/(0.5*60*60)</freetext>
+        </nonrdfAnnotation>
+        <nonrdfAnnotation vcid="ReactionStep(PFAS_Bind_Syntran)">
+          <freetext>https://www.sciencedirect.com/science/article/pii/S016041201932759X
+
+Kd is 71.95 uM
+kr/kf=71.95*10^-6
+if kf=1
+kr=71.95*10^-6
+https://pubs.acs.org/doi/abs/10.1021/es304030x
+this says kd=107 ??M
+about the same</freetext>
+        </nonrdfAnnotation>
+        <nonrdfAnnotation vcid="ReactionStep(make GFP_mRNA)">
+          <freetext>https://book.bionumbers.org/what-is-faster-transcription-or-translation/ transcription 40-80 nt/sec. gfp + rbs is 732 nt
+40/732=0.0546448087432
+https://bionumbers.hms.harvard.edu/bionumber.aspx?id=111997&amp;ver=5 initiation about 20 genes per minute so 1/3 gene per second
+0.0546448087432/3=0.01821493624</freetext>
+        </nonrdfAnnotation>
+        <nonrdfAnnotation vcid="ReactionStep(SynTRan_Production)">
+          <freetext>https://bionumbers.hms.harvard.edu/bionumber.aspx?s=y&amp;id=100059&amp;ver=26&amp;hlid=56413
+12 for slower rates
+synthetic transcription factor is 1734/3 aa
+(12.0 / (1734.0 / 3.0))
+https://www.nature.com/articles/s41467-023-41176-y at slow growth rates elongation can fall to 9 aa
+so 9 /(1734/3)=0.0155709342561
+also says translation initiation time is about 10 s so 
+.1*0.0155709342561=0.00155709342561</freetext>
+        </nonrdfAnnotation>
+        <nonrdfAnnotation vcid="ReactionStep(degrade_synt_pfas_cplx)">
+          <freetext>same as protein degradation</freetext>
+        </nonrdfAnnotation>
+        <nonrdfAnnotation vcid="ReactionStep(Syntran_Degr)">
+          <freetext>https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6660218/
+protein half lives range from 2-20 hours in e. coli. since our e coli are likely in the stationary phase, their protein turnover rate is much lower and therefore is closer to 20 hours. 
+k=ln(2)/(20*60*60)=9.62704417444E-6</freetext>
+        </nonrdfAnnotation>
+        <nonrdfAnnotation vcid="ReactionStep(SF_GFP_degr)">
+          <freetext>Was halflife of 2 hrs but substituted for 4.15/hr or 0.00115/s From 
+    https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4162443/</freetext>
+        </nonrdfAnnotation>
+        <nonrdfAnnotation vcid="ReactionStep(Degr_GFP_mRNA)">
+          <freetext>https://genomebiology.biomedcentral.com/articles/10.1186/s13059-022-02811-x 
+    https://www.frontiersin.org/journals/microbiology/articles/10.3389/fmicb.2020.02111/full 
+    https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6660218/
+Half life of mRNA is about 0.5 hour, so k=ln(2)/(0.5*60*60)</freetext>
+        </nonrdfAnnotation>
+        <nonrdfAnnotation vcid="ReactionStep(Production)">
+          <freetext>https://book.bionumbers.org/what-is-faster-transcription-or-translation/ transcription 40-80 nt/sec.
+syntrans is 1734 nt 
+rbs is 12
+40/1746=0.0229095074456
+https://bionumbers.hms.harvard.edu/bionumber.aspx?id=111997&amp;ver=5 initiation about 20 genes per minute so 1/3 gene per second
+0.0229095074456/3=0.00763650248187</freetext>
+        </nonrdfAnnotation>
+        <nonrdfAnnotation vcid="ReactionStep(PFAS_DiffusionAndMessenger)">
+          <freetext>https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8913905/
+it is not well known if PFAS interact with proteins for cell transport. in absence of better evidence, we assume it acts by simple diffusion</freetext>
+        </nonrdfAnnotation>
+      </nonrdfAnnotationList>
+      <uriBindingList />
+    </vcmetadata>
+  </BioModel>
+</vcml>
+

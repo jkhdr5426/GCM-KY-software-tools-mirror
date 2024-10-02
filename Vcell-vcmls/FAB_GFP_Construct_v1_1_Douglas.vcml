@@ -1,0 +1,2168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This biomodel was generated in VCML Version Rel_Version_7.6.0_build_27-->
+<vcml xmlns="http://sourceforge.net/projects/vcell/vcml" Version="Rel_Version_7.6.0_build_27">
+  <BioModel Name="FAB_GFP_Construct_v1.1_Douglas">
+    <Annotation>cloned from 'FAB_GFP_Construct v1.1' owned by user Pillow123</Annotation>
+    <Model Name="model">
+      <Annotation>cloned from 'model' owned by user Pillow123</Annotation>
+      <Compound Name="s0" />
+      <Compound Name="s1" />
+      <Compound Name="s3" />
+      <Compound Name="s2" />
+      <Compound Name="s4" />
+      <Compound Name="s5" />
+      <Compound Name="s10" />
+      <Compound Name="s11" />
+      <Compound Name="s6" />
+      <Feature Name="Enviroment" KeyValue="276691576" />
+      <Feature Name="Cell" KeyValue="276691574" />
+      <LocalizedCompound Name="PFAS_Outside" CompoundRef="s0" Structure="Enviroment" OverrideName="true" KeyValue="276691578">
+        <SpeciesPattern>
+          <MolecularTypePattern Index="1">
+            <MolecularType Name="PFAS_Outside" />
+          </MolecularTypePattern>
+        </SpeciesPattern>
+      </LocalizedCompound>
+      <LocalizedCompound Name="PFAS_Inside" CompoundRef="s1" Structure="Cell" OverrideName="true" KeyValue="276691579">
+        <SpeciesPattern>
+          <MolecularTypePattern Index="1">
+            <MolecularType Name="PFAS_Inside" />
+          </MolecularTypePattern>
+        </SpeciesPattern>
+      </LocalizedCompound>
+      <LocalizedCompound Name="PFAS_FAB_GFP" CompoundRef="s3" Structure="Cell" OverrideName="true" KeyValue="276691580">
+        <SpeciesPattern>
+          <MolecularTypePattern Index="1">
+            <MolecularType Name="FAB_PFOA_Cplx" />
+          </MolecularTypePattern>
+        </SpeciesPattern>
+      </LocalizedCompound>
+      <LocalizedCompound Name="FAB_GFP_gene" CompoundRef="s2" Structure="Cell" OverrideName="true" KeyValue="276691581">
+        <SpeciesPattern>
+          <MolecularTypePattern Index="1">
+            <MolecularType Name="FAB_GFP_gene" />
+          </MolecularTypePattern>
+        </SpeciesPattern>
+      </LocalizedCompound>
+      <LocalizedCompound Name="FAB_GFP_mRNA" CompoundRef="s4" Structure="Cell" OverrideName="true" KeyValue="276691582">
+        <SpeciesPattern>
+          <MolecularTypePattern Index="1">
+            <MolecularType Name="FAB_GFP_mRNA" />
+          </MolecularTypePattern>
+        </SpeciesPattern>
+      </LocalizedCompound>
+      <LocalizedCompound Name="FAB_GFP" CompoundRef="s5" Structure="Cell" OverrideName="true" KeyValue="276691583">
+        <SpeciesPattern>
+          <MolecularTypePattern Index="1">
+            <MolecularType Name="FAB_GFP" />
+          </MolecularTypePattern>
+        </SpeciesPattern>
+      </LocalizedCompound>
+      <LocalizedCompound Name="FAB_GFP_mRNA_degr" CompoundRef="s10" Structure="Cell" OverrideName="true" KeyValue="276691584">
+        <SpeciesPattern>
+          <MolecularTypePattern Index="1">
+            <MolecularType Name="FAB_GFP_mRNA_degr" />
+          </MolecularTypePattern>
+        </SpeciesPattern>
+      </LocalizedCompound>
+      <LocalizedCompound Name="FAB_GFP_degr" CompoundRef="s11" Structure="Cell" OverrideName="true" KeyValue="276691585">
+        <SpeciesPattern>
+          <MolecularTypePattern Index="1">
+            <MolecularType Name="FAB_GFP_degr" />
+          </MolecularTypePattern>
+        </SpeciesPattern>
+      </LocalizedCompound>
+      <LocalizedCompound Name="PFAS_FAB_GFP_degr" CompoundRef="s6" Structure="Cell" OverrideName="true" KeyValue="276691586">
+        <SpeciesPattern>
+          <MolecularTypePattern Index="1">
+            <MolecularType Name="FAB_cGFP_degr" />
+          </MolecularTypePattern>
+        </SpeciesPattern>
+      </LocalizedCompound>
+      <SimpleReaction Structure="Enviroment" Name="r0" Reversible="true" FluxOption="MolecularOnly" KeyValue="276691587">
+        <Reactant LocalizedCompoundRef="PFAS_Outside" Stoichiometry="1" KeyValue="276691588" />
+        <Product LocalizedCompoundRef="PFAS_Inside" Stoichiometry="1" KeyValue="276691589" />
+        <Kinetics KineticsType="MassAction">
+          <Parameter Name="J" Role="reaction rate" Unit="uM.s-1">((Kf * PFAS_Outside) - (Kr * PFAS_Inside))</Parameter>
+          <Parameter Name="Kf" Role="forward rate constant" Unit="s-1">0.001</Parameter>
+          <Parameter Name="Kr" Role="reverse rate constant" Unit="s-1">0.001</Parameter>
+        </Kinetics>
+      </SimpleReaction>
+      <SimpleReaction Structure="Cell" Name="r1" Reversible="true" FluxOption="MolecularOnly" KeyValue="276691590">
+        <Reactant LocalizedCompoundRef="PFAS_Inside" Stoichiometry="1" KeyValue="276691591" />
+        <Reactant LocalizedCompoundRef="FAB_GFP" Stoichiometry="1" KeyValue="276691592" />
+        <Product LocalizedCompoundRef="PFAS_FAB_GFP" Stoichiometry="1" KeyValue="276691593" />
+        <Kinetics KineticsType="MassAction">
+          <Parameter Name="J" Role="reaction rate" Unit="uM.s-1">(((Kf * PFAS_Inside) * FAB_GFP) - (Kr * PFAS_FAB_GFP))</Parameter>
+          <Parameter Name="Kf" Role="forward rate constant" Unit="s-1.uM-1">192.4</Parameter>
+          <Parameter Name="Kr" Role="reverse rate constant" Unit="s-1">9.99E-4</Parameter>
+        </Kinetics>
+      </SimpleReaction>
+      <SimpleReaction Structure="Cell" Name="r2" Reversible="true" FluxOption="MolecularOnly" KeyValue="276691594">
+        <Reactant LocalizedCompoundRef="FAB_GFP_gene" Stoichiometry="1" KeyValue="276691595" />
+        <Product LocalizedCompoundRef="FAB_GFP_mRNA" Stoichiometry="1" KeyValue="276691596" />
+        <Product LocalizedCompoundRef="FAB_GFP_gene" Stoichiometry="1" KeyValue="276691597" />
+        <Kinetics KineticsType="MassAction">
+          <Parameter Name="J" Role="reaction rate" Unit="uM.s-1">((Kf * FAB_GFP_gene) - ((Kr * FAB_GFP_mRNA) * FAB_GFP_gene))</Parameter>
+          <Parameter Name="Kf" Role="forward rate constant" Unit="s-1">0.0116652085156</Parameter>
+          <Parameter Name="Kr" Role="reverse rate constant" Unit="s-1.uM-1">0.0</Parameter>
+        </Kinetics>
+      </SimpleReaction>
+      <SimpleReaction Structure="Cell" Name="r4" Reversible="true" FluxOption="MolecularOnly" KeyValue="276691598">
+        <Reactant LocalizedCompoundRef="FAB_GFP_mRNA" Stoichiometry="1" KeyValue="276691599" />
+        <Product LocalizedCompoundRef="FAB_GFP" Stoichiometry="1" KeyValue="276691600" />
+        <Product LocalizedCompoundRef="FAB_GFP_mRNA" Stoichiometry="1" KeyValue="276691601" />
+        <Kinetics KineticsType="MassAction">
+          <Parameter Name="J" Role="reaction rate" Unit="uM.s-1">((Kf * FAB_GFP_mRNA) - ((Kr * FAB_GFP) * FAB_GFP_mRNA))</Parameter>
+          <Parameter Name="Kf" Role="forward rate constant" Unit="s-1">0.00238726790451</Parameter>
+          <Parameter Name="Kr" Role="reverse rate constant" Unit="s-1.uM-1">0.0</Parameter>
+        </Kinetics>
+      </SimpleReaction>
+      <SimpleReaction Structure="Cell" Name="r5" Reversible="true" FluxOption="MolecularOnly" KeyValue="276691602">
+        <Reactant LocalizedCompoundRef="FAB_GFP_mRNA" Stoichiometry="1" KeyValue="276691603" />
+        <Product LocalizedCompoundRef="FAB_GFP_mRNA_degr" Stoichiometry="1" KeyValue="276691604" />
+        <Kinetics KineticsType="MassAction">
+          <Parameter Name="J" Role="reaction rate" Unit="uM.s-1">((Kf * FAB_GFP_mRNA) - (Kr * FAB_GFP_mRNA_degr))</Parameter>
+          <Parameter Name="Kf" Role="forward rate constant" Unit="s-1">3.85E-4</Parameter>
+          <Parameter Name="Kr" Role="reverse rate constant" Unit="s-1">0.0</Parameter>
+        </Kinetics>
+      </SimpleReaction>
+      <SimpleReaction Structure="Cell" Name="r6" Reversible="true" FluxOption="MolecularOnly" KeyValue="276691605">
+        <Reactant LocalizedCompoundRef="FAB_GFP" Stoichiometry="1" KeyValue="276691606" />
+        <Product LocalizedCompoundRef="FAB_GFP_degr" Stoichiometry="1" KeyValue="276691607" />
+        <Kinetics KineticsType="MassAction">
+          <Parameter Name="J" Role="reaction rate" Unit="uM.s-1">((Kf * FAB_GFP) - (Kr * FAB_GFP_degr))</Parameter>
+          <Parameter Name="Kf" Role="forward rate constant" Unit="s-1">9.62704417444E-6</Parameter>
+          <Parameter Name="Kr" Role="reverse rate constant" Unit="s-1">0.0</Parameter>
+        </Kinetics>
+      </SimpleReaction>
+      <SimpleReaction Structure="Cell" Name="r3" Reversible="true" FluxOption="MolecularOnly" KeyValue="276691608">
+        <Reactant LocalizedCompoundRef="PFAS_FAB_GFP" Stoichiometry="1" KeyValue="276691609" />
+        <Product LocalizedCompoundRef="PFAS_FAB_GFP_degr" Stoichiometry="1" KeyValue="276691610" />
+        <Product LocalizedCompoundRef="PFAS_Inside" Stoichiometry="1" KeyValue="276691611" />
+        <Kinetics KineticsType="MassAction">
+          <Parameter Name="J" Role="reaction rate" Unit="uM.s-1">((Kf * PFAS_FAB_GFP) - ((Kr * PFAS_FAB_GFP_degr) * PFAS_Inside))</Parameter>
+          <Parameter Name="Kf" Role="forward rate constant" Unit="s-1">9.62704417444E-6</Parameter>
+          <Parameter Name="Kr" Role="reverse rate constant" Unit="s-1.uM-1">0.0</Parameter>
+        </Kinetics>
+      </SimpleReaction>
+      <RbmModelContainer>
+        <MolecularTypeList>
+          <MolecularType Name="PFAS_Outside" AnchorAll="true" />
+          <MolecularType Name="PFAS_Inside" AnchorAll="true" />
+          <MolecularType Name="FAB_PFOA_Cplx" AnchorAll="true" />
+          <MolecularType Name="cpGFP_gene" AnchorAll="true" />
+          <MolecularType Name="cpGFP_mRNA" AnchorAll="true" />
+          <MolecularType Name="cpGFP_mRNA_degr" AnchorAll="true" />
+          <MolecularType Name="cpGFP_degr" AnchorAll="true" />
+          <MolecularType Name="cpGFP" AnchorAll="true" />
+          <MolecularType Name="FAB_GFP_gene" AnchorAll="true" />
+          <MolecularType Name="FAB_GFP_mRNA" AnchorAll="true" />
+          <MolecularType Name="FAB_GFP" AnchorAll="true" />
+          <MolecularType Name="FAB_GFP_degr" AnchorAll="true" />
+          <MolecularType Name="FAB_GFP_mRNA_degr" AnchorAll="true" />
+          <MolecularType Name="FAB_cGFP_degr" AnchorAll="true" />
+        </MolecularTypeList>
+        <RbmObservableList>
+          <Observable Name="O0_PFAS_Outside_tot" ObservableType="Molecules" Sequence="Multimolecular" LengthEqual="2" LengthGreater="1" Structure="Enviroment">
+            <SpeciesPattern>
+              <MolecularTypePattern Index="1">
+                <MolecularType Name="PFAS_Outside" />
+              </MolecularTypePattern>
+            </SpeciesPattern>
+          </Observable>
+          <Observable Name="O0_PFAS_Inside_tot" ObservableType="Molecules" Sequence="Multimolecular" LengthEqual="2" LengthGreater="1" Structure="Enviroment">
+            <SpeciesPattern>
+              <MolecularTypePattern Index="1">
+                <MolecularType Name="PFAS_Inside" />
+              </MolecularTypePattern>
+            </SpeciesPattern>
+          </Observable>
+          <Observable Name="O0_FAB_PFOA_Cplx_tot" ObservableType="Molecules" Sequence="Multimolecular" LengthEqual="2" LengthGreater="1" Structure="Enviroment">
+            <SpeciesPattern>
+              <MolecularTypePattern Index="1">
+                <MolecularType Name="FAB_PFOA_Cplx" />
+              </MolecularTypePattern>
+            </SpeciesPattern>
+          </Observable>
+          <Observable Name="O0_cpGFP_gene_tot" ObservableType="Molecules" Sequence="Multimolecular" LengthEqual="2" LengthGreater="1" Structure="Enviroment">
+            <SpeciesPattern>
+              <MolecularTypePattern Index="1">
+                <MolecularType Name="cpGFP_gene" />
+              </MolecularTypePattern>
+            </SpeciesPattern>
+          </Observable>
+          <Observable Name="O0_cpGFP_mRNA_tot" ObservableType="Molecules" Sequence="Multimolecular" LengthEqual="2" LengthGreater="1" Structure="Enviroment">
+            <SpeciesPattern>
+              <MolecularTypePattern Index="1">
+                <MolecularType Name="cpGFP_mRNA" />
+              </MolecularTypePattern>
+            </SpeciesPattern>
+          </Observable>
+          <Observable Name="O0_cpGFP_mRNA_degr_tot" ObservableType="Molecules" Sequence="Multimolecular" LengthEqual="2" LengthGreater="1" Structure="Enviroment">
+            <SpeciesPattern>
+              <MolecularTypePattern Index="1">
+                <MolecularType Name="cpGFP_mRNA_degr" />
+              </MolecularTypePattern>
+            </SpeciesPattern>
+          </Observable>
+          <Observable Name="O0_cpGFP_degr_tot" ObservableType="Molecules" Sequence="Multimolecular" LengthEqual="2" LengthGreater="1" Structure="Enviroment">
+            <SpeciesPattern>
+              <MolecularTypePattern Index="1">
+                <MolecularType Name="cpGFP_degr" />
+              </MolecularTypePattern>
+            </SpeciesPattern>
+          </Observable>
+          <Observable Name="O0_cpGFP_tot" ObservableType="Molecules" Sequence="Multimolecular" LengthEqual="2" LengthGreater="1" Structure="Enviroment">
+            <SpeciesPattern>
+              <MolecularTypePattern Index="1">
+                <MolecularType Name="cpGFP" />
+              </MolecularTypePattern>
+            </SpeciesPattern>
+          </Observable>
+          <Observable Name="O0_FAB_GFP_gene_tot" ObservableType="Molecules" Sequence="Multimolecular" LengthEqual="2" LengthGreater="1" Structure="Enviroment">
+            <SpeciesPattern>
+              <MolecularTypePattern Index="1">
+                <MolecularType Name="FAB_GFP_gene" />
+              </MolecularTypePattern>
+            </SpeciesPattern>
+          </Observable>
+          <Observable Name="O0_FAB_GFP_mRNA_tot" ObservableType="Molecules" Sequence="Multimolecular" LengthEqual="2" LengthGreater="1" Structure="Enviroment">
+            <SpeciesPattern>
+              <MolecularTypePattern Index="1">
+                <MolecularType Name="FAB_GFP_mRNA" />
+              </MolecularTypePattern>
+            </SpeciesPattern>
+          </Observable>
+          <Observable Name="O0_FAB_GFP_tot" ObservableType="Molecules" Sequence="Multimolecular" LengthEqual="2" LengthGreater="1" Structure="Enviroment">
+            <SpeciesPattern>
+              <MolecularTypePattern Index="1">
+                <MolecularType Name="FAB_GFP" />
+              </MolecularTypePattern>
+            </SpeciesPattern>
+          </Observable>
+          <Observable Name="O0_FAB_GFP_degr_tot" ObservableType="Molecules" Sequence="Multimolecular" LengthEqual="2" LengthGreater="1" Structure="Enviroment">
+            <SpeciesPattern>
+              <MolecularTypePattern Index="1">
+                <MolecularType Name="FAB_GFP_degr" />
+              </MolecularTypePattern>
+            </SpeciesPattern>
+          </Observable>
+          <Observable Name="O0_FAB_GFP_mRNA_degr_tot" ObservableType="Molecules" Sequence="Multimolecular" LengthEqual="2" LengthGreater="1" Structure="Enviroment">
+            <SpeciesPattern>
+              <MolecularTypePattern Index="1">
+                <MolecularType Name="FAB_GFP_mRNA_degr" />
+              </MolecularTypePattern>
+            </SpeciesPattern>
+          </Observable>
+          <Observable Name="O0_FAB_cGFP_degr_tot" ObservableType="Molecules" Sequence="Multimolecular" LengthEqual="2" LengthGreater="1" Structure="Cell">
+            <SpeciesPattern>
+              <MolecularTypePattern Index="1">
+                <MolecularType Name="FAB_cGFP_degr" />
+              </MolecularTypePattern>
+            </SpeciesPattern>
+          </Observable>
+        </RbmObservableList>
+      </RbmModelContainer>
+      <Diagram Name="c0" Structure="Enviroment">
+        <SimpleReactionShape NodeReferenceModeAttrTag="full" SimpleReactionRef="r2" LocationX="112" LocationY="370" />
+        <LocalizedCompoundShape NodeReferenceModeAttrTag="full" LocalizedCompoundRef="PFAS_FAB_GFP" LocationX="247" LocationY="61" />
+        <LocalizedCompoundShape NodeReferenceModeAttrTag="full" LocalizedCompoundRef="FAB_GFP_degr" LocationX="282" LocationY="144" />
+        <SimpleReactionShape NodeReferenceModeAttrTag="full" SimpleReactionRef="r4" LocationX="40" LocationY="218" />
+        <LocalizedCompoundShape NodeReferenceModeAttrTag="full" LocalizedCompoundRef="PFAS_FAB_GFP_degr" LocationX="357" LocationY="87" />
+        <SimpleReactionShape NodeReferenceModeAttrTag="full" SimpleReactionRef="r0" LocationX="159" LocationY="115" />
+        <LocalizedCompoundShape NodeReferenceModeAttrTag="full" LocalizedCompoundRef="FAB_GFP_mRNA_degr" LocationX="311" LocationY="190" />
+        <LocalizedCompoundShape NodeReferenceModeAttrTag="full" LocalizedCompoundRef="PFAS_Outside" LocationX="75" LocationY="83" />
+        <SimpleReactionShape NodeReferenceModeAttrTag="full" SimpleReactionRef="r3" LocationX="295" LocationY="90" />
+        <SimpleReactionShape NodeReferenceModeAttrTag="full" SimpleReactionRef="r5" LocationX="425" LocationY="258" />
+        <LocalizedCompoundShape NodeReferenceModeAttrTag="full" LocalizedCompoundRef="FAB_GFP" LocationX="24" LocationY="162" />
+        <LocalizedCompoundShape NodeReferenceModeAttrTag="full" LocalizedCompoundRef="FAB_GFP_mRNA" LocationX="162" LocationY="213" />
+        <SimpleReactionShape NodeReferenceModeAttrTag="full" SimpleReactionRef="r6" LocationX="204" LocationY="179" />
+        <LocalizedCompoundShape NodeReferenceModeAttrTag="full" LocalizedCompoundRef="PFAS_Inside" LocationX="31" LocationY="34" />
+        <SimpleReactionShape NodeReferenceModeAttrTag="full" SimpleReactionRef="r1" LocationX="120" LocationY="138" />
+        <LocalizedCompoundShape NodeReferenceModeAttrTag="full" LocalizedCompoundRef="FAB_GFP_gene" LocationX="40" LocationY="319" />
+      </Diagram>
+      <Diagram Name="c1" Structure="Cell">
+        <SimpleReactionShape NodeReferenceModeAttrTag="full" SimpleReactionRef="r2" LocationX="112" LocationY="370" />
+        <LocalizedCompoundShape NodeReferenceModeAttrTag="full" LocalizedCompoundRef="PFAS_FAB_GFP" LocationX="247" LocationY="61" />
+        <LocalizedCompoundShape NodeReferenceModeAttrTag="full" LocalizedCompoundRef="FAB_GFP_degr" LocationX="282" LocationY="144" />
+        <SimpleReactionShape NodeReferenceModeAttrTag="full" SimpleReactionRef="r4" LocationX="40" LocationY="218" />
+        <LocalizedCompoundShape NodeReferenceModeAttrTag="full" LocalizedCompoundRef="PFAS_FAB_GFP_degr" LocationX="357" LocationY="87" />
+        <SimpleReactionShape NodeReferenceModeAttrTag="full" SimpleReactionRef="r0" LocationX="159" LocationY="115" />
+        <LocalizedCompoundShape NodeReferenceModeAttrTag="full" LocalizedCompoundRef="FAB_GFP_mRNA_degr" LocationX="311" LocationY="190" />
+        <LocalizedCompoundShape NodeReferenceModeAttrTag="full" LocalizedCompoundRef="PFAS_Outside" LocationX="75" LocationY="83" />
+        <SimpleReactionShape NodeReferenceModeAttrTag="full" SimpleReactionRef="r3" LocationX="295" LocationY="90" />
+        <SimpleReactionShape NodeReferenceModeAttrTag="full" SimpleReactionRef="r5" LocationX="425" LocationY="258" />
+        <LocalizedCompoundShape NodeReferenceModeAttrTag="full" LocalizedCompoundRef="FAB_GFP" LocationX="24" LocationY="162" />
+        <LocalizedCompoundShape NodeReferenceModeAttrTag="full" LocalizedCompoundRef="FAB_GFP_mRNA" LocationX="162" LocationY="213" />
+        <SimpleReactionShape NodeReferenceModeAttrTag="full" SimpleReactionRef="r6" LocationX="204" LocationY="179" />
+        <LocalizedCompoundShape NodeReferenceModeAttrTag="full" LocalizedCompoundRef="PFAS_Inside" LocationX="31" LocationY="34" />
+        <SimpleReactionShape NodeReferenceModeAttrTag="full" SimpleReactionRef="r1" LocationX="120" LocationY="138" />
+        <LocalizedCompoundShape NodeReferenceModeAttrTag="full" LocalizedCompoundRef="FAB_GFP_gene" LocationX="40" LocationY="319" />
+      </Diagram>
+      <Version Name="model" KeyValue="276691563" BranchId="276487842" Archived="0" Date="01-Oct-2024 04:14:05" FromVersionable="false">
+        <Owner Name="dglVcell" Identifier="202231687" />
+        <GroupAccess Type="1" />
+        <Annotation>cloned from 'model' owned by user Pillow123</Annotation>
+      </Version>
+      <ModelUnitSystem VolumeSubstanceUnit="uM.um3" MembraneSubstanceUnit="molecules" LumpedReactionSubstanceUnit="molecules" VolumeUnit="um3" AreaUnit="um2" LengthUnit="um" TimeUnit="s" />
+    </Model>
+    <SimulationSpec Name="Application0" Stochastic="true" UseConcentration="true" RandomizeInitCondition="false" SpringSaLaD="false" RuleBased="false" MassConservationModelReduction="false" InsufficientIterations="false" InsufficientMaxMolecules="false">
+      <NetworkConstraints RbmMaxIteration="1" RbmMaxMoleculesPerSpecies="10" RbmSpeciesLimit="800" RbmReactionsLimit="2500">
+        <MaxStoichiometry MolecularType="PFAS_Outside" Integer="100" />
+        <MaxStoichiometry MolecularType="PFAS_Inside" Integer="100" />
+        <MaxStoichiometry MolecularType="FAB_PFOA_Cplx" Integer="100" />
+        <MaxStoichiometry MolecularType="cpGFP_gene" Integer="100" />
+        <MaxStoichiometry MolecularType="cpGFP_mRNA" Integer="100" />
+        <MaxStoichiometry MolecularType="cpGFP_mRNA_degr" Integer="100" />
+        <MaxStoichiometry MolecularType="cpGFP_degr" Integer="100" />
+        <MaxStoichiometry MolecularType="cpGFP" Integer="100" />
+        <MaxStoichiometry MolecularType="FAB_GFP_gene" Integer="100" />
+        <MaxStoichiometry MolecularType="FAB_GFP_mRNA" Integer="100" />
+        <MaxStoichiometry MolecularType="FAB_GFP" Integer="100" />
+        <MaxStoichiometry MolecularType="FAB_GFP_degr" Integer="100" />
+        <MaxStoichiometry MolecularType="FAB_GFP_mRNA_degr" Integer="100" />
+        <MaxStoichiometry MolecularType="FAB_cGFP_degr" Integer="100" />
+      </NetworkConstraints>
+      <Annotation>cloned from 'Application0' owned by user Pillow123</Annotation>
+      <Geometry Name="non-spatial1956351447" Dimension="0">
+        <Annotation>cloned from 'non-spatial1956351447' owned by user Pillow123</Annotation>
+        <Extent X="10.0" Y="10.0" Z="10.0" />
+        <Origin X="0.0" Y="0.0" Z="0.0" />
+        <SubVolume Name="Compartment" Handle="0" Type="Compartmental" KeyValue="276487821" />
+        <Version Name="non-spatial1956351447" KeyValue="276487817" BranchId="276487818" Archived="0" Date="27-Sep-2024 19:08:05" FromVersionable="false">
+          <Owner Name="dglVcell" Identifier="202231687" />
+          <GroupAccess Type="1" />
+          <Annotation>cloned from 'non-spatial1956351447' owned by user Pillow123</Annotation>
+        </Version>
+      </Geometry>
+      <GeometryContext>
+        <FeatureMapping Feature="Enviroment" GeometryClass="Compartment" SubVolume="Compartment" Size="1000.0">
+          <BoundariesTypes Xm="Flux" Xp="Flux" Ym="Flux" Yp="Flux" Zm="Flux" Zp="Flux" />
+        </FeatureMapping>
+        <FeatureMapping Feature="Cell" GeometryClass="Compartment" SubVolume="Compartment" Size="3.5">
+          <BoundariesTypes Xm="Flux" Xp="Flux" Ym="Flux" Yp="Flux" Zm="Flux" Zp="Flux" />
+        </FeatureMapping>
+      </GeometryContext>
+      <ReactionContext>
+        <LocalizedCompoundSpec LocalizedCompoundRef="PFAS_Outside" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="PFAS_Inside" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="PFAS_FAB_GFP" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="FAB_GFP_gene" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.47443965233220736</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="FAB_GFP_mRNA" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="FAB_GFP" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="FAB_GFP_mRNA_degr" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="FAB_GFP_degr" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="PFAS_FAB_GFP_degr" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <ReactionSpec ReactionStepRef="r0" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="r1" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="r2" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="r4" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="r5" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="r6" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="r3" ReactionMapping="included" />
+      </ReactionContext>
+      <MathDescription Name="Application0_generated">
+        <Annotation>cloned from 'Application0_generated' owned by user Pillow123</Annotation>
+        <Constant Name="_F_">96485.3321</Constant>
+        <Constant Name="_F_nmol_">9.64853321E-5</Constant>
+        <Constant Name="_N_pmol_">6.02214179E11</Constant>
+        <Constant Name="_PI_">3.141592653589793</Constant>
+        <Constant Name="_R_">8314.46261815</Constant>
+        <Constant Name="_T_">300.0</Constant>
+        <Constant Name="FAB_GFP_Count_init_uM">0.0</Constant>
+        <Constant Name="FAB_GFP_degr_Count_init_uM">0.0</Constant>
+        <Constant Name="FAB_GFP_gene_Count_init_uM">0.47443965233220736</Constant>
+        <Constant Name="FAB_GFP_mRNA_Count_init_uM">0.0</Constant>
+        <Constant Name="FAB_GFP_mRNA_degr_Count_init_uM">0.0</Constant>
+        <Constant Name="Kf_r0">0.001</Constant>
+        <Constant Name="Kf_r1">192.4</Constant>
+        <Constant Name="Kf_r2">0.0116652085156</Constant>
+        <Constant Name="Kf_r3">9.62704417444E-6</Constant>
+        <Constant Name="Kf_r4">0.00238726790451</Constant>
+        <Constant Name="Kf_r5">3.85E-4</Constant>
+        <Constant Name="Kf_r6">9.62704417444E-6</Constant>
+        <Constant Name="KMOLE">0.001660538783162726</Constant>
+        <Constant Name="Kr_r0">0.001</Constant>
+        <Constant Name="Kr_r1">9.99E-4</Constant>
+        <Constant Name="Kr_r2">0.0</Constant>
+        <Constant Name="Kr_r3">0.0</Constant>
+        <Constant Name="Kr_r4">0.0</Constant>
+        <Constant Name="Kr_r5">0.0</Constant>
+        <Constant Name="Kr_r6">0.0</Constant>
+        <Constant Name="PFAS_FAB_GFP_Count_init_uM">0.0</Constant>
+        <Constant Name="PFAS_FAB_GFP_degr_Count_init_uM">0.0</Constant>
+        <Constant Name="PFAS_Inside_Count_init_uM">0.0</Constant>
+        <Constant Name="PFAS_Outside_Count_init_uM">0.0</Constant>
+        <Constant Name="Size_Cell">3.5</Constant>
+        <Constant Name="Size_Enviroment">1000.0</Constant>
+        <Constant Name="UnitFactor_molecules_uM_neg_1_um_neg_3">(1.0 * pow(KMOLE, - 1.0))</Constant>
+        <Constant Name="UnitFactor_uM_um3_molecules_neg_1">(1.0 * pow(KMOLE,1.0))</Constant>
+        <StochasticVolumeVariable Name="FAB_GFP_Count" />
+        <StochasticVolumeVariable Name="FAB_GFP_degr_Count" />
+        <StochasticVolumeVariable Name="FAB_GFP_gene_Count" />
+        <StochasticVolumeVariable Name="FAB_GFP_mRNA_Count" />
+        <StochasticVolumeVariable Name="FAB_GFP_mRNA_degr_Count" />
+        <StochasticVolumeVariable Name="PFAS_FAB_GFP_Count" />
+        <StochasticVolumeVariable Name="PFAS_FAB_GFP_degr_Count" />
+        <StochasticVolumeVariable Name="PFAS_Inside_Count" />
+        <StochasticVolumeVariable Name="PFAS_Outside_Count" />
+        <Function Name="FAB_GFP" Domain="Compartment">((FAB_GFP_Count * UnitFactor_uM_um3_molecules_neg_1) / Size_Cell)</Function>
+        <Function Name="FAB_GFP_Count_initCount" Domain="Compartment">(Size_Cell * FAB_GFP_Count_init_uM * UnitFactor_molecules_uM_neg_1_um_neg_3)</Function>
+        <Function Name="FAB_GFP_degr" Domain="Compartment">((FAB_GFP_degr_Count * UnitFactor_uM_um3_molecules_neg_1) / Size_Cell)</Function>
+        <Function Name="FAB_GFP_degr_Count_initCount" Domain="Compartment">(Size_Cell * FAB_GFP_degr_Count_init_uM * UnitFactor_molecules_uM_neg_1_um_neg_3)</Function>
+        <Function Name="FAB_GFP_gene" Domain="Compartment">((FAB_GFP_gene_Count * UnitFactor_uM_um3_molecules_neg_1) / Size_Cell)</Function>
+        <Function Name="FAB_GFP_gene_Count_initCount" Domain="Compartment">(Size_Cell * FAB_GFP_gene_Count_init_uM * UnitFactor_molecules_uM_neg_1_um_neg_3)</Function>
+        <Function Name="FAB_GFP_mRNA" Domain="Compartment">((FAB_GFP_mRNA_Count * UnitFactor_uM_um3_molecules_neg_1) / Size_Cell)</Function>
+        <Function Name="FAB_GFP_mRNA_Count_initCount" Domain="Compartment">(Size_Cell * FAB_GFP_mRNA_Count_init_uM * UnitFactor_molecules_uM_neg_1_um_neg_3)</Function>
+        <Function Name="FAB_GFP_mRNA_degr" Domain="Compartment">((FAB_GFP_mRNA_degr_Count * UnitFactor_uM_um3_molecules_neg_1) / Size_Cell)</Function>
+        <Function Name="FAB_GFP_mRNA_degr_Count_initCount" Domain="Compartment">(Size_Cell * FAB_GFP_mRNA_degr_Count_init_uM * UnitFactor_molecules_uM_neg_1_um_neg_3)</Function>
+        <Function Name="J_r0" Domain="Compartment">((Kf_r0 * PFAS_Outside) - (Kr_r0 * PFAS_Inside))</Function>
+        <Function Name="J_r1" Domain="Compartment">(((Kf_r1 * PFAS_Inside) * FAB_GFP) - (Kr_r1 * PFAS_FAB_GFP))</Function>
+        <Function Name="J_r2" Domain="Compartment">((Kf_r2 * FAB_GFP_gene) - ((Kr_r2 * FAB_GFP_mRNA) * FAB_GFP_gene))</Function>
+        <Function Name="J_r3" Domain="Compartment">((Kf_r3 * PFAS_FAB_GFP) - ((Kr_r3 * PFAS_FAB_GFP_degr) * PFAS_Inside))</Function>
+        <Function Name="J_r4" Domain="Compartment">((Kf_r4 * FAB_GFP_mRNA) - ((Kr_r4 * FAB_GFP) * FAB_GFP_mRNA))</Function>
+        <Function Name="J_r5" Domain="Compartment">((Kf_r5 * FAB_GFP_mRNA) - (Kr_r5 * FAB_GFP_mRNA_degr))</Function>
+        <Function Name="J_r6" Domain="Compartment">((Kf_r6 * FAB_GFP) - (Kr_r6 * FAB_GFP_degr))</Function>
+        <Function Name="P_r0_probabilityRate" Domain="Compartment">(Kf_r0 * PFAS_Outside_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1)</Function>
+        <Function Name="P_r0_reverse_probabilityRate" Domain="Compartment">(Kr_r0 * PFAS_Inside_Count * Size_Enviroment * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1 / Size_Cell)</Function>
+        <Function Name="P_r1_probabilityRate" Domain="Compartment">(Kf_r1 * PFAS_Inside_Count * FAB_GFP_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1 * UnitFactor_uM_um3_molecules_neg_1 / Size_Cell)</Function>
+        <Function Name="P_r1_reverse_probabilityRate" Domain="Compartment">(Kr_r1 * PFAS_FAB_GFP_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1)</Function>
+        <Function Name="P_r2_probabilityRate" Domain="Compartment">(Kf_r2 * FAB_GFP_gene_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1)</Function>
+        <Function Name="P_r2_reverse_probabilityRate" Domain="Compartment">(Kr_r2 * FAB_GFP_mRNA_Count * FAB_GFP_gene_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1 * UnitFactor_uM_um3_molecules_neg_1 / Size_Cell)</Function>
+        <Function Name="P_r3_probabilityRate" Domain="Compartment">(Kf_r3 * PFAS_FAB_GFP_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1)</Function>
+        <Function Name="P_r3_reverse_probabilityRate" Domain="Compartment">(Kr_r3 * PFAS_FAB_GFP_degr_Count * PFAS_Inside_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1 * UnitFactor_uM_um3_molecules_neg_1 / Size_Cell)</Function>
+        <Function Name="P_r4_probabilityRate" Domain="Compartment">(Kf_r4 * FAB_GFP_mRNA_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1)</Function>
+        <Function Name="P_r4_reverse_probabilityRate" Domain="Compartment">(Kr_r4 * FAB_GFP_Count * FAB_GFP_mRNA_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1 * UnitFactor_uM_um3_molecules_neg_1 / Size_Cell)</Function>
+        <Function Name="P_r5_probabilityRate" Domain="Compartment">(Kf_r5 * FAB_GFP_mRNA_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1)</Function>
+        <Function Name="P_r5_reverse_probabilityRate" Domain="Compartment">(Kr_r5 * FAB_GFP_mRNA_degr_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1)</Function>
+        <Function Name="P_r6_probabilityRate" Domain="Compartment">(Kf_r6 * FAB_GFP_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1)</Function>
+        <Function Name="P_r6_reverse_probabilityRate" Domain="Compartment">(Kr_r6 * FAB_GFP_degr_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1)</Function>
+        <Function Name="PFAS_FAB_GFP" Domain="Compartment">((PFAS_FAB_GFP_Count * UnitFactor_uM_um3_molecules_neg_1) / Size_Cell)</Function>
+        <Function Name="PFAS_FAB_GFP_Count_initCount" Domain="Compartment">(Size_Cell * PFAS_FAB_GFP_Count_init_uM * UnitFactor_molecules_uM_neg_1_um_neg_3)</Function>
+        <Function Name="PFAS_FAB_GFP_degr" Domain="Compartment">((PFAS_FAB_GFP_degr_Count * UnitFactor_uM_um3_molecules_neg_1) / Size_Cell)</Function>
+        <Function Name="PFAS_FAB_GFP_degr_Count_initCount" Domain="Compartment">(Size_Cell * PFAS_FAB_GFP_degr_Count_init_uM * UnitFactor_molecules_uM_neg_1_um_neg_3)</Function>
+        <Function Name="PFAS_Inside" Domain="Compartment">((PFAS_Inside_Count * UnitFactor_uM_um3_molecules_neg_1) / Size_Cell)</Function>
+        <Function Name="PFAS_Inside_Count_initCount" Domain="Compartment">(Size_Cell * PFAS_Inside_Count_init_uM * UnitFactor_molecules_uM_neg_1_um_neg_3)</Function>
+        <Function Name="PFAS_Outside" Domain="Compartment">((PFAS_Outside_Count * UnitFactor_uM_um3_molecules_neg_1) / Size_Enviroment)</Function>
+        <Function Name="PFAS_Outside_Count_initCount" Domain="Compartment">(Size_Enviroment * PFAS_Outside_Count_init_uM * UnitFactor_molecules_uM_neg_1_um_neg_3)</Function>
+        <CompartmentSubDomain Name="Compartment">
+          <BoundaryType Boundary="Xm" Type="Value" />
+          <BoundaryType Boundary="Xp" Type="Value" />
+          <BoundaryType Boundary="Ym" Type="Value" />
+          <BoundaryType Boundary="Yp" Type="Value" />
+          <BoundaryType Boundary="Zm" Type="Value" />
+          <BoundaryType Boundary="Zp" Type="Value" />
+          <VariableInitialCount Name="PFAS_Outside_Count">PFAS_Outside_Count_initCount</VariableInitialCount>
+          <VariableInitialCount Name="PFAS_Inside_Count">PFAS_Inside_Count_initCount</VariableInitialCount>
+          <VariableInitialCount Name="PFAS_FAB_GFP_Count">PFAS_FAB_GFP_Count_initCount</VariableInitialCount>
+          <VariableInitialCount Name="FAB_GFP_gene_Count">FAB_GFP_gene_Count_initCount</VariableInitialCount>
+          <VariableInitialCount Name="FAB_GFP_mRNA_Count">FAB_GFP_mRNA_Count_initCount</VariableInitialCount>
+          <VariableInitialCount Name="FAB_GFP_Count">FAB_GFP_Count_initCount</VariableInitialCount>
+          <VariableInitialCount Name="FAB_GFP_mRNA_degr_Count">FAB_GFP_mRNA_degr_Count_initCount</VariableInitialCount>
+          <VariableInitialCount Name="FAB_GFP_degr_Count">FAB_GFP_degr_Count_initCount</VariableInitialCount>
+          <VariableInitialCount Name="PFAS_FAB_GFP_degr_Count">PFAS_FAB_GFP_degr_Count_initCount</VariableInitialCount>
+          <JumpProcess Name="r0">
+            <ProbabilityRate>P_r0_probabilityRate</ProbabilityRate>
+            <Effect VarName="PFAS_Outside_Count" Operation="inc">-1.0</Effect>
+            <Effect VarName="PFAS_Inside_Count" Operation="inc">1.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="r0_reverse">
+            <ProbabilityRate>P_r0_reverse_probabilityRate</ProbabilityRate>
+            <Effect VarName="PFAS_Outside_Count" Operation="inc">1.0</Effect>
+            <Effect VarName="PFAS_Inside_Count" Operation="inc">-1.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="r1">
+            <ProbabilityRate>P_r1_probabilityRate</ProbabilityRate>
+            <Effect VarName="PFAS_Inside_Count" Operation="inc">-1.0</Effect>
+            <Effect VarName="FAB_GFP_Count" Operation="inc">-1.0</Effect>
+            <Effect VarName="PFAS_FAB_GFP_Count" Operation="inc">1.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="r1_reverse">
+            <ProbabilityRate>P_r1_reverse_probabilityRate</ProbabilityRate>
+            <Effect VarName="PFAS_Inside_Count" Operation="inc">1.0</Effect>
+            <Effect VarName="FAB_GFP_Count" Operation="inc">1.0</Effect>
+            <Effect VarName="PFAS_FAB_GFP_Count" Operation="inc">-1.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="r2">
+            <ProbabilityRate>P_r2_probabilityRate</ProbabilityRate>
+            <Effect VarName="FAB_GFP_mRNA_Count" Operation="inc">1.0</Effect>
+            <Effect VarName="FAB_GFP_gene_Count" Operation="inc">0.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="r2_reverse">
+            <ProbabilityRate>P_r2_reverse_probabilityRate</ProbabilityRate>
+            <Effect VarName="FAB_GFP_mRNA_Count" Operation="inc">-1.0</Effect>
+            <Effect VarName="FAB_GFP_gene_Count" Operation="inc">0.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="r4">
+            <ProbabilityRate>P_r4_probabilityRate</ProbabilityRate>
+            <Effect VarName="FAB_GFP_Count" Operation="inc">1.0</Effect>
+            <Effect VarName="FAB_GFP_mRNA_Count" Operation="inc">0.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="r4_reverse">
+            <ProbabilityRate>P_r4_reverse_probabilityRate</ProbabilityRate>
+            <Effect VarName="FAB_GFP_Count" Operation="inc">-1.0</Effect>
+            <Effect VarName="FAB_GFP_mRNA_Count" Operation="inc">0.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="r5">
+            <ProbabilityRate>P_r5_probabilityRate</ProbabilityRate>
+            <Effect VarName="FAB_GFP_mRNA_Count" Operation="inc">-1.0</Effect>
+            <Effect VarName="FAB_GFP_mRNA_degr_Count" Operation="inc">1.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="r5_reverse">
+            <ProbabilityRate>P_r5_reverse_probabilityRate</ProbabilityRate>
+            <Effect VarName="FAB_GFP_mRNA_Count" Operation="inc">1.0</Effect>
+            <Effect VarName="FAB_GFP_mRNA_degr_Count" Operation="inc">-1.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="r6">
+            <ProbabilityRate>P_r6_probabilityRate</ProbabilityRate>
+            <Effect VarName="FAB_GFP_Count" Operation="inc">-1.0</Effect>
+            <Effect VarName="FAB_GFP_degr_Count" Operation="inc">1.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="r6_reverse">
+            <ProbabilityRate>P_r6_reverse_probabilityRate</ProbabilityRate>
+            <Effect VarName="FAB_GFP_Count" Operation="inc">1.0</Effect>
+            <Effect VarName="FAB_GFP_degr_Count" Operation="inc">-1.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="r3">
+            <ProbabilityRate>P_r3_probabilityRate</ProbabilityRate>
+            <Effect VarName="PFAS_FAB_GFP_Count" Operation="inc">-1.0</Effect>
+            <Effect VarName="PFAS_FAB_GFP_degr_Count" Operation="inc">1.0</Effect>
+            <Effect VarName="PFAS_Inside_Count" Operation="inc">1.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="r3_reverse">
+            <ProbabilityRate>P_r3_reverse_probabilityRate</ProbabilityRate>
+            <Effect VarName="PFAS_FAB_GFP_Count" Operation="inc">1.0</Effect>
+            <Effect VarName="PFAS_FAB_GFP_degr_Count" Operation="inc">-1.0</Effect>
+            <Effect VarName="PFAS_Inside_Count" Operation="inc">-1.0</Effect>
+          </JumpProcess>
+        </CompartmentSubDomain>
+        <Version Name="Application0_generated" KeyValue="276687455" BranchId="276487833" Archived="0" Date="01-Oct-2024 03:05:13" FromVersionable="false">
+          <Owner Name="dglVcell" Identifier="202231687" />
+          <GroupAccess Type="1" />
+          <Annotation>cloned from 'Application0_generated' owned by user Pillow123</Annotation>
+        </Version>
+      </MathDescription>
+      <Simulation Name="0.01">
+        <Annotation>cloned from '0.01' owned by user Pillow123</Annotation>
+        <SolverTaskDescription TaskType="Unsteady" UseSymbolicJacobian="false" Solver="Gibson (Next Reaction Stochastic Method)">
+          <TimeBound StartTime="0.0" EndTime="10000.0" />
+          <TimeStep DefaultTime="0.1" MinTime="1.0E-8" MaxTime="1.0" />
+          <ErrorTolerance Absolut="1.0E-9" Relative="1.0E-8" />
+          <StochSimOptions UseCustomSeed="false" NumberOfTrial="1" Histogram="false" />
+          <OutputOptions OutputTimeStep="10.0" />
+          <NumberProcessors>1</NumberProcessors>
+        </SolverTaskDescription>
+        <MathOverrides>
+          <Constant Name="PFAS_Outside_Count_init_uM">0.01</Constant>
+        </MathOverrides>
+        <Version Name="0.01" KeyValue="276687616" BranchId="276487956" Archived="0" Date="01-Oct-2024 03:05:14" FromVersionable="false">
+          <Owner Name="dglVcell" Identifier="202231687" />
+          <GroupAccess Type="1" />
+          <Annotation>cloned from '0.01' owned by user Pillow123</Annotation>
+          <ParentSimRef KeyValue="276625038" />
+        </Version>
+      </Simulation>
+      <Simulation Name="0.1">
+        <Annotation>cloned from '0.1' owned by user Pillow123</Annotation>
+        <SolverTaskDescription TaskType="Unsteady" UseSymbolicJacobian="false" Solver="Gibson (Next Reaction Stochastic Method)">
+          <TimeBound StartTime="0.0" EndTime="10000.0" />
+          <TimeStep DefaultTime="0.1" MinTime="1.0E-8" MaxTime="1.0" />
+          <ErrorTolerance Absolut="1.0E-9" Relative="1.0E-8" />
+          <StochSimOptions UseCustomSeed="false" NumberOfTrial="1" Histogram="false" />
+          <OutputOptions OutputTimeStep="10.0" />
+          <NumberProcessors>1</NumberProcessors>
+        </SolverTaskDescription>
+        <MathOverrides />
+        <Version Name="0.1" KeyValue="276687618" BranchId="276487959" Archived="0" Date="01-Oct-2024 03:05:14" FromVersionable="false">
+          <Owner Name="dglVcell" Identifier="202231687" />
+          <GroupAccess Type="1" />
+          <Annotation>cloned from '0.1' owned by user Pillow123</Annotation>
+        </Version>
+      </Simulation>
+      <Simulation Name="0">
+        <Annotation>cloned from '0' owned by user Pillow123</Annotation>
+        <SolverTaskDescription TaskType="Unsteady" UseSymbolicJacobian="false" Solver="Gibson (Next Reaction Stochastic Method)">
+          <TimeBound StartTime="0.0" EndTime="10000.0" />
+          <TimeStep DefaultTime="0.1" MinTime="1.0E-8" MaxTime="1.0" />
+          <ErrorTolerance Absolut="1.0E-9" Relative="1.0E-8" />
+          <StochSimOptions UseCustomSeed="false" NumberOfTrial="1" Histogram="false" />
+          <OutputOptions OutputTimeStep="10.0" />
+          <NumberProcessors>1</NumberProcessors>
+        </SolverTaskDescription>
+        <MathOverrides />
+        <Version Name="0" KeyValue="276687620" BranchId="276487962" Archived="0" Date="01-Oct-2024 03:05:14" FromVersionable="false">
+          <Owner Name="dglVcell" Identifier="202231687" />
+          <GroupAccess Type="1" />
+          <Annotation>cloned from '0' owned by user Pillow123</Annotation>
+        </Version>
+      </Simulation>
+      <Simulation Name="1">
+        <Annotation>cloned from '1' owned by user Pillow123</Annotation>
+        <SolverTaskDescription TaskType="Unsteady" UseSymbolicJacobian="false" Solver="Gibson (Next Reaction Stochastic Method)">
+          <TimeBound StartTime="0.0" EndTime="10000.0" />
+          <TimeStep DefaultTime="0.1" MinTime="1.0E-8" MaxTime="1.0" />
+          <ErrorTolerance Absolut="1.0E-9" Relative="1.0E-8" />
+          <StochSimOptions UseCustomSeed="false" NumberOfTrial="1" Histogram="false" />
+          <OutputOptions OutputTimeStep="10.0" />
+          <NumberProcessors>1</NumberProcessors>
+        </SolverTaskDescription>
+        <MathOverrides />
+        <Version Name="1" KeyValue="276687622" BranchId="276487965" Archived="0" Date="01-Oct-2024 03:05:14" FromVersionable="false">
+          <Owner Name="dglVcell" Identifier="202231687" />
+          <GroupAccess Type="1" />
+          <Annotation>cloned from '1' owned by user Pillow123</Annotation>
+        </Version>
+      </Simulation>
+      <Simulation Name="10">
+        <Annotation>cloned from '10' owned by user Pillow123</Annotation>
+        <SolverTaskDescription TaskType="Unsteady" UseSymbolicJacobian="false" Solver="Gibson (Next Reaction Stochastic Method)">
+          <TimeBound StartTime="0.0" EndTime="10000.0" />
+          <TimeStep DefaultTime="0.1" MinTime="1.0E-8" MaxTime="1.0" />
+          <ErrorTolerance Absolut="1.0E-9" Relative="1.0E-8" />
+          <StochSimOptions UseCustomSeed="false" NumberOfTrial="1" Histogram="false" />
+          <OutputOptions OutputTimeStep="10.0" />
+          <NumberProcessors>1</NumberProcessors>
+        </SolverTaskDescription>
+        <MathOverrides />
+        <Version Name="10" KeyValue="276687624" BranchId="276487968" Archived="0" Date="01-Oct-2024 03:05:14" FromVersionable="false">
+          <Owner Name="dglVcell" Identifier="202231687" />
+          <GroupAccess Type="1" />
+          <Annotation>cloned from '10' owned by user Pillow123</Annotation>
+        </Version>
+      </Simulation>
+      <Simulation Name="5">
+        <Annotation>cloned from '5' owned by user Pillow123</Annotation>
+        <SolverTaskDescription TaskType="Unsteady" UseSymbolicJacobian="false" Solver="Gibson (Next Reaction Stochastic Method)">
+          <TimeBound StartTime="0.0" EndTime="10000.0" />
+          <TimeStep DefaultTime="0.1" MinTime="1.0E-8" MaxTime="1.0" />
+          <ErrorTolerance Absolut="1.0E-9" Relative="1.0E-8" />
+          <StochSimOptions UseCustomSeed="false" NumberOfTrial="1" Histogram="false" />
+          <OutputOptions OutputTimeStep="10.0" />
+          <NumberProcessors>1</NumberProcessors>
+        </SolverTaskDescription>
+        <MathOverrides />
+        <Version Name="5" KeyValue="276687626" BranchId="276487971" Archived="0" Date="01-Oct-2024 03:05:14" FromVersionable="false">
+          <Owner Name="dglVcell" Identifier="202231687" />
+          <GroupAccess Type="1" />
+          <Annotation>cloned from '5' owned by user Pillow123</Annotation>
+        </Version>
+      </Simulation>
+      <Simulation Name="50">
+        <Annotation>cloned from '50' owned by user Pillow123</Annotation>
+        <SolverTaskDescription TaskType="Unsteady" UseSymbolicJacobian="false" Solver="Gibson (Next Reaction Stochastic Method)">
+          <TimeBound StartTime="0.0" EndTime="10000.0" />
+          <TimeStep DefaultTime="0.1" MinTime="1.0E-8" MaxTime="1.0" />
+          <ErrorTolerance Absolut="1.0E-9" Relative="1.0E-8" />
+          <StochSimOptions UseCustomSeed="false" NumberOfTrial="1" Histogram="false" />
+          <OutputOptions OutputTimeStep="10.0" />
+          <NumberProcessors>1</NumberProcessors>
+        </SolverTaskDescription>
+        <MathOverrides />
+        <Version Name="50" KeyValue="276687628" BranchId="276487974" Archived="0" Date="01-Oct-2024 03:05:14" FromVersionable="false">
+          <Owner Name="dglVcell" Identifier="202231687" />
+          <GroupAccess Type="1" />
+          <Annotation>cloned from '50' owned by user Pillow123</Annotation>
+        </Version>
+      </Simulation>
+      <Simulation Name="250">
+        <Annotation>cloned from '250' owned by user Pillow123</Annotation>
+        <SolverTaskDescription TaskType="Unsteady" UseSymbolicJacobian="false" Solver="Gibson (Next Reaction Stochastic Method)">
+          <TimeBound StartTime="0.0" EndTime="10000.0" />
+          <TimeStep DefaultTime="0.1" MinTime="1.0E-8" MaxTime="1.0" />
+          <ErrorTolerance Absolut="1.0E-9" Relative="1.0E-8" />
+          <StochSimOptions UseCustomSeed="false" NumberOfTrial="1" Histogram="false" />
+          <OutputOptions OutputTimeStep="10.0" />
+          <NumberProcessors>1</NumberProcessors>
+        </SolverTaskDescription>
+        <MathOverrides />
+        <Version Name="250" KeyValue="276687630" BranchId="276487977" Archived="0" Date="01-Oct-2024 03:05:14" FromVersionable="false">
+          <Owner Name="dglVcell" Identifier="202231687" />
+          <GroupAccess Type="1" />
+          <Annotation>cloned from '250' owned by user Pillow123</Annotation>
+        </Version>
+      </Simulation>
+      <Version Name="Application0" KeyValue="276695396" BranchId="276487893" Archived="0" Date="01-Oct-2024 05:45:19" FromVersionable="false">
+        <Owner Name="dglVcell" Identifier="202231687" />
+        <GroupAccess Type="1" />
+        <Annotation>cloned from 'Application0' owned by user Pillow123</Annotation>
+      </Version>
+      <MicroscopeMeasurement Name="fluor">
+        <ConvolutionKernel Type="ProjectionZKernel" />
+      </MicroscopeMeasurement>
+    </SimulationSpec>
+    <SimulationSpec Name="Application1" Stochastic="true" UseConcentration="true" RandomizeInitCondition="false" SpringSaLaD="false" RuleBased="false" MassConservationModelReduction="false" InsufficientIterations="false" InsufficientMaxMolecules="false">
+      <NetworkConstraints RbmMaxIteration="1" RbmMaxMoleculesPerSpecies="10" RbmSpeciesLimit="800" RbmReactionsLimit="2500">
+        <MaxStoichiometry MolecularType="PFAS_Outside" Integer="100" />
+        <MaxStoichiometry MolecularType="PFAS_Inside" Integer="100" />
+        <MaxStoichiometry MolecularType="FAB_PFOA_Cplx" Integer="100" />
+        <MaxStoichiometry MolecularType="cpGFP_gene" Integer="100" />
+        <MaxStoichiometry MolecularType="cpGFP_mRNA" Integer="100" />
+        <MaxStoichiometry MolecularType="cpGFP_mRNA_degr" Integer="100" />
+        <MaxStoichiometry MolecularType="cpGFP_degr" Integer="100" />
+        <MaxStoichiometry MolecularType="cpGFP" Integer="100" />
+        <MaxStoichiometry MolecularType="FAB_GFP_gene" Integer="100" />
+        <MaxStoichiometry MolecularType="FAB_GFP_mRNA" Integer="100" />
+        <MaxStoichiometry MolecularType="FAB_GFP" Integer="100" />
+        <MaxStoichiometry MolecularType="FAB_GFP_degr" Integer="100" />
+        <MaxStoichiometry MolecularType="FAB_GFP_mRNA_degr" Integer="100" />
+        <MaxStoichiometry MolecularType="FAB_cGFP_degr" Integer="100" />
+      </NetworkConstraints>
+      <Annotation>cloned from 'Application1' owned by user Pillow123</Annotation>
+      <Geometry Name="non-spatial526296125" Dimension="0">
+        <Annotation>cloned from 'non-spatial526296125' owned by user Pillow123</Annotation>
+        <Extent X="10.0" Y="10.0" Z="10.0" />
+        <Origin X="0.0" Y="0.0" Z="0.0" />
+        <SubVolume Name="Compartment" Handle="0" Type="Compartmental" KeyValue="276487826" />
+        <Version Name="non-spatial526296125" KeyValue="276487822" BranchId="276487823" Archived="0" Date="27-Sep-2024 19:08:05" FromVersionable="false">
+          <Owner Name="dglVcell" Identifier="202231687" />
+          <GroupAccess Type="1" />
+          <Annotation>cloned from 'non-spatial526296125' owned by user Pillow123</Annotation>
+        </Version>
+      </Geometry>
+      <GeometryContext>
+        <FeatureMapping Feature="Enviroment" GeometryClass="Compartment" SubVolume="Compartment" Size="1000.0">
+          <BoundariesTypes Xm="Flux" Xp="Flux" Ym="Flux" Yp="Flux" Zm="Flux" Zp="Flux" />
+        </FeatureMapping>
+        <FeatureMapping Feature="Cell" GeometryClass="Compartment" SubVolume="Compartment" Size="3.5">
+          <BoundariesTypes Xm="Flux" Xp="Flux" Ym="Flux" Yp="Flux" Zm="Flux" Zp="Flux" />
+        </FeatureMapping>
+      </GeometryContext>
+      <ReactionContext>
+        <LocalizedCompoundSpec LocalizedCompoundRef="PFAS_Outside" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="PFAS_Inside" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="PFAS_FAB_GFP" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="FAB_GFP_gene" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.47443965233220736</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="FAB_GFP_mRNA" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="FAB_GFP" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="FAB_GFP_mRNA_degr" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="FAB_GFP_degr" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="PFAS_FAB_GFP_degr" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <ReactionSpec ReactionStepRef="r0" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="r1" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="r2" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="r4" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="r5" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="r6" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="r3" ReactionMapping="included" />
+      </ReactionContext>
+      <MathDescription Name="Application1_generated">
+        <Annotation>cloned from 'Application1_generated' owned by user Pillow123</Annotation>
+        <Constant Name="_F_">96485.3321</Constant>
+        <Constant Name="_F_nmol_">9.64853321E-5</Constant>
+        <Constant Name="_N_pmol_">6.02214179E11</Constant>
+        <Constant Name="_PI_">3.141592653589793</Constant>
+        <Constant Name="_R_">8314.46261815</Constant>
+        <Constant Name="_T_">300.0</Constant>
+        <Constant Name="FAB_GFP_Count_init_uM">0.0</Constant>
+        <Constant Name="FAB_GFP_degr_Count_init_uM">0.0</Constant>
+        <Constant Name="FAB_GFP_gene_Count_init_uM">0.47443965233220736</Constant>
+        <Constant Name="FAB_GFP_mRNA_Count_init_uM">0.0</Constant>
+        <Constant Name="FAB_GFP_mRNA_degr_Count_init_uM">0.0</Constant>
+        <Constant Name="Kf_r0">0.001</Constant>
+        <Constant Name="Kf_r1">192.4</Constant>
+        <Constant Name="Kf_r2">0.0116652085156</Constant>
+        <Constant Name="Kf_r3">9.62704417444E-6</Constant>
+        <Constant Name="Kf_r4">0.00238726790451</Constant>
+        <Constant Name="Kf_r5">3.85E-4</Constant>
+        <Constant Name="Kf_r6">9.62704417444E-6</Constant>
+        <Constant Name="KMOLE">0.001660538783162726</Constant>
+        <Constant Name="Kr_r0">0.001</Constant>
+        <Constant Name="Kr_r1">9.99E-4</Constant>
+        <Constant Name="Kr_r2">0.0</Constant>
+        <Constant Name="Kr_r3">0.0</Constant>
+        <Constant Name="Kr_r4">0.0</Constant>
+        <Constant Name="Kr_r5">0.0</Constant>
+        <Constant Name="Kr_r6">0.0</Constant>
+        <Constant Name="PFAS_FAB_GFP_Count_init_uM">0.0</Constant>
+        <Constant Name="PFAS_FAB_GFP_degr_Count_init_uM">0.0</Constant>
+        <Constant Name="PFAS_Inside_Count_init_uM">0.0</Constant>
+        <Constant Name="PFAS_Outside_Count_init_uM">0.0</Constant>
+        <Constant Name="Size_Cell">3.5</Constant>
+        <Constant Name="Size_Enviroment">1000.0</Constant>
+        <Constant Name="UnitFactor_molecules_uM_neg_1_um_neg_3">(1.0 * pow(KMOLE, - 1.0))</Constant>
+        <Constant Name="UnitFactor_uM_um3_molecules_neg_1">(1.0 * pow(KMOLE,1.0))</Constant>
+        <StochasticVolumeVariable Name="FAB_GFP_Count" />
+        <StochasticVolumeVariable Name="FAB_GFP_degr_Count" />
+        <StochasticVolumeVariable Name="FAB_GFP_gene_Count" />
+        <StochasticVolumeVariable Name="FAB_GFP_mRNA_Count" />
+        <StochasticVolumeVariable Name="FAB_GFP_mRNA_degr_Count" />
+        <StochasticVolumeVariable Name="PFAS_FAB_GFP_Count" />
+        <StochasticVolumeVariable Name="PFAS_FAB_GFP_degr_Count" />
+        <StochasticVolumeVariable Name="PFAS_Inside_Count" />
+        <StochasticVolumeVariable Name="PFAS_Outside_Count" />
+        <Function Name="FAB_GFP" Domain="Compartment">((FAB_GFP_Count * UnitFactor_uM_um3_molecules_neg_1) / Size_Cell)</Function>
+        <Function Name="FAB_GFP_Count_initCount" Domain="Compartment">(Size_Cell * FAB_GFP_Count_init_uM * UnitFactor_molecules_uM_neg_1_um_neg_3)</Function>
+        <Function Name="FAB_GFP_degr" Domain="Compartment">((FAB_GFP_degr_Count * UnitFactor_uM_um3_molecules_neg_1) / Size_Cell)</Function>
+        <Function Name="FAB_GFP_degr_Count_initCount" Domain="Compartment">(Size_Cell * FAB_GFP_degr_Count_init_uM * UnitFactor_molecules_uM_neg_1_um_neg_3)</Function>
+        <Function Name="FAB_GFP_gene" Domain="Compartment">((FAB_GFP_gene_Count * UnitFactor_uM_um3_molecules_neg_1) / Size_Cell)</Function>
+        <Function Name="FAB_GFP_gene_Count_initCount" Domain="Compartment">(Size_Cell * FAB_GFP_gene_Count_init_uM * UnitFactor_molecules_uM_neg_1_um_neg_3)</Function>
+        <Function Name="FAB_GFP_mRNA" Domain="Compartment">((FAB_GFP_mRNA_Count * UnitFactor_uM_um3_molecules_neg_1) / Size_Cell)</Function>
+        <Function Name="FAB_GFP_mRNA_Count_initCount" Domain="Compartment">(Size_Cell * FAB_GFP_mRNA_Count_init_uM * UnitFactor_molecules_uM_neg_1_um_neg_3)</Function>
+        <Function Name="FAB_GFP_mRNA_degr" Domain="Compartment">((FAB_GFP_mRNA_degr_Count * UnitFactor_uM_um3_molecules_neg_1) / Size_Cell)</Function>
+        <Function Name="FAB_GFP_mRNA_degr_Count_initCount" Domain="Compartment">(Size_Cell * FAB_GFP_mRNA_degr_Count_init_uM * UnitFactor_molecules_uM_neg_1_um_neg_3)</Function>
+        <Function Name="J_r0" Domain="Compartment">((Kf_r0 * PFAS_Outside) - (Kr_r0 * PFAS_Inside))</Function>
+        <Function Name="J_r1" Domain="Compartment">(((Kf_r1 * PFAS_Inside) * FAB_GFP) - (Kr_r1 * PFAS_FAB_GFP))</Function>
+        <Function Name="J_r2" Domain="Compartment">((Kf_r2 * FAB_GFP_gene) - ((Kr_r2 * FAB_GFP_mRNA) * FAB_GFP_gene))</Function>
+        <Function Name="J_r3" Domain="Compartment">((Kf_r3 * PFAS_FAB_GFP) - ((Kr_r3 * PFAS_FAB_GFP_degr) * PFAS_Inside))</Function>
+        <Function Name="J_r4" Domain="Compartment">((Kf_r4 * FAB_GFP_mRNA) - ((Kr_r4 * FAB_GFP) * FAB_GFP_mRNA))</Function>
+        <Function Name="J_r5" Domain="Compartment">((Kf_r5 * FAB_GFP_mRNA) - (Kr_r5 * FAB_GFP_mRNA_degr))</Function>
+        <Function Name="J_r6" Domain="Compartment">((Kf_r6 * FAB_GFP) - (Kr_r6 * FAB_GFP_degr))</Function>
+        <Function Name="P_r0_probabilityRate" Domain="Compartment">(Kf_r0 * PFAS_Outside_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1)</Function>
+        <Function Name="P_r0_reverse_probabilityRate" Domain="Compartment">(Kr_r0 * PFAS_Inside_Count * Size_Enviroment * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1 / Size_Cell)</Function>
+        <Function Name="P_r1_probabilityRate" Domain="Compartment">(Kf_r1 * PFAS_Inside_Count * FAB_GFP_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1 * UnitFactor_uM_um3_molecules_neg_1 / Size_Cell)</Function>
+        <Function Name="P_r1_reverse_probabilityRate" Domain="Compartment">(Kr_r1 * PFAS_FAB_GFP_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1)</Function>
+        <Function Name="P_r2_probabilityRate" Domain="Compartment">(Kf_r2 * FAB_GFP_gene_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1)</Function>
+        <Function Name="P_r2_reverse_probabilityRate" Domain="Compartment">(Kr_r2 * FAB_GFP_mRNA_Count * FAB_GFP_gene_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1 * UnitFactor_uM_um3_molecules_neg_1 / Size_Cell)</Function>
+        <Function Name="P_r3_probabilityRate" Domain="Compartment">(Kf_r3 * PFAS_FAB_GFP_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1)</Function>
+        <Function Name="P_r3_reverse_probabilityRate" Domain="Compartment">(Kr_r3 * PFAS_FAB_GFP_degr_Count * PFAS_Inside_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1 * UnitFactor_uM_um3_molecules_neg_1 / Size_Cell)</Function>
+        <Function Name="P_r4_probabilityRate" Domain="Compartment">(Kf_r4 * FAB_GFP_mRNA_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1)</Function>
+        <Function Name="P_r4_reverse_probabilityRate" Domain="Compartment">(Kr_r4 * FAB_GFP_Count * FAB_GFP_mRNA_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1 * UnitFactor_uM_um3_molecules_neg_1 / Size_Cell)</Function>
+        <Function Name="P_r5_probabilityRate" Domain="Compartment">(Kf_r5 * FAB_GFP_mRNA_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1)</Function>
+        <Function Name="P_r5_reverse_probabilityRate" Domain="Compartment">(Kr_r5 * FAB_GFP_mRNA_degr_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1)</Function>
+        <Function Name="P_r6_probabilityRate" Domain="Compartment">(Kf_r6 * FAB_GFP_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1)</Function>
+        <Function Name="P_r6_reverse_probabilityRate" Domain="Compartment">(Kr_r6 * FAB_GFP_degr_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1)</Function>
+        <Function Name="PFAS_FAB_GFP" Domain="Compartment">((PFAS_FAB_GFP_Count * UnitFactor_uM_um3_molecules_neg_1) / Size_Cell)</Function>
+        <Function Name="PFAS_FAB_GFP_Count_initCount" Domain="Compartment">(Size_Cell * PFAS_FAB_GFP_Count_init_uM * UnitFactor_molecules_uM_neg_1_um_neg_3)</Function>
+        <Function Name="PFAS_FAB_GFP_degr" Domain="Compartment">((PFAS_FAB_GFP_degr_Count * UnitFactor_uM_um3_molecules_neg_1) / Size_Cell)</Function>
+        <Function Name="PFAS_FAB_GFP_degr_Count_initCount" Domain="Compartment">(Size_Cell * PFAS_FAB_GFP_degr_Count_init_uM * UnitFactor_molecules_uM_neg_1_um_neg_3)</Function>
+        <Function Name="PFAS_Inside" Domain="Compartment">((PFAS_Inside_Count * UnitFactor_uM_um3_molecules_neg_1) / Size_Cell)</Function>
+        <Function Name="PFAS_Inside_Count_initCount" Domain="Compartment">(Size_Cell * PFAS_Inside_Count_init_uM * UnitFactor_molecules_uM_neg_1_um_neg_3)</Function>
+        <Function Name="PFAS_Outside" Domain="Compartment">((PFAS_Outside_Count * UnitFactor_uM_um3_molecules_neg_1) / Size_Enviroment)</Function>
+        <Function Name="PFAS_Outside_Count_initCount" Domain="Compartment">(Size_Enviroment * PFAS_Outside_Count_init_uM * UnitFactor_molecules_uM_neg_1_um_neg_3)</Function>
+        <CompartmentSubDomain Name="Compartment">
+          <BoundaryType Boundary="Xm" Type="Value" />
+          <BoundaryType Boundary="Xp" Type="Value" />
+          <BoundaryType Boundary="Ym" Type="Value" />
+          <BoundaryType Boundary="Yp" Type="Value" />
+          <BoundaryType Boundary="Zm" Type="Value" />
+          <BoundaryType Boundary="Zp" Type="Value" />
+          <VariableInitialCount Name="PFAS_Outside_Count">PFAS_Outside_Count_initCount</VariableInitialCount>
+          <VariableInitialCount Name="PFAS_Inside_Count">PFAS_Inside_Count_initCount</VariableInitialCount>
+          <VariableInitialCount Name="PFAS_FAB_GFP_Count">PFAS_FAB_GFP_Count_initCount</VariableInitialCount>
+          <VariableInitialCount Name="FAB_GFP_gene_Count">FAB_GFP_gene_Count_initCount</VariableInitialCount>
+          <VariableInitialCount Name="FAB_GFP_mRNA_Count">FAB_GFP_mRNA_Count_initCount</VariableInitialCount>
+          <VariableInitialCount Name="FAB_GFP_Count">FAB_GFP_Count_initCount</VariableInitialCount>
+          <VariableInitialCount Name="FAB_GFP_mRNA_degr_Count">FAB_GFP_mRNA_degr_Count_initCount</VariableInitialCount>
+          <VariableInitialCount Name="FAB_GFP_degr_Count">FAB_GFP_degr_Count_initCount</VariableInitialCount>
+          <VariableInitialCount Name="PFAS_FAB_GFP_degr_Count">PFAS_FAB_GFP_degr_Count_initCount</VariableInitialCount>
+          <JumpProcess Name="r0">
+            <ProbabilityRate>P_r0_probabilityRate</ProbabilityRate>
+            <Effect VarName="PFAS_Outside_Count" Operation="inc">-1.0</Effect>
+            <Effect VarName="PFAS_Inside_Count" Operation="inc">1.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="r0_reverse">
+            <ProbabilityRate>P_r0_reverse_probabilityRate</ProbabilityRate>
+            <Effect VarName="PFAS_Outside_Count" Operation="inc">1.0</Effect>
+            <Effect VarName="PFAS_Inside_Count" Operation="inc">-1.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="r1">
+            <ProbabilityRate>P_r1_probabilityRate</ProbabilityRate>
+            <Effect VarName="PFAS_Inside_Count" Operation="inc">-1.0</Effect>
+            <Effect VarName="FAB_GFP_Count" Operation="inc">-1.0</Effect>
+            <Effect VarName="PFAS_FAB_GFP_Count" Operation="inc">1.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="r1_reverse">
+            <ProbabilityRate>P_r1_reverse_probabilityRate</ProbabilityRate>
+            <Effect VarName="PFAS_Inside_Count" Operation="inc">1.0</Effect>
+            <Effect VarName="FAB_GFP_Count" Operation="inc">1.0</Effect>
+            <Effect VarName="PFAS_FAB_GFP_Count" Operation="inc">-1.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="r2">
+            <ProbabilityRate>P_r2_probabilityRate</ProbabilityRate>
+            <Effect VarName="FAB_GFP_mRNA_Count" Operation="inc">1.0</Effect>
+            <Effect VarName="FAB_GFP_gene_Count" Operation="inc">0.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="r2_reverse">
+            <ProbabilityRate>P_r2_reverse_probabilityRate</ProbabilityRate>
+            <Effect VarName="FAB_GFP_mRNA_Count" Operation="inc">-1.0</Effect>
+            <Effect VarName="FAB_GFP_gene_Count" Operation="inc">0.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="r4">
+            <ProbabilityRate>P_r4_probabilityRate</ProbabilityRate>
+            <Effect VarName="FAB_GFP_Count" Operation="inc">1.0</Effect>
+            <Effect VarName="FAB_GFP_mRNA_Count" Operation="inc">0.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="r4_reverse">
+            <ProbabilityRate>P_r4_reverse_probabilityRate</ProbabilityRate>
+            <Effect VarName="FAB_GFP_Count" Operation="inc">-1.0</Effect>
+            <Effect VarName="FAB_GFP_mRNA_Count" Operation="inc">0.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="r5">
+            <ProbabilityRate>P_r5_probabilityRate</ProbabilityRate>
+            <Effect VarName="FAB_GFP_mRNA_Count" Operation="inc">-1.0</Effect>
+            <Effect VarName="FAB_GFP_mRNA_degr_Count" Operation="inc">1.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="r5_reverse">
+            <ProbabilityRate>P_r5_reverse_probabilityRate</ProbabilityRate>
+            <Effect VarName="FAB_GFP_mRNA_Count" Operation="inc">1.0</Effect>
+            <Effect VarName="FAB_GFP_mRNA_degr_Count" Operation="inc">-1.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="r6">
+            <ProbabilityRate>P_r6_probabilityRate</ProbabilityRate>
+            <Effect VarName="FAB_GFP_Count" Operation="inc">-1.0</Effect>
+            <Effect VarName="FAB_GFP_degr_Count" Operation="inc">1.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="r6_reverse">
+            <ProbabilityRate>P_r6_reverse_probabilityRate</ProbabilityRate>
+            <Effect VarName="FAB_GFP_Count" Operation="inc">1.0</Effect>
+            <Effect VarName="FAB_GFP_degr_Count" Operation="inc">-1.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="r3">
+            <ProbabilityRate>P_r3_probabilityRate</ProbabilityRate>
+            <Effect VarName="PFAS_FAB_GFP_Count" Operation="inc">-1.0</Effect>
+            <Effect VarName="PFAS_FAB_GFP_degr_Count" Operation="inc">1.0</Effect>
+            <Effect VarName="PFAS_Inside_Count" Operation="inc">1.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="r3_reverse">
+            <ProbabilityRate>P_r3_reverse_probabilityRate</ProbabilityRate>
+            <Effect VarName="PFAS_FAB_GFP_Count" Operation="inc">1.0</Effect>
+            <Effect VarName="PFAS_FAB_GFP_degr_Count" Operation="inc">-1.0</Effect>
+            <Effect VarName="PFAS_Inside_Count" Operation="inc">-1.0</Effect>
+          </JumpProcess>
+        </CompartmentSubDomain>
+        <Version Name="Application1_generated" KeyValue="276687457" BranchId="276487836" Archived="0" Date="01-Oct-2024 03:05:13" FromVersionable="false">
+          <Owner Name="dglVcell" Identifier="202231687" />
+          <GroupAccess Type="1" />
+          <Annotation>cloned from 'Application1_generated' owned by user Pillow123</Annotation>
+        </Version>
+      </MathDescription>
+      <Simulation Name="PFAS TEST">
+        <Annotation>cloned from 'PFAS TEST' owned by user Pillow123</Annotation>
+        <SolverTaskDescription TaskType="Unsteady" UseSymbolicJacobian="false" Solver="Gibson (Next Reaction Stochastic Method)">
+          <TimeBound StartTime="0.0" EndTime="10000.0" />
+          <TimeStep DefaultTime="0.1" MinTime="1.0E-8" MaxTime="1.0" />
+          <ErrorTolerance Absolut="1.0E-9" Relative="1.0E-8" />
+          <StochSimOptions UseCustomSeed="false" NumberOfTrial="1" Histogram="false" />
+          <OutputOptions OutputTimeStep="15.0" />
+          <NumberProcessors>1</NumberProcessors>
+        </SolverTaskDescription>
+        <MathOverrides>
+          <Constant Name="PFAS_Outside_Count_init_uM" ConstantArraySpec="1000">"0.01", "0.1", "0.0", "1.0", "5.0", "10.0", "50.0"</Constant>
+          <Constant Name="Kf_r2" ConstantArraySpec="1000">"3.85E-4", "3.85E-5", "3.8499999999999996E-6", "0.0038499999999999997", "0.0385"</Constant>
+        </MathOverrides>
+        <Version Name="PFAS TEST" KeyValue="276687632" BranchId="276487980" Archived="0" Date="01-Oct-2024 03:05:14" FromVersionable="false">
+          <Owner Name="dglVcell" Identifier="202231687" />
+          <GroupAccess Type="1" />
+          <Annotation>cloned from 'PFAS TEST' owned by user Pillow123</Annotation>
+        </Version>
+      </Simulation>
+      <Simulation Name="PFAS TEST fixed outside">
+        <SolverTaskDescription TaskType="Unsteady" UseSymbolicJacobian="false" Solver="Gibson (Next Reaction Stochastic Method)">
+          <TimeBound StartTime="0.0" EndTime="10000.0" />
+          <TimeStep DefaultTime="0.1" MinTime="1.0E-8" MaxTime="1.0" />
+          <ErrorTolerance Absolut="1.0E-9" Relative="1.0E-8" />
+          <StochSimOptions UseCustomSeed="false" NumberOfTrial="1" Histogram="false" />
+          <OutputOptions OutputTimeStep="15.0" />
+          <NumberProcessors>1</NumberProcessors>
+        </SolverTaskDescription>
+        <MathOverrides>
+          <Constant Name="PFAS_Outside_Count_init_uM" ConstantArraySpec="1000">"0.01", "0.1", "0.0", "1.0", "5.0", "10.0", "50.0"</Constant>
+          <Constant Name="Kf_r2" ConstantArraySpec="1000">"3.85E-4", "3.85E-5", "3.8499999999999996E-6", "0.0038499999999999997", "0.0385"</Constant>
+        </MathOverrides>
+        <Version Name="PFAS TEST fixed outside" KeyValue="276687634" BranchId="276487983" Archived="0" Date="01-Oct-2024 03:05:14" FromVersionable="false">
+          <Owner Name="dglVcell" Identifier="202231687" />
+          <GroupAccess Type="1" />
+        </Version>
+      </Simulation>
+      <Version Name="Application1" KeyValue="276695416" BranchId="276487914" Archived="0" Date="01-Oct-2024 05:45:19" FromVersionable="false">
+        <Owner Name="dglVcell" Identifier="202231687" />
+        <GroupAccess Type="1" />
+        <Annotation>cloned from 'Application1' owned by user Pillow123</Annotation>
+      </Version>
+      <MicroscopeMeasurement Name="fluor">
+        <ConvolutionKernel Type="ProjectionZKernel" />
+      </MicroscopeMeasurement>
+    </SimulationSpec>
+    <SimulationSpec Name="Copy of Application1" Stochastic="true" UseConcentration="true" RandomizeInitCondition="false" SpringSaLaD="false" RuleBased="false" MassConservationModelReduction="false" InsufficientIterations="false" InsufficientMaxMolecules="false">
+      <NetworkConstraints RbmMaxIteration="1" RbmMaxMoleculesPerSpecies="10" RbmSpeciesLimit="800" RbmReactionsLimit="2500">
+        <MaxStoichiometry MolecularType="PFAS_Outside" Integer="100" />
+        <MaxStoichiometry MolecularType="PFAS_Inside" Integer="100" />
+        <MaxStoichiometry MolecularType="FAB_PFOA_Cplx" Integer="100" />
+        <MaxStoichiometry MolecularType="cpGFP_gene" Integer="100" />
+        <MaxStoichiometry MolecularType="cpGFP_mRNA" Integer="100" />
+        <MaxStoichiometry MolecularType="cpGFP_mRNA_degr" Integer="100" />
+        <MaxStoichiometry MolecularType="cpGFP_degr" Integer="100" />
+        <MaxStoichiometry MolecularType="cpGFP" Integer="100" />
+        <MaxStoichiometry MolecularType="FAB_GFP_gene" Integer="100" />
+        <MaxStoichiometry MolecularType="FAB_GFP_mRNA" Integer="100" />
+        <MaxStoichiometry MolecularType="FAB_GFP" Integer="100" />
+        <MaxStoichiometry MolecularType="FAB_GFP_degr" Integer="100" />
+        <MaxStoichiometry MolecularType="FAB_GFP_mRNA_degr" Integer="100" />
+        <MaxStoichiometry MolecularType="FAB_cGFP_degr" Integer="100" />
+      </NetworkConstraints>
+      <Annotation>(copied from Application1)</Annotation>
+      <Geometry Name="non-spatial1344108893" Dimension="0">
+        <Extent X="10.0" Y="10.0" Z="10.0" />
+        <Origin X="0.0" Y="0.0" Z="0.0" />
+        <SubVolume Name="Compartment" Handle="0" Type="Compartmental" KeyValue="276487831" />
+        <Version Name="non-spatial1344108893" KeyValue="276487827" BranchId="276487828" Archived="0" Date="27-Sep-2024 19:08:05" FromVersionable="false">
+          <Owner Name="dglVcell" Identifier="202231687" />
+          <GroupAccess Type="1" />
+        </Version>
+      </Geometry>
+      <GeometryContext>
+        <FeatureMapping Feature="Enviroment" GeometryClass="Compartment" SubVolume="Compartment" Size="1.0E13">
+          <BoundariesTypes Xm="Flux" Xp="Flux" Ym="Flux" Yp="Flux" Zm="Flux" Zp="Flux" />
+        </FeatureMapping>
+        <FeatureMapping Feature="Cell" GeometryClass="Compartment" SubVolume="Compartment" Size="3.5">
+          <BoundariesTypes Xm="Flux" Xp="Flux" Ym="Flux" Yp="Flux" Zm="Flux" Zp="Flux" />
+        </FeatureMapping>
+      </GeometryContext>
+      <ReactionContext>
+        <LocalizedCompoundSpec LocalizedCompoundRef="PFAS_Outside" ForceConstant="true" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="PFAS_Inside" ForceConstant="true" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="PFAS_FAB_GFP" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="FAB_GFP_gene" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.47443965233220736</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="FAB_GFP_mRNA" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="FAB_GFP" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="FAB_GFP_mRNA_degr" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="FAB_GFP_degr" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="PFAS_FAB_GFP_degr" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <ReactionSpec ReactionStepRef="r0" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="r1" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="r2" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="r4" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="r5" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="r6" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="r3" ReactionMapping="included" />
+      </ReactionContext>
+      <MathDescription Name="Copy of Application1_generated">
+        <Constant Name="_F_">96485.3321</Constant>
+        <Constant Name="_F_nmol_">9.64853321E-5</Constant>
+        <Constant Name="_N_pmol_">6.02214179E11</Constant>
+        <Constant Name="_PI_">3.141592653589793</Constant>
+        <Constant Name="_R_">8314.46261815</Constant>
+        <Constant Name="_T_">300.0</Constant>
+        <Constant Name="FAB_GFP_Count_init_uM">0.0</Constant>
+        <Constant Name="FAB_GFP_degr_Count_init_uM">0.0</Constant>
+        <Constant Name="FAB_GFP_gene_Count_init_uM">0.47443965233220736</Constant>
+        <Constant Name="FAB_GFP_mRNA_Count_init_uM">0.0</Constant>
+        <Constant Name="FAB_GFP_mRNA_degr_Count_init_uM">0.0</Constant>
+        <Constant Name="Kf_r0">0.001</Constant>
+        <Constant Name="Kf_r1">192.4</Constant>
+        <Constant Name="Kf_r2">0.0116652085156</Constant>
+        <Constant Name="Kf_r3">9.62704417444E-6</Constant>
+        <Constant Name="Kf_r4">0.00238726790451</Constant>
+        <Constant Name="Kf_r5">3.85E-4</Constant>
+        <Constant Name="Kf_r6">9.62704417444E-6</Constant>
+        <Constant Name="KMOLE">0.001660538783162726</Constant>
+        <Constant Name="Kr_r0">0.001</Constant>
+        <Constant Name="Kr_r1">9.99E-4</Constant>
+        <Constant Name="Kr_r2">0.0</Constant>
+        <Constant Name="Kr_r3">0.0</Constant>
+        <Constant Name="Kr_r4">0.0</Constant>
+        <Constant Name="Kr_r5">0.0</Constant>
+        <Constant Name="Kr_r6">0.0</Constant>
+        <Constant Name="PFAS_FAB_GFP_Count_init_uM">0.0</Constant>
+        <Constant Name="PFAS_FAB_GFP_degr_Count_init_uM">0.0</Constant>
+        <Constant Name="PFAS_Inside_Count_init_uM">0.0</Constant>
+        <Constant Name="PFAS_Outside_Count_init_uM">0.0</Constant>
+        <Constant Name="Size_Cell">3.5</Constant>
+        <Constant Name="Size_Enviroment">1.0E13</Constant>
+        <Constant Name="UnitFactor_molecules_uM_neg_1_um_neg_3">(1.0 * pow(KMOLE, - 1.0))</Constant>
+        <Constant Name="UnitFactor_uM_um3_molecules_neg_1">(1.0 * pow(KMOLE,1.0))</Constant>
+        <StochasticVolumeVariable Name="FAB_GFP_Count" />
+        <StochasticVolumeVariable Name="FAB_GFP_degr_Count" />
+        <StochasticVolumeVariable Name="FAB_GFP_gene_Count" />
+        <StochasticVolumeVariable Name="FAB_GFP_mRNA_Count" />
+        <StochasticVolumeVariable Name="FAB_GFP_mRNA_degr_Count" />
+        <StochasticVolumeVariable Name="PFAS_FAB_GFP_Count" />
+        <StochasticVolumeVariable Name="PFAS_FAB_GFP_degr_Count" />
+        <StochasticVolumeVariable Name="PFAS_Inside_Count" />
+        <StochasticVolumeVariable Name="PFAS_Outside_Count" />
+        <Function Name="FAB_GFP" Domain="Compartment">((FAB_GFP_Count * UnitFactor_uM_um3_molecules_neg_1) / Size_Cell)</Function>
+        <Function Name="FAB_GFP_Count_initCount" Domain="Compartment">(Size_Cell * FAB_GFP_Count_init_uM * UnitFactor_molecules_uM_neg_1_um_neg_3)</Function>
+        <Function Name="FAB_GFP_degr" Domain="Compartment">((FAB_GFP_degr_Count * UnitFactor_uM_um3_molecules_neg_1) / Size_Cell)</Function>
+        <Function Name="FAB_GFP_degr_Count_initCount" Domain="Compartment">(Size_Cell * FAB_GFP_degr_Count_init_uM * UnitFactor_molecules_uM_neg_1_um_neg_3)</Function>
+        <Function Name="FAB_GFP_gene" Domain="Compartment">((FAB_GFP_gene_Count * UnitFactor_uM_um3_molecules_neg_1) / Size_Cell)</Function>
+        <Function Name="FAB_GFP_gene_Count_initCount" Domain="Compartment">(Size_Cell * FAB_GFP_gene_Count_init_uM * UnitFactor_molecules_uM_neg_1_um_neg_3)</Function>
+        <Function Name="FAB_GFP_mRNA" Domain="Compartment">((FAB_GFP_mRNA_Count * UnitFactor_uM_um3_molecules_neg_1) / Size_Cell)</Function>
+        <Function Name="FAB_GFP_mRNA_Count_initCount" Domain="Compartment">(Size_Cell * FAB_GFP_mRNA_Count_init_uM * UnitFactor_molecules_uM_neg_1_um_neg_3)</Function>
+        <Function Name="FAB_GFP_mRNA_degr" Domain="Compartment">((FAB_GFP_mRNA_degr_Count * UnitFactor_uM_um3_molecules_neg_1) / Size_Cell)</Function>
+        <Function Name="FAB_GFP_mRNA_degr_Count_initCount" Domain="Compartment">(Size_Cell * FAB_GFP_mRNA_degr_Count_init_uM * UnitFactor_molecules_uM_neg_1_um_neg_3)</Function>
+        <Function Name="J_r0" Domain="Compartment">((Kf_r0 * PFAS_Outside) - (Kr_r0 * PFAS_Inside))</Function>
+        <Function Name="J_r1" Domain="Compartment">(((Kf_r1 * PFAS_Inside) * FAB_GFP) - (Kr_r1 * PFAS_FAB_GFP))</Function>
+        <Function Name="J_r2" Domain="Compartment">((Kf_r2 * FAB_GFP_gene) - ((Kr_r2 * FAB_GFP_mRNA) * FAB_GFP_gene))</Function>
+        <Function Name="J_r3" Domain="Compartment">((Kf_r3 * PFAS_FAB_GFP) - ((Kr_r3 * PFAS_FAB_GFP_degr) * PFAS_Inside))</Function>
+        <Function Name="J_r4" Domain="Compartment">((Kf_r4 * FAB_GFP_mRNA) - ((Kr_r4 * FAB_GFP) * FAB_GFP_mRNA))</Function>
+        <Function Name="J_r5" Domain="Compartment">((Kf_r5 * FAB_GFP_mRNA) - (Kr_r5 * FAB_GFP_mRNA_degr))</Function>
+        <Function Name="J_r6" Domain="Compartment">((Kf_r6 * FAB_GFP) - (Kr_r6 * FAB_GFP_degr))</Function>
+        <Function Name="P_r0_probabilityRate" Domain="Compartment">(Kf_r0 * PFAS_Outside_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1)</Function>
+        <Function Name="P_r0_reverse_probabilityRate" Domain="Compartment">(Kr_r0 * PFAS_Inside_Count * Size_Enviroment * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1 / Size_Cell)</Function>
+        <Function Name="P_r1_probabilityRate" Domain="Compartment">(Kf_r1 * PFAS_Inside_Count * FAB_GFP_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1 * UnitFactor_uM_um3_molecules_neg_1 / Size_Cell)</Function>
+        <Function Name="P_r1_reverse_probabilityRate" Domain="Compartment">(Kr_r1 * PFAS_FAB_GFP_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1)</Function>
+        <Function Name="P_r2_probabilityRate" Domain="Compartment">(Kf_r2 * FAB_GFP_gene_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1)</Function>
+        <Function Name="P_r2_reverse_probabilityRate" Domain="Compartment">(Kr_r2 * FAB_GFP_mRNA_Count * FAB_GFP_gene_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1 * UnitFactor_uM_um3_molecules_neg_1 / Size_Cell)</Function>
+        <Function Name="P_r3_probabilityRate" Domain="Compartment">(Kf_r3 * PFAS_FAB_GFP_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1)</Function>
+        <Function Name="P_r3_reverse_probabilityRate" Domain="Compartment">(Kr_r3 * PFAS_FAB_GFP_degr_Count * PFAS_Inside_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1 * UnitFactor_uM_um3_molecules_neg_1 / Size_Cell)</Function>
+        <Function Name="P_r4_probabilityRate" Domain="Compartment">(Kf_r4 * FAB_GFP_mRNA_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1)</Function>
+        <Function Name="P_r4_reverse_probabilityRate" Domain="Compartment">(Kr_r4 * FAB_GFP_Count * FAB_GFP_mRNA_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1 * UnitFactor_uM_um3_molecules_neg_1 / Size_Cell)</Function>
+        <Function Name="P_r5_probabilityRate" Domain="Compartment">(Kf_r5 * FAB_GFP_mRNA_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1)</Function>
+        <Function Name="P_r5_reverse_probabilityRate" Domain="Compartment">(Kr_r5 * FAB_GFP_mRNA_degr_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1)</Function>
+        <Function Name="P_r6_probabilityRate" Domain="Compartment">(Kf_r6 * FAB_GFP_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1)</Function>
+        <Function Name="P_r6_reverse_probabilityRate" Domain="Compartment">(Kr_r6 * FAB_GFP_degr_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1)</Function>
+        <Function Name="PFAS_FAB_GFP" Domain="Compartment">((PFAS_FAB_GFP_Count * UnitFactor_uM_um3_molecules_neg_1) / Size_Cell)</Function>
+        <Function Name="PFAS_FAB_GFP_Count_initCount" Domain="Compartment">(Size_Cell * PFAS_FAB_GFP_Count_init_uM * UnitFactor_molecules_uM_neg_1_um_neg_3)</Function>
+        <Function Name="PFAS_FAB_GFP_degr" Domain="Compartment">((PFAS_FAB_GFP_degr_Count * UnitFactor_uM_um3_molecules_neg_1) / Size_Cell)</Function>
+        <Function Name="PFAS_FAB_GFP_degr_Count_initCount" Domain="Compartment">(Size_Cell * PFAS_FAB_GFP_degr_Count_init_uM * UnitFactor_molecules_uM_neg_1_um_neg_3)</Function>
+        <Function Name="PFAS_Inside" Domain="Compartment">((PFAS_Inside_Count * UnitFactor_uM_um3_molecules_neg_1) / Size_Cell)</Function>
+        <Function Name="PFAS_Inside_Count_initCount" Domain="Compartment">(Size_Cell * PFAS_Inside_Count_init_uM * UnitFactor_molecules_uM_neg_1_um_neg_3)</Function>
+        <Function Name="PFAS_Outside" Domain="Compartment">((PFAS_Outside_Count * UnitFactor_uM_um3_molecules_neg_1) / Size_Enviroment)</Function>
+        <Function Name="PFAS_Outside_Count_initCount" Domain="Compartment">(Size_Enviroment * PFAS_Outside_Count_init_uM * UnitFactor_molecules_uM_neg_1_um_neg_3)</Function>
+        <CompartmentSubDomain Name="Compartment">
+          <BoundaryType Boundary="Xm" Type="Value" />
+          <BoundaryType Boundary="Xp" Type="Value" />
+          <BoundaryType Boundary="Ym" Type="Value" />
+          <BoundaryType Boundary="Yp" Type="Value" />
+          <BoundaryType Boundary="Zm" Type="Value" />
+          <BoundaryType Boundary="Zp" Type="Value" />
+          <VariableInitialCount Name="PFAS_Outside_Count">PFAS_Outside_Count_initCount</VariableInitialCount>
+          <VariableInitialCount Name="PFAS_Inside_Count">PFAS_Inside_Count_initCount</VariableInitialCount>
+          <VariableInitialCount Name="PFAS_FAB_GFP_Count">PFAS_FAB_GFP_Count_initCount</VariableInitialCount>
+          <VariableInitialCount Name="FAB_GFP_gene_Count">FAB_GFP_gene_Count_initCount</VariableInitialCount>
+          <VariableInitialCount Name="FAB_GFP_mRNA_Count">FAB_GFP_mRNA_Count_initCount</VariableInitialCount>
+          <VariableInitialCount Name="FAB_GFP_Count">FAB_GFP_Count_initCount</VariableInitialCount>
+          <VariableInitialCount Name="FAB_GFP_mRNA_degr_Count">FAB_GFP_mRNA_degr_Count_initCount</VariableInitialCount>
+          <VariableInitialCount Name="FAB_GFP_degr_Count">FAB_GFP_degr_Count_initCount</VariableInitialCount>
+          <VariableInitialCount Name="PFAS_FAB_GFP_degr_Count">PFAS_FAB_GFP_degr_Count_initCount</VariableInitialCount>
+          <JumpProcess Name="r0">
+            <ProbabilityRate>P_r0_probabilityRate</ProbabilityRate>
+          </JumpProcess>
+          <JumpProcess Name="r0_reverse">
+            <ProbabilityRate>P_r0_reverse_probabilityRate</ProbabilityRate>
+          </JumpProcess>
+          <JumpProcess Name="r1">
+            <ProbabilityRate>P_r1_probabilityRate</ProbabilityRate>
+            <Effect VarName="FAB_GFP_Count" Operation="inc">-1.0</Effect>
+            <Effect VarName="PFAS_FAB_GFP_Count" Operation="inc">1.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="r1_reverse">
+            <ProbabilityRate>P_r1_reverse_probabilityRate</ProbabilityRate>
+            <Effect VarName="FAB_GFP_Count" Operation="inc">1.0</Effect>
+            <Effect VarName="PFAS_FAB_GFP_Count" Operation="inc">-1.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="r2">
+            <ProbabilityRate>P_r2_probabilityRate</ProbabilityRate>
+            <Effect VarName="FAB_GFP_mRNA_Count" Operation="inc">1.0</Effect>
+            <Effect VarName="FAB_GFP_gene_Count" Operation="inc">0.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="r2_reverse">
+            <ProbabilityRate>P_r2_reverse_probabilityRate</ProbabilityRate>
+            <Effect VarName="FAB_GFP_mRNA_Count" Operation="inc">-1.0</Effect>
+            <Effect VarName="FAB_GFP_gene_Count" Operation="inc">0.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="r4">
+            <ProbabilityRate>P_r4_probabilityRate</ProbabilityRate>
+            <Effect VarName="FAB_GFP_Count" Operation="inc">1.0</Effect>
+            <Effect VarName="FAB_GFP_mRNA_Count" Operation="inc">0.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="r4_reverse">
+            <ProbabilityRate>P_r4_reverse_probabilityRate</ProbabilityRate>
+            <Effect VarName="FAB_GFP_Count" Operation="inc">-1.0</Effect>
+            <Effect VarName="FAB_GFP_mRNA_Count" Operation="inc">0.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="r5">
+            <ProbabilityRate>P_r5_probabilityRate</ProbabilityRate>
+            <Effect VarName="FAB_GFP_mRNA_Count" Operation="inc">-1.0</Effect>
+            <Effect VarName="FAB_GFP_mRNA_degr_Count" Operation="inc">1.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="r5_reverse">
+            <ProbabilityRate>P_r5_reverse_probabilityRate</ProbabilityRate>
+            <Effect VarName="FAB_GFP_mRNA_Count" Operation="inc">1.0</Effect>
+            <Effect VarName="FAB_GFP_mRNA_degr_Count" Operation="inc">-1.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="r6">
+            <ProbabilityRate>P_r6_probabilityRate</ProbabilityRate>
+            <Effect VarName="FAB_GFP_Count" Operation="inc">-1.0</Effect>
+            <Effect VarName="FAB_GFP_degr_Count" Operation="inc">1.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="r6_reverse">
+            <ProbabilityRate>P_r6_reverse_probabilityRate</ProbabilityRate>
+            <Effect VarName="FAB_GFP_Count" Operation="inc">1.0</Effect>
+            <Effect VarName="FAB_GFP_degr_Count" Operation="inc">-1.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="r3">
+            <ProbabilityRate>P_r3_probabilityRate</ProbabilityRate>
+            <Effect VarName="PFAS_FAB_GFP_Count" Operation="inc">-1.0</Effect>
+            <Effect VarName="PFAS_FAB_GFP_degr_Count" Operation="inc">1.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="r3_reverse">
+            <ProbabilityRate>P_r3_reverse_probabilityRate</ProbabilityRate>
+            <Effect VarName="PFAS_FAB_GFP_Count" Operation="inc">1.0</Effect>
+            <Effect VarName="PFAS_FAB_GFP_degr_Count" Operation="inc">-1.0</Effect>
+          </JumpProcess>
+        </CompartmentSubDomain>
+        <Version Name="Copy of Application1_generated" KeyValue="276687459" BranchId="276487839" Archived="0" Date="01-Oct-2024 03:05:13" FromVersionable="false">
+          <Owner Name="dglVcell" Identifier="202231687" />
+          <GroupAccess Type="1" />
+        </Version>
+      </MathDescription>
+      <Simulation Name="PFAS TEST_1">
+        <SolverTaskDescription TaskType="Unsteady" UseSymbolicJacobian="false" Solver="Gibson (Next Reaction Stochastic Method)">
+          <TimeBound StartTime="0.0" EndTime="10000.0" />
+          <TimeStep DefaultTime="0.1" MinTime="1.0E-8" MaxTime="1.0" />
+          <ErrorTolerance Absolut="1.0E-9" Relative="1.0E-8" />
+          <StochSimOptions UseCustomSeed="false" NumberOfTrial="1" Histogram="false" />
+          <OutputOptions OutputTimeStep="15.0" />
+          <NumberProcessors>1</NumberProcessors>
+        </SolverTaskDescription>
+        <MathOverrides>
+          <Constant Name="PFAS_Inside_Count_init_uM" ConstantArraySpec="1000">"1.0E-7", "1.0E-6", "1.0E-5", "1.0E-4", "0.001"</Constant>
+          <Constant Name="Kf_r2" ConstantArraySpec="1000">"3.85E-4", "3.85E-5", "3.8499999999999996E-6", "0.0038499999999999997", "0.0385"</Constant>
+        </MathOverrides>
+        <Version Name="PFAS TEST_1" KeyValue="276687636" BranchId="276487986" Archived="0" Date="01-Oct-2024 03:05:14" FromVersionable="false">
+          <Owner Name="dglVcell" Identifier="202231687" />
+          <GroupAccess Type="1" />
+          <ParentSimRef KeyValue="276493180" />
+        </Version>
+      </Simulation>
+      <Simulation Name="Copy of PFAS TEST_1">
+        <SolverTaskDescription TaskType="Unsteady" UseSymbolicJacobian="false" Solver="Gibson (Next Reaction Stochastic Method)">
+          <TimeBound StartTime="0.0" EndTime="1000.0" />
+          <TimeStep DefaultTime="0.1" MinTime="1.0E-8" MaxTime="1.0" />
+          <ErrorTolerance Absolut="1.0E-9" Relative="1.0E-8" />
+          <StochSimOptions UseCustomSeed="false" NumberOfTrial="1" Histogram="false" />
+          <OutputOptions OutputTimeStep="5.0" />
+          <NumberProcessors>1</NumberProcessors>
+        </SolverTaskDescription>
+        <MathOverrides>
+          <Constant Name="PFAS_Inside_Count_init_uM" ConstantArraySpec="1001">0.001 to 1.0, log, 4 values</Constant>
+        </MathOverrides>
+        <Version Name="Copy of PFAS TEST_1" KeyValue="276687638" BranchId="276494485" Archived="0" Date="01-Oct-2024 03:05:14" FromVersionable="false">
+          <Owner Name="dglVcell" Identifier="202231687" />
+          <GroupAccess Type="1" />
+        </Version>
+      </Simulation>
+      <Version Name="Copy of Application1" KeyValue="276695436" BranchId="276487935" Archived="0" Date="01-Oct-2024 05:45:19" FromVersionable="false">
+        <Owner Name="dglVcell" Identifier="202231687" />
+        <GroupAccess Type="1" />
+        <Annotation>(copied from Application1)</Annotation>
+      </Version>
+      <MicroscopeMeasurement Name="fluor">
+        <ConvolutionKernel Type="ProjectionZKernel" />
+      </MicroscopeMeasurement>
+    </SimulationSpec>
+    <SimulationSpec Name="Application2" Stochastic="false" UseConcentration="true" SpringSaLaD="false" RuleBased="false" MassConservationModelReduction="false" InsufficientIterations="false" InsufficientMaxMolecules="false">
+      <NetworkConstraints RbmMaxIteration="1" RbmMaxMoleculesPerSpecies="10" RbmSpeciesLimit="800" RbmReactionsLimit="2500">
+        <MaxStoichiometry MolecularType="PFAS_Outside" Integer="100" />
+        <MaxStoichiometry MolecularType="PFAS_Inside" Integer="100" />
+        <MaxStoichiometry MolecularType="FAB_PFOA_Cplx" Integer="100" />
+        <MaxStoichiometry MolecularType="cpGFP_gene" Integer="100" />
+        <MaxStoichiometry MolecularType="cpGFP_mRNA" Integer="100" />
+        <MaxStoichiometry MolecularType="cpGFP_mRNA_degr" Integer="100" />
+        <MaxStoichiometry MolecularType="cpGFP_degr" Integer="100" />
+        <MaxStoichiometry MolecularType="cpGFP" Integer="100" />
+        <MaxStoichiometry MolecularType="FAB_GFP_gene" Integer="100" />
+        <MaxStoichiometry MolecularType="FAB_GFP_mRNA" Integer="100" />
+        <MaxStoichiometry MolecularType="FAB_GFP" Integer="100" />
+        <MaxStoichiometry MolecularType="FAB_GFP_degr" Integer="100" />
+        <MaxStoichiometry MolecularType="FAB_GFP_mRNA_degr" Integer="100" />
+        <MaxStoichiometry MolecularType="FAB_cGFP_degr" Integer="100" />
+      </NetworkConstraints>
+      <Annotation />
+      <Geometry Name="non-spatial159015437" Dimension="0">
+        <Extent X="10.0" Y="10.0" Z="10.0" />
+        <Origin X="0.0" Y="0.0" Z="0.0" />
+        <SubVolume Name="Compartment" Handle="0" Type="Compartmental" KeyValue="276506059" />
+        <Version Name="non-spatial159015437" KeyValue="276506055" BranchId="276506056" Archived="0" Date="28-Sep-2024 02:34:10" FromVersionable="false">
+          <Owner Name="dglVcell" Identifier="202231687" />
+          <GroupAccess Type="1" />
+        </Version>
+      </Geometry>
+      <GeometryContext>
+        <FeatureMapping Feature="Enviroment" GeometryClass="Compartment" SubVolume="Compartment" Size="50000.0">
+          <BoundariesTypes Xm="Flux" Xp="Flux" Ym="Flux" Yp="Flux" Zm="Flux" Zp="Flux" />
+        </FeatureMapping>
+        <FeatureMapping Feature="Cell" GeometryClass="Compartment" SubVolume="Compartment" Size="3.5">
+          <BoundariesTypes Xm="Flux" Xp="Flux" Ym="Flux" Yp="Flux" Zm="Flux" Zp="Flux" />
+        </FeatureMapping>
+      </GeometryContext>
+      <ReactionContext>
+        <LocalizedCompoundSpec LocalizedCompoundRef="PFAS_Outside" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="PFAS_Inside" ForceConstant="true" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="PFAS_FAB_GFP" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="FAB_GFP_gene" ForceConstant="true" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.47443965233220736</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="FAB_GFP_mRNA" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="FAB_GFP" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="FAB_GFP_mRNA_degr" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="FAB_GFP_degr" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="PFAS_FAB_GFP_degr" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <ReactionSpec ReactionStepRef="r0" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="r1" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="r2" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="r4" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="r5" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="r6" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="r3" ReactionMapping="included" />
+      </ReactionContext>
+      <MathDescription Name="Application2_generated">
+        <Constant Name="_F_">96485.3321</Constant>
+        <Constant Name="_F_nmol_">9.64853321E-5</Constant>
+        <Constant Name="_K_GHK_">1.0E-9</Constant>
+        <Constant Name="_N_pmol_">6.02214179E11</Constant>
+        <Constant Name="_PI_">3.141592653589793</Constant>
+        <Constant Name="_R_">8314.46261815</Constant>
+        <Constant Name="_T_">300.0</Constant>
+        <Constant Name="FAB_GFP_degr_init_uM">0.0</Constant>
+        <Constant Name="FAB_GFP_gene_init_uM">0.47443965233220736</Constant>
+        <Constant Name="FAB_GFP_init_uM">0.0</Constant>
+        <Constant Name="FAB_GFP_mRNA_degr_init_uM">0.0</Constant>
+        <Constant Name="FAB_GFP_mRNA_init_uM">0.0</Constant>
+        <Constant Name="K_millivolts_per_volt">1000.0</Constant>
+        <Constant Name="Kf_r0">0.001</Constant>
+        <Constant Name="Kf_r1">192.4</Constant>
+        <Constant Name="Kf_r2">0.0116652085156</Constant>
+        <Constant Name="Kf_r3">9.62704417444E-6</Constant>
+        <Constant Name="Kf_r4">0.00238726790451</Constant>
+        <Constant Name="Kf_r5">3.85E-4</Constant>
+        <Constant Name="Kf_r6">9.62704417444E-6</Constant>
+        <Constant Name="KMOLE">0.001660538783162726</Constant>
+        <Constant Name="Kr_r0">0.001</Constant>
+        <Constant Name="Kr_r1">9.99E-4</Constant>
+        <Constant Name="Kr_r2">0.0</Constant>
+        <Constant Name="Kr_r3">0.0</Constant>
+        <Constant Name="Kr_r4">0.0</Constant>
+        <Constant Name="Kr_r5">0.0</Constant>
+        <Constant Name="Kr_r6">0.0</Constant>
+        <Constant Name="PFAS_FAB_GFP_degr_init_uM">0.0</Constant>
+        <Constant Name="PFAS_FAB_GFP_init_uM">0.0</Constant>
+        <Constant Name="PFAS_Inside_init_uM">0.0</Constant>
+        <Constant Name="PFAS_Outside_init_uM">0.0</Constant>
+        <Constant Name="Size_Cell">3.5</Constant>
+        <Constant Name="Size_Enviroment">50000.0</Constant>
+        <VolumeVariable Name="FAB_GFP" Domain="Compartment" />
+        <VolumeVariable Name="FAB_GFP_degr" Domain="Compartment" />
+        <VolumeVariable Name="FAB_GFP_mRNA" Domain="Compartment" />
+        <VolumeVariable Name="FAB_GFP_mRNA_degr" Domain="Compartment" />
+        <VolumeVariable Name="PFAS_FAB_GFP" Domain="Compartment" />
+        <VolumeVariable Name="PFAS_FAB_GFP_degr" Domain="Compartment" />
+        <VolumeVariable Name="PFAS_Outside" Domain="Compartment" />
+        <Function Name="FAB_GFP_gene" Domain="Compartment">FAB_GFP_gene_init_uM</Function>
+        <Function Name="J_r0" Domain="Compartment">((Kf_r0 * PFAS_Outside) - (Kr_r0 * PFAS_Inside))</Function>
+        <Function Name="J_r1" Domain="Compartment">(((Kf_r1 * PFAS_Inside) * FAB_GFP) - (Kr_r1 * PFAS_FAB_GFP))</Function>
+        <Function Name="J_r2" Domain="Compartment">((Kf_r2 * FAB_GFP_gene) - ((Kr_r2 * FAB_GFP_mRNA) * FAB_GFP_gene))</Function>
+        <Function Name="J_r3" Domain="Compartment">((Kf_r3 * PFAS_FAB_GFP) - ((Kr_r3 * PFAS_FAB_GFP_degr) * PFAS_Inside))</Function>
+        <Function Name="J_r4" Domain="Compartment">((Kf_r4 * FAB_GFP_mRNA) - ((Kr_r4 * FAB_GFP) * FAB_GFP_mRNA))</Function>
+        <Function Name="J_r5" Domain="Compartment">((Kf_r5 * FAB_GFP_mRNA) - (Kr_r5 * FAB_GFP_mRNA_degr))</Function>
+        <Function Name="J_r6" Domain="Compartment">((Kf_r6 * FAB_GFP) - (Kr_r6 * FAB_GFP_degr))</Function>
+        <Function Name="PFAS_Inside" Domain="Compartment">PFAS_Inside_init_uM</Function>
+        <CompartmentSubDomain Name="Compartment">
+          <BoundaryType Boundary="Xm" Type="Value" />
+          <BoundaryType Boundary="Xp" Type="Value" />
+          <BoundaryType Boundary="Ym" Type="Value" />
+          <BoundaryType Boundary="Yp" Type="Value" />
+          <BoundaryType Boundary="Zm" Type="Value" />
+          <BoundaryType Boundary="Zp" Type="Value" />
+          <OdeEquation Name="PFAS_Outside" SolutionType="Unknown">
+            <Rate>- J_r0</Rate>
+            <Initial>PFAS_Outside_init_uM</Initial>
+          </OdeEquation>
+          <OdeEquation Name="PFAS_FAB_GFP" SolutionType="Unknown">
+            <Rate>(J_r1 - J_r3)</Rate>
+            <Initial>PFAS_FAB_GFP_init_uM</Initial>
+          </OdeEquation>
+          <OdeEquation Name="FAB_GFP_mRNA" SolutionType="Unknown">
+            <Rate>(J_r2 - J_r5)</Rate>
+            <Initial>FAB_GFP_mRNA_init_uM</Initial>
+          </OdeEquation>
+          <OdeEquation Name="FAB_GFP" SolutionType="Unknown">
+            <Rate>( - J_r1 + J_r4 - J_r6)</Rate>
+            <Initial>FAB_GFP_init_uM</Initial>
+          </OdeEquation>
+          <OdeEquation Name="FAB_GFP_mRNA_degr" SolutionType="Unknown">
+            <Rate>J_r5</Rate>
+            <Initial>FAB_GFP_mRNA_degr_init_uM</Initial>
+          </OdeEquation>
+          <OdeEquation Name="FAB_GFP_degr" SolutionType="Unknown">
+            <Rate>J_r6</Rate>
+            <Initial>FAB_GFP_degr_init_uM</Initial>
+          </OdeEquation>
+          <OdeEquation Name="PFAS_FAB_GFP_degr" SolutionType="Unknown">
+            <Rate>J_r3</Rate>
+            <Initial>PFAS_FAB_GFP_degr_init_uM</Initial>
+          </OdeEquation>
+        </CompartmentSubDomain>
+        <Version Name="Application2_generated" KeyValue="276687461" BranchId="276506061" Archived="0" Date="01-Oct-2024 03:05:13" FromVersionable="false">
+          <Owner Name="dglVcell" Identifier="202231687" />
+          <GroupAccess Type="1" />
+        </Version>
+      </MathDescription>
+      <Simulation Name="scan_pfas">
+        <SolverTaskDescription TaskType="Unsteady" UseSymbolicJacobian="false" Solver="Combined Stiff Solver (IDA/CVODE)">
+          <TimeBound StartTime="0.0" EndTime="1000.0" />
+          <TimeStep DefaultTime="0.1" MinTime="1.0E-8" MaxTime="1.0" />
+          <ErrorTolerance Absolut="1.0E-9" Relative="1.0E-9" />
+          <OutputOptions KeepEvery="1" KeepAtMost="1000" />
+          <NumberProcessors>1</NumberProcessors>
+        </SolverTaskDescription>
+        <MathOverrides>
+          <Constant Name="PFAS_Inside_init_uM" ConstantArraySpec="1000">"1.0E-5", "1.0E-4", "0.001", "0.01", "0.1", "1.0", "0.0"</Constant>
+        </MathOverrides>
+        <Version Name="scan_pfas" KeyValue="276687640" BranchId="276507987" Archived="0" Date="01-Oct-2024 03:05:14" FromVersionable="false">
+          <Owner Name="dglVcell" Identifier="202231687" />
+          <GroupAccess Type="1" />
+        </Version>
+      </Simulation>
+      <Simulation Name="no_pfas">
+        <SolverTaskDescription TaskType="Unsteady" UseSymbolicJacobian="false" Solver="Combined Stiff Solver (IDA/CVODE)">
+          <TimeBound StartTime="0.0" EndTime="1.0E7" />
+          <TimeStep DefaultTime="0.1" MinTime="1.0E-8" MaxTime="1.0" />
+          <ErrorTolerance Absolut="1.0E-9" Relative="1.0E-9" />
+          <OutputOptions KeepEvery="1000" KeepAtMost="1000" />
+          <NumberProcessors>1</NumberProcessors>
+        </SolverTaskDescription>
+        <MathOverrides />
+        <Version Name="no_pfas" KeyValue="276687642" BranchId="276507776" Archived="0" Date="01-Oct-2024 03:05:14" FromVersionable="false">
+          <Owner Name="dglVcell" Identifier="202231687" />
+          <GroupAccess Type="1" />
+        </Version>
+      </Simulation>
+      <Version Name="Application2" KeyValue="276695456" BranchId="276506124" Archived="0" Date="01-Oct-2024 05:45:19" FromVersionable="false">
+        <Owner Name="dglVcell" Identifier="202231687" />
+        <GroupAccess Type="1" />
+      </Version>
+      <MicroscopeMeasurement Name="fluor">
+        <ConvolutionKernel Type="ProjectionZKernel" />
+      </MicroscopeMeasurement>
+    </SimulationSpec>
+    <SimulationSpec Name="Application3" Stochastic="true" UseConcentration="true" RandomizeInitCondition="false" SpringSaLaD="false" RuleBased="false" MassConservationModelReduction="false" InsufficientIterations="false" InsufficientMaxMolecules="false">
+      <NetworkConstraints RbmMaxIteration="1" RbmMaxMoleculesPerSpecies="10" RbmSpeciesLimit="800" RbmReactionsLimit="2500">
+        <MaxStoichiometry MolecularType="PFAS_Outside" Integer="100" />
+        <MaxStoichiometry MolecularType="PFAS_Inside" Integer="100" />
+        <MaxStoichiometry MolecularType="FAB_PFOA_Cplx" Integer="100" />
+        <MaxStoichiometry MolecularType="cpGFP_gene" Integer="100" />
+        <MaxStoichiometry MolecularType="cpGFP_mRNA" Integer="100" />
+        <MaxStoichiometry MolecularType="cpGFP_mRNA_degr" Integer="100" />
+        <MaxStoichiometry MolecularType="cpGFP_degr" Integer="100" />
+        <MaxStoichiometry MolecularType="cpGFP" Integer="100" />
+        <MaxStoichiometry MolecularType="FAB_GFP_gene" Integer="100" />
+        <MaxStoichiometry MolecularType="FAB_GFP_mRNA" Integer="100" />
+        <MaxStoichiometry MolecularType="FAB_GFP" Integer="100" />
+        <MaxStoichiometry MolecularType="FAB_GFP_degr" Integer="100" />
+        <MaxStoichiometry MolecularType="FAB_GFP_mRNA_degr" Integer="100" />
+        <MaxStoichiometry MolecularType="FAB_cGFP_degr" Integer="100" />
+      </NetworkConstraints>
+      <Annotation />
+      <Geometry Name="non-spatial1532065873" Dimension="0">
+        <Extent X="10.0" Y="10.0" Z="10.0" />
+        <Origin X="0.0" Y="0.0" Z="0.0" />
+        <SubVolume Name="Compartment" Handle="0" Type="Compartmental" KeyValue="276667874" />
+        <Version Name="non-spatial1532065873" KeyValue="276667870" BranchId="276667871" Archived="0" Date="30-Sep-2024 19:47:06" FromVersionable="false">
+          <Owner Name="dglVcell" Identifier="202231687" />
+          <GroupAccess Type="1" />
+        </Version>
+      </Geometry>
+      <GeometryContext>
+        <FeatureMapping Feature="Enviroment" GeometryClass="Compartment" SubVolume="Compartment" Size="1000.0">
+          <BoundariesTypes Xm="Flux" Xp="Flux" Ym="Flux" Yp="Flux" Zm="Flux" Zp="Flux" />
+        </FeatureMapping>
+        <FeatureMapping Feature="Cell" GeometryClass="Compartment" SubVolume="Compartment" Size="3.5">
+          <BoundariesTypes Xm="Flux" Xp="Flux" Ym="Flux" Yp="Flux" Zm="Flux" Zp="Flux" />
+        </FeatureMapping>
+      </GeometryContext>
+      <ReactionContext>
+        <LocalizedCompoundSpec LocalizedCompoundRef="PFAS_Outside" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="PFAS_Inside" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="PFAS_FAB_GFP" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="FAB_GFP_gene" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.47443965233220736</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="FAB_GFP_mRNA" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="FAB_GFP" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="FAB_GFP_mRNA_degr" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="FAB_GFP_degr" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="PFAS_FAB_GFP_degr" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <ReactionSpec ReactionStepRef="r0" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="r1" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="r2" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="r4" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="r5" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="r6" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="r3" ReactionMapping="included" />
+      </ReactionContext>
+      <MathDescription Name="Application3_generated">
+        <Constant Name="_F_">96485.3321</Constant>
+        <Constant Name="_F_nmol_">9.64853321E-5</Constant>
+        <Constant Name="_N_pmol_">6.02214179E11</Constant>
+        <Constant Name="_PI_">3.141592653589793</Constant>
+        <Constant Name="_R_">8314.46261815</Constant>
+        <Constant Name="_T_">300.0</Constant>
+        <Constant Name="FAB_GFP_Count_init_uM">0.0</Constant>
+        <Constant Name="FAB_GFP_degr_Count_init_uM">0.0</Constant>
+        <Constant Name="FAB_GFP_gene_Count_init_uM">0.47443965233220736</Constant>
+        <Constant Name="FAB_GFP_mRNA_Count_init_uM">0.0</Constant>
+        <Constant Name="FAB_GFP_mRNA_degr_Count_init_uM">0.0</Constant>
+        <Constant Name="Kf_r0">0.001</Constant>
+        <Constant Name="Kf_r1">192.4</Constant>
+        <Constant Name="Kf_r2">0.0116652085156</Constant>
+        <Constant Name="Kf_r3">9.62704417444E-6</Constant>
+        <Constant Name="Kf_r4">0.00238726790451</Constant>
+        <Constant Name="Kf_r5">3.85E-4</Constant>
+        <Constant Name="Kf_r6">9.62704417444E-6</Constant>
+        <Constant Name="KMOLE">0.001660538783162726</Constant>
+        <Constant Name="Kr_r0">0.001</Constant>
+        <Constant Name="Kr_r1">9.99E-4</Constant>
+        <Constant Name="Kr_r2">0.0</Constant>
+        <Constant Name="Kr_r3">0.0</Constant>
+        <Constant Name="Kr_r4">0.0</Constant>
+        <Constant Name="Kr_r5">0.0</Constant>
+        <Constant Name="Kr_r6">0.0</Constant>
+        <Constant Name="PFAS_FAB_GFP_Count_init_uM">0.0</Constant>
+        <Constant Name="PFAS_FAB_GFP_degr_Count_init_uM">0.0</Constant>
+        <Constant Name="PFAS_Inside_Count_init_uM">0.0</Constant>
+        <Constant Name="PFAS_Outside_Count_init_uM">0.0</Constant>
+        <Constant Name="Size_Cell">3.5</Constant>
+        <Constant Name="Size_Enviroment">1000.0</Constant>
+        <Constant Name="UnitFactor_molecules_uM_neg_1_um_neg_3">(1.0 * pow(KMOLE, - 1.0))</Constant>
+        <Constant Name="UnitFactor_uM_um3_molecules_neg_1">(1.0 * pow(KMOLE,1.0))</Constant>
+        <StochasticVolumeVariable Name="FAB_GFP_Count" />
+        <StochasticVolumeVariable Name="FAB_GFP_degr_Count" />
+        <StochasticVolumeVariable Name="FAB_GFP_gene_Count" />
+        <StochasticVolumeVariable Name="FAB_GFP_mRNA_Count" />
+        <StochasticVolumeVariable Name="FAB_GFP_mRNA_degr_Count" />
+        <StochasticVolumeVariable Name="PFAS_FAB_GFP_Count" />
+        <StochasticVolumeVariable Name="PFAS_FAB_GFP_degr_Count" />
+        <StochasticVolumeVariable Name="PFAS_Inside_Count" />
+        <StochasticVolumeVariable Name="PFAS_Outside_Count" />
+        <Function Name="FAB_GFP" Domain="Compartment">((FAB_GFP_Count * UnitFactor_uM_um3_molecules_neg_1) / Size_Cell)</Function>
+        <Function Name="FAB_GFP_Count_initCount" Domain="Compartment">(Size_Cell * FAB_GFP_Count_init_uM * UnitFactor_molecules_uM_neg_1_um_neg_3)</Function>
+        <Function Name="FAB_GFP_degr" Domain="Compartment">((FAB_GFP_degr_Count * UnitFactor_uM_um3_molecules_neg_1) / Size_Cell)</Function>
+        <Function Name="FAB_GFP_degr_Count_initCount" Domain="Compartment">(Size_Cell * FAB_GFP_degr_Count_init_uM * UnitFactor_molecules_uM_neg_1_um_neg_3)</Function>
+        <Function Name="FAB_GFP_gene" Domain="Compartment">((FAB_GFP_gene_Count * UnitFactor_uM_um3_molecules_neg_1) / Size_Cell)</Function>
+        <Function Name="FAB_GFP_gene_Count_initCount" Domain="Compartment">(Size_Cell * FAB_GFP_gene_Count_init_uM * UnitFactor_molecules_uM_neg_1_um_neg_3)</Function>
+        <Function Name="FAB_GFP_mRNA" Domain="Compartment">((FAB_GFP_mRNA_Count * UnitFactor_uM_um3_molecules_neg_1) / Size_Cell)</Function>
+        <Function Name="FAB_GFP_mRNA_Count_initCount" Domain="Compartment">(Size_Cell * FAB_GFP_mRNA_Count_init_uM * UnitFactor_molecules_uM_neg_1_um_neg_3)</Function>
+        <Function Name="FAB_GFP_mRNA_degr" Domain="Compartment">((FAB_GFP_mRNA_degr_Count * UnitFactor_uM_um3_molecules_neg_1) / Size_Cell)</Function>
+        <Function Name="FAB_GFP_mRNA_degr_Count_initCount" Domain="Compartment">(Size_Cell * FAB_GFP_mRNA_degr_Count_init_uM * UnitFactor_molecules_uM_neg_1_um_neg_3)</Function>
+        <Function Name="J_r0" Domain="Compartment">((Kf_r0 * PFAS_Outside) - (Kr_r0 * PFAS_Inside))</Function>
+        <Function Name="J_r1" Domain="Compartment">(((Kf_r1 * PFAS_Inside) * FAB_GFP) - (Kr_r1 * PFAS_FAB_GFP))</Function>
+        <Function Name="J_r2" Domain="Compartment">((Kf_r2 * FAB_GFP_gene) - ((Kr_r2 * FAB_GFP_mRNA) * FAB_GFP_gene))</Function>
+        <Function Name="J_r3" Domain="Compartment">((Kf_r3 * PFAS_FAB_GFP) - ((Kr_r3 * PFAS_FAB_GFP_degr) * PFAS_Inside))</Function>
+        <Function Name="J_r4" Domain="Compartment">((Kf_r4 * FAB_GFP_mRNA) - ((Kr_r4 * FAB_GFP) * FAB_GFP_mRNA))</Function>
+        <Function Name="J_r5" Domain="Compartment">((Kf_r5 * FAB_GFP_mRNA) - (Kr_r5 * FAB_GFP_mRNA_degr))</Function>
+        <Function Name="J_r6" Domain="Compartment">((Kf_r6 * FAB_GFP) - (Kr_r6 * FAB_GFP_degr))</Function>
+        <Function Name="P_r0_probabilityRate" Domain="Compartment">(Kf_r0 * PFAS_Outside_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1)</Function>
+        <Function Name="P_r0_reverse_probabilityRate" Domain="Compartment">(Kr_r0 * PFAS_Inside_Count * Size_Enviroment * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1 / Size_Cell)</Function>
+        <Function Name="P_r1_probabilityRate" Domain="Compartment">(Kf_r1 * PFAS_Inside_Count * FAB_GFP_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1 * UnitFactor_uM_um3_molecules_neg_1 / Size_Cell)</Function>
+        <Function Name="P_r1_reverse_probabilityRate" Domain="Compartment">(Kr_r1 * PFAS_FAB_GFP_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1)</Function>
+        <Function Name="P_r2_probabilityRate" Domain="Compartment">(Kf_r2 * FAB_GFP_gene_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1)</Function>
+        <Function Name="P_r2_reverse_probabilityRate" Domain="Compartment">(Kr_r2 * FAB_GFP_mRNA_Count * FAB_GFP_gene_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1 * UnitFactor_uM_um3_molecules_neg_1 / Size_Cell)</Function>
+        <Function Name="P_r3_probabilityRate" Domain="Compartment">(Kf_r3 * PFAS_FAB_GFP_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1)</Function>
+        <Function Name="P_r3_reverse_probabilityRate" Domain="Compartment">(Kr_r3 * PFAS_FAB_GFP_degr_Count * PFAS_Inside_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1 * UnitFactor_uM_um3_molecules_neg_1 / Size_Cell)</Function>
+        <Function Name="P_r4_probabilityRate" Domain="Compartment">(Kf_r4 * FAB_GFP_mRNA_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1)</Function>
+        <Function Name="P_r4_reverse_probabilityRate" Domain="Compartment">(Kr_r4 * FAB_GFP_Count * FAB_GFP_mRNA_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1 * UnitFactor_uM_um3_molecules_neg_1 / Size_Cell)</Function>
+        <Function Name="P_r5_probabilityRate" Domain="Compartment">(Kf_r5 * FAB_GFP_mRNA_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1)</Function>
+        <Function Name="P_r5_reverse_probabilityRate" Domain="Compartment">(Kr_r5 * FAB_GFP_mRNA_degr_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1)</Function>
+        <Function Name="P_r6_probabilityRate" Domain="Compartment">(Kf_r6 * FAB_GFP_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1)</Function>
+        <Function Name="P_r6_reverse_probabilityRate" Domain="Compartment">(Kr_r6 * FAB_GFP_degr_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1)</Function>
+        <Function Name="PFAS_FAB_GFP" Domain="Compartment">((PFAS_FAB_GFP_Count * UnitFactor_uM_um3_molecules_neg_1) / Size_Cell)</Function>
+        <Function Name="PFAS_FAB_GFP_Count_initCount" Domain="Compartment">(Size_Cell * PFAS_FAB_GFP_Count_init_uM * UnitFactor_molecules_uM_neg_1_um_neg_3)</Function>
+        <Function Name="PFAS_FAB_GFP_degr" Domain="Compartment">((PFAS_FAB_GFP_degr_Count * UnitFactor_uM_um3_molecules_neg_1) / Size_Cell)</Function>
+        <Function Name="PFAS_FAB_GFP_degr_Count_initCount" Domain="Compartment">(Size_Cell * PFAS_FAB_GFP_degr_Count_init_uM * UnitFactor_molecules_uM_neg_1_um_neg_3)</Function>
+        <Function Name="PFAS_Inside" Domain="Compartment">((PFAS_Inside_Count * UnitFactor_uM_um3_molecules_neg_1) / Size_Cell)</Function>
+        <Function Name="PFAS_Inside_Count_initCount" Domain="Compartment">(Size_Cell * PFAS_Inside_Count_init_uM * UnitFactor_molecules_uM_neg_1_um_neg_3)</Function>
+        <Function Name="PFAS_Outside" Domain="Compartment">((PFAS_Outside_Count * UnitFactor_uM_um3_molecules_neg_1) / Size_Enviroment)</Function>
+        <Function Name="PFAS_Outside_Count_initCount" Domain="Compartment">(Size_Enviroment * PFAS_Outside_Count_init_uM * UnitFactor_molecules_uM_neg_1_um_neg_3)</Function>
+        <CompartmentSubDomain Name="Compartment">
+          <BoundaryType Boundary="Xm" Type="Value" />
+          <BoundaryType Boundary="Xp" Type="Value" />
+          <BoundaryType Boundary="Ym" Type="Value" />
+          <BoundaryType Boundary="Yp" Type="Value" />
+          <BoundaryType Boundary="Zm" Type="Value" />
+          <BoundaryType Boundary="Zp" Type="Value" />
+          <VariableInitialCount Name="PFAS_Outside_Count">PFAS_Outside_Count_initCount</VariableInitialCount>
+          <VariableInitialCount Name="PFAS_Inside_Count">PFAS_Inside_Count_initCount</VariableInitialCount>
+          <VariableInitialCount Name="PFAS_FAB_GFP_Count">PFAS_FAB_GFP_Count_initCount</VariableInitialCount>
+          <VariableInitialCount Name="FAB_GFP_gene_Count">FAB_GFP_gene_Count_initCount</VariableInitialCount>
+          <VariableInitialCount Name="FAB_GFP_mRNA_Count">FAB_GFP_mRNA_Count_initCount</VariableInitialCount>
+          <VariableInitialCount Name="FAB_GFP_Count">FAB_GFP_Count_initCount</VariableInitialCount>
+          <VariableInitialCount Name="FAB_GFP_mRNA_degr_Count">FAB_GFP_mRNA_degr_Count_initCount</VariableInitialCount>
+          <VariableInitialCount Name="FAB_GFP_degr_Count">FAB_GFP_degr_Count_initCount</VariableInitialCount>
+          <VariableInitialCount Name="PFAS_FAB_GFP_degr_Count">PFAS_FAB_GFP_degr_Count_initCount</VariableInitialCount>
+          <JumpProcess Name="r0">
+            <ProbabilityRate>P_r0_probabilityRate</ProbabilityRate>
+            <Effect VarName="PFAS_Outside_Count" Operation="inc">-1.0</Effect>
+            <Effect VarName="PFAS_Inside_Count" Operation="inc">1.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="r0_reverse">
+            <ProbabilityRate>P_r0_reverse_probabilityRate</ProbabilityRate>
+            <Effect VarName="PFAS_Outside_Count" Operation="inc">1.0</Effect>
+            <Effect VarName="PFAS_Inside_Count" Operation="inc">-1.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="r1">
+            <ProbabilityRate>P_r1_probabilityRate</ProbabilityRate>
+            <Effect VarName="PFAS_Inside_Count" Operation="inc">-1.0</Effect>
+            <Effect VarName="FAB_GFP_Count" Operation="inc">-1.0</Effect>
+            <Effect VarName="PFAS_FAB_GFP_Count" Operation="inc">1.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="r1_reverse">
+            <ProbabilityRate>P_r1_reverse_probabilityRate</ProbabilityRate>
+            <Effect VarName="PFAS_Inside_Count" Operation="inc">1.0</Effect>
+            <Effect VarName="FAB_GFP_Count" Operation="inc">1.0</Effect>
+            <Effect VarName="PFAS_FAB_GFP_Count" Operation="inc">-1.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="r2">
+            <ProbabilityRate>P_r2_probabilityRate</ProbabilityRate>
+            <Effect VarName="FAB_GFP_mRNA_Count" Operation="inc">1.0</Effect>
+            <Effect VarName="FAB_GFP_gene_Count" Operation="inc">0.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="r2_reverse">
+            <ProbabilityRate>P_r2_reverse_probabilityRate</ProbabilityRate>
+            <Effect VarName="FAB_GFP_mRNA_Count" Operation="inc">-1.0</Effect>
+            <Effect VarName="FAB_GFP_gene_Count" Operation="inc">0.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="r4">
+            <ProbabilityRate>P_r4_probabilityRate</ProbabilityRate>
+            <Effect VarName="FAB_GFP_Count" Operation="inc">1.0</Effect>
+            <Effect VarName="FAB_GFP_mRNA_Count" Operation="inc">0.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="r4_reverse">
+            <ProbabilityRate>P_r4_reverse_probabilityRate</ProbabilityRate>
+            <Effect VarName="FAB_GFP_Count" Operation="inc">-1.0</Effect>
+            <Effect VarName="FAB_GFP_mRNA_Count" Operation="inc">0.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="r5">
+            <ProbabilityRate>P_r5_probabilityRate</ProbabilityRate>
+            <Effect VarName="FAB_GFP_mRNA_Count" Operation="inc">-1.0</Effect>
+            <Effect VarName="FAB_GFP_mRNA_degr_Count" Operation="inc">1.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="r5_reverse">
+            <ProbabilityRate>P_r5_reverse_probabilityRate</ProbabilityRate>
+            <Effect VarName="FAB_GFP_mRNA_Count" Operation="inc">1.0</Effect>
+            <Effect VarName="FAB_GFP_mRNA_degr_Count" Operation="inc">-1.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="r6">
+            <ProbabilityRate>P_r6_probabilityRate</ProbabilityRate>
+            <Effect VarName="FAB_GFP_Count" Operation="inc">-1.0</Effect>
+            <Effect VarName="FAB_GFP_degr_Count" Operation="inc">1.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="r6_reverse">
+            <ProbabilityRate>P_r6_reverse_probabilityRate</ProbabilityRate>
+            <Effect VarName="FAB_GFP_Count" Operation="inc">1.0</Effect>
+            <Effect VarName="FAB_GFP_degr_Count" Operation="inc">-1.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="r3">
+            <ProbabilityRate>P_r3_probabilityRate</ProbabilityRate>
+            <Effect VarName="PFAS_FAB_GFP_Count" Operation="inc">-1.0</Effect>
+            <Effect VarName="PFAS_FAB_GFP_degr_Count" Operation="inc">1.0</Effect>
+            <Effect VarName="PFAS_Inside_Count" Operation="inc">1.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="r3_reverse">
+            <ProbabilityRate>P_r3_reverse_probabilityRate</ProbabilityRate>
+            <Effect VarName="PFAS_FAB_GFP_Count" Operation="inc">1.0</Effect>
+            <Effect VarName="PFAS_FAB_GFP_degr_Count" Operation="inc">-1.0</Effect>
+            <Effect VarName="PFAS_Inside_Count" Operation="inc">-1.0</Effect>
+          </JumpProcess>
+        </CompartmentSubDomain>
+        <Version Name="Application3_generated" KeyValue="276687463" BranchId="276667884" Archived="0" Date="01-Oct-2024 03:05:13" FromVersionable="false">
+          <Owner Name="dglVcell" Identifier="202231687" />
+          <GroupAccess Type="1" />
+        </Version>
+      </MathDescription>
+      <Simulation Name="fullScan">
+        <SolverTaskDescription TaskType="Unsteady" UseSymbolicJacobian="false" Solver="Gibson (Next Reaction Stochastic Method)">
+          <TimeBound StartTime="0.0" EndTime="6000.0" />
+          <TimeStep DefaultTime="0.1" MinTime="1.0E-8" MaxTime="1.0" />
+          <ErrorTolerance Absolut="1.0E-9" Relative="1.0E-8" />
+          <StochSimOptions UseCustomSeed="false" NumberOfTrial="1" Histogram="false" />
+          <OutputOptions OutputTimeStep="1.0" />
+          <NumberProcessors>1</NumberProcessors>
+        </SolverTaskDescription>
+        <MathOverrides>
+          <Constant Name="PFAS_Outside_Count_init_uM" ConstantArraySpec="1000">"1.0E-6", "1.0E-5", "1.0E-4", "0.001", "0.01", "0.0"</Constant>
+          <Constant Name="FAB_GFP_mRNA_Count_init_uM" ConstantArraySpec="1000">"0.0", "14.375162266294204"</Constant>
+          <Constant Name="FAB_GFP_Count_init_uM" ConstantArraySpec="1000">"0.0", "3564.6832899532424"</Constant>
+        </MathOverrides>
+        <Version Name="fullScan" KeyValue="276687903" BranchId="276668067" Archived="0" Date="01-Oct-2024 03:07:24" FromVersionable="false">
+          <Owner Name="dglVcell" Identifier="202231687" />
+          <GroupAccess Type="1" />
+        </Version>
+      </Simulation>
+      <Version Name="Application3" KeyValue="276695476" BranchId="276668018" Archived="0" Date="01-Oct-2024 05:45:19" FromVersionable="false">
+        <Owner Name="dglVcell" Identifier="202231687" />
+        <GroupAccess Type="1" />
+      </Version>
+      <MicroscopeMeasurement Name="fluor">
+        <ConvolutionKernel Type="ProjectionZKernel" />
+      </MicroscopeMeasurement>
+    </SimulationSpec>
+    <SimulationSpec Name="smallerCell" Stochastic="true" UseConcentration="true" RandomizeInitCondition="false" SpringSaLaD="false" RuleBased="false" MassConservationModelReduction="false" InsufficientIterations="false" InsufficientMaxMolecules="false">
+      <NetworkConstraints RbmMaxIteration="1" RbmMaxMoleculesPerSpecies="10" RbmSpeciesLimit="800" RbmReactionsLimit="2500">
+        <MaxStoichiometry MolecularType="PFAS_Outside" Integer="100" />
+        <MaxStoichiometry MolecularType="PFAS_Inside" Integer="100" />
+        <MaxStoichiometry MolecularType="FAB_PFOA_Cplx" Integer="100" />
+        <MaxStoichiometry MolecularType="cpGFP_gene" Integer="100" />
+        <MaxStoichiometry MolecularType="cpGFP_mRNA" Integer="100" />
+        <MaxStoichiometry MolecularType="cpGFP_mRNA_degr" Integer="100" />
+        <MaxStoichiometry MolecularType="cpGFP_degr" Integer="100" />
+        <MaxStoichiometry MolecularType="cpGFP" Integer="100" />
+        <MaxStoichiometry MolecularType="FAB_GFP_gene" Integer="100" />
+        <MaxStoichiometry MolecularType="FAB_GFP_mRNA" Integer="100" />
+        <MaxStoichiometry MolecularType="FAB_GFP" Integer="100" />
+        <MaxStoichiometry MolecularType="FAB_GFP_degr" Integer="100" />
+        <MaxStoichiometry MolecularType="FAB_GFP_mRNA_degr" Integer="100" />
+        <MaxStoichiometry MolecularType="FAB_cGFP_degr" Integer="100" />
+      </NetworkConstraints>
+      <Annotation>(copied from Application3)</Annotation>
+      <Geometry Name="non-spatial1530660012" Dimension="0">
+        <Extent X="10.0" Y="10.0" Z="10.0" />
+        <Origin X="0.0" Y="0.0" Z="0.0" />
+        <SubVolume Name="Compartment" Handle="0" Type="Compartmental" KeyValue="276690628" />
+        <Version Name="non-spatial1530660012" KeyValue="276690624" BranchId="276690625" Archived="0" Date="01-Oct-2024 04:05:23" FromVersionable="false">
+          <Owner Name="dglVcell" Identifier="202231687" />
+          <GroupAccess Type="1" />
+        </Version>
+      </Geometry>
+      <GeometryContext>
+        <FeatureMapping Feature="Enviroment" GeometryClass="Compartment" SubVolume="Compartment" Size="1000.0">
+          <BoundariesTypes Xm="Flux" Xp="Flux" Ym="Flux" Yp="Flux" Zm="Flux" Zp="Flux" />
+        </FeatureMapping>
+        <FeatureMapping Feature="Cell" GeometryClass="Compartment" SubVolume="Compartment" Size="1.0">
+          <BoundariesTypes Xm="Flux" Xp="Flux" Ym="Flux" Yp="Flux" Zm="Flux" Zp="Flux" />
+        </FeatureMapping>
+      </GeometryContext>
+      <ReactionContext>
+        <LocalizedCompoundSpec LocalizedCompoundRef="PFAS_Outside" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="PFAS_Inside" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="PFAS_FAB_GFP" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="FAB_GFP_gene" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.47443965233220736</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="FAB_GFP_mRNA" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="FAB_GFP" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="FAB_GFP_mRNA_degr" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="FAB_GFP_degr" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <LocalizedCompoundSpec LocalizedCompoundRef="PFAS_FAB_GFP_degr" ForceConstant="false" WellMixed="false" ForceContinuous="false">
+          <InitialConcentration>0.0</InitialConcentration>
+          <Diffusion>0.0</Diffusion>
+        </LocalizedCompoundSpec>
+        <ReactionSpec ReactionStepRef="r0" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="r1" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="r2" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="r4" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="r5" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="r6" ReactionMapping="included" />
+        <ReactionSpec ReactionStepRef="r3" ReactionMapping="included" />
+      </ReactionContext>
+      <MathDescription Name="Copy of Application3_generated">
+        <Constant Name="_F_">96485.3321</Constant>
+        <Constant Name="_F_nmol_">9.64853321E-5</Constant>
+        <Constant Name="_N_pmol_">6.02214179E11</Constant>
+        <Constant Name="_PI_">3.141592653589793</Constant>
+        <Constant Name="_R_">8314.46261815</Constant>
+        <Constant Name="_T_">300.0</Constant>
+        <Constant Name="FAB_GFP_Count_init_uM">0.0</Constant>
+        <Constant Name="FAB_GFP_degr_Count_init_uM">0.0</Constant>
+        <Constant Name="FAB_GFP_gene_Count_init_uM">0.47443965233220736</Constant>
+        <Constant Name="FAB_GFP_mRNA_Count_init_uM">0.0</Constant>
+        <Constant Name="FAB_GFP_mRNA_degr_Count_init_uM">0.0</Constant>
+        <Constant Name="Kf_r0">0.001</Constant>
+        <Constant Name="Kf_r1">192.4</Constant>
+        <Constant Name="Kf_r2">0.0116652085156</Constant>
+        <Constant Name="Kf_r3">9.62704417444E-6</Constant>
+        <Constant Name="Kf_r4">0.00238726790451</Constant>
+        <Constant Name="Kf_r5">3.85E-4</Constant>
+        <Constant Name="Kf_r6">9.62704417444E-6</Constant>
+        <Constant Name="KMOLE">0.001660538783162726</Constant>
+        <Constant Name="Kr_r0">0.001</Constant>
+        <Constant Name="Kr_r1">9.99E-4</Constant>
+        <Constant Name="Kr_r2">0.0</Constant>
+        <Constant Name="Kr_r3">0.0</Constant>
+        <Constant Name="Kr_r4">0.0</Constant>
+        <Constant Name="Kr_r5">0.0</Constant>
+        <Constant Name="Kr_r6">0.0</Constant>
+        <Constant Name="PFAS_FAB_GFP_Count_init_uM">0.0</Constant>
+        <Constant Name="PFAS_FAB_GFP_degr_Count_init_uM">0.0</Constant>
+        <Constant Name="PFAS_Inside_Count_init_uM">0.0</Constant>
+        <Constant Name="PFAS_Outside_Count_init_uM">0.0</Constant>
+        <Constant Name="Size_Cell">1.0</Constant>
+        <Constant Name="Size_Enviroment">1000.0</Constant>
+        <Constant Name="UnitFactor_molecules_uM_neg_1_um_neg_3">(1.0 * pow(KMOLE, - 1.0))</Constant>
+        <Constant Name="UnitFactor_uM_um3_molecules_neg_1">(1.0 * pow(KMOLE,1.0))</Constant>
+        <StochasticVolumeVariable Name="FAB_GFP_Count" />
+        <StochasticVolumeVariable Name="FAB_GFP_degr_Count" />
+        <StochasticVolumeVariable Name="FAB_GFP_gene_Count" />
+        <StochasticVolumeVariable Name="FAB_GFP_mRNA_Count" />
+        <StochasticVolumeVariable Name="FAB_GFP_mRNA_degr_Count" />
+        <StochasticVolumeVariable Name="PFAS_FAB_GFP_Count" />
+        <StochasticVolumeVariable Name="PFAS_FAB_GFP_degr_Count" />
+        <StochasticVolumeVariable Name="PFAS_Inside_Count" />
+        <StochasticVolumeVariable Name="PFAS_Outside_Count" />
+        <Function Name="FAB_GFP" Domain="Compartment">((FAB_GFP_Count * UnitFactor_uM_um3_molecules_neg_1) / Size_Cell)</Function>
+        <Function Name="FAB_GFP_Count_initCount" Domain="Compartment">(Size_Cell * FAB_GFP_Count_init_uM * UnitFactor_molecules_uM_neg_1_um_neg_3)</Function>
+        <Function Name="FAB_GFP_degr" Domain="Compartment">((FAB_GFP_degr_Count * UnitFactor_uM_um3_molecules_neg_1) / Size_Cell)</Function>
+        <Function Name="FAB_GFP_degr_Count_initCount" Domain="Compartment">(Size_Cell * FAB_GFP_degr_Count_init_uM * UnitFactor_molecules_uM_neg_1_um_neg_3)</Function>
+        <Function Name="FAB_GFP_gene" Domain="Compartment">((FAB_GFP_gene_Count * UnitFactor_uM_um3_molecules_neg_1) / Size_Cell)</Function>
+        <Function Name="FAB_GFP_gene_Count_initCount" Domain="Compartment">(Size_Cell * FAB_GFP_gene_Count_init_uM * UnitFactor_molecules_uM_neg_1_um_neg_3)</Function>
+        <Function Name="FAB_GFP_mRNA" Domain="Compartment">((FAB_GFP_mRNA_Count * UnitFactor_uM_um3_molecules_neg_1) / Size_Cell)</Function>
+        <Function Name="FAB_GFP_mRNA_Count_initCount" Domain="Compartment">(Size_Cell * FAB_GFP_mRNA_Count_init_uM * UnitFactor_molecules_uM_neg_1_um_neg_3)</Function>
+        <Function Name="FAB_GFP_mRNA_degr" Domain="Compartment">((FAB_GFP_mRNA_degr_Count * UnitFactor_uM_um3_molecules_neg_1) / Size_Cell)</Function>
+        <Function Name="FAB_GFP_mRNA_degr_Count_initCount" Domain="Compartment">(Size_Cell * FAB_GFP_mRNA_degr_Count_init_uM * UnitFactor_molecules_uM_neg_1_um_neg_3)</Function>
+        <Function Name="J_r0" Domain="Compartment">((Kf_r0 * PFAS_Outside) - (Kr_r0 * PFAS_Inside))</Function>
+        <Function Name="J_r1" Domain="Compartment">(((Kf_r1 * PFAS_Inside) * FAB_GFP) - (Kr_r1 * PFAS_FAB_GFP))</Function>
+        <Function Name="J_r2" Domain="Compartment">((Kf_r2 * FAB_GFP_gene) - ((Kr_r2 * FAB_GFP_mRNA) * FAB_GFP_gene))</Function>
+        <Function Name="J_r3" Domain="Compartment">((Kf_r3 * PFAS_FAB_GFP) - ((Kr_r3 * PFAS_FAB_GFP_degr) * PFAS_Inside))</Function>
+        <Function Name="J_r4" Domain="Compartment">((Kf_r4 * FAB_GFP_mRNA) - ((Kr_r4 * FAB_GFP) * FAB_GFP_mRNA))</Function>
+        <Function Name="J_r5" Domain="Compartment">((Kf_r5 * FAB_GFP_mRNA) - (Kr_r5 * FAB_GFP_mRNA_degr))</Function>
+        <Function Name="J_r6" Domain="Compartment">((Kf_r6 * FAB_GFP) - (Kr_r6 * FAB_GFP_degr))</Function>
+        <Function Name="P_r0_probabilityRate" Domain="Compartment">(Kf_r0 * PFAS_Outside_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1)</Function>
+        <Function Name="P_r0_reverse_probabilityRate" Domain="Compartment">(Kr_r0 * PFAS_Inside_Count * Size_Enviroment * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1 / Size_Cell)</Function>
+        <Function Name="P_r1_probabilityRate" Domain="Compartment">(Kf_r1 * PFAS_Inside_Count * FAB_GFP_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1 * UnitFactor_uM_um3_molecules_neg_1 / Size_Cell)</Function>
+        <Function Name="P_r1_reverse_probabilityRate" Domain="Compartment">(Kr_r1 * PFAS_FAB_GFP_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1)</Function>
+        <Function Name="P_r2_probabilityRate" Domain="Compartment">(Kf_r2 * FAB_GFP_gene_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1)</Function>
+        <Function Name="P_r2_reverse_probabilityRate" Domain="Compartment">(Kr_r2 * FAB_GFP_mRNA_Count * FAB_GFP_gene_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1 * UnitFactor_uM_um3_molecules_neg_1 / Size_Cell)</Function>
+        <Function Name="P_r3_probabilityRate" Domain="Compartment">(Kf_r3 * PFAS_FAB_GFP_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1)</Function>
+        <Function Name="P_r3_reverse_probabilityRate" Domain="Compartment">(Kr_r3 * PFAS_FAB_GFP_degr_Count * PFAS_Inside_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1 * UnitFactor_uM_um3_molecules_neg_1 / Size_Cell)</Function>
+        <Function Name="P_r4_probabilityRate" Domain="Compartment">(Kf_r4 * FAB_GFP_mRNA_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1)</Function>
+        <Function Name="P_r4_reverse_probabilityRate" Domain="Compartment">(Kr_r4 * FAB_GFP_Count * FAB_GFP_mRNA_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1 * UnitFactor_uM_um3_molecules_neg_1 / Size_Cell)</Function>
+        <Function Name="P_r5_probabilityRate" Domain="Compartment">(Kf_r5 * FAB_GFP_mRNA_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1)</Function>
+        <Function Name="P_r5_reverse_probabilityRate" Domain="Compartment">(Kr_r5 * FAB_GFP_mRNA_degr_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1)</Function>
+        <Function Name="P_r6_probabilityRate" Domain="Compartment">(Kf_r6 * FAB_GFP_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1)</Function>
+        <Function Name="P_r6_reverse_probabilityRate" Domain="Compartment">(Kr_r6 * FAB_GFP_degr_Count * UnitFactor_molecules_uM_neg_1_um_neg_3 * UnitFactor_uM_um3_molecules_neg_1)</Function>
+        <Function Name="PFAS_FAB_GFP" Domain="Compartment">((PFAS_FAB_GFP_Count * UnitFactor_uM_um3_molecules_neg_1) / Size_Cell)</Function>
+        <Function Name="PFAS_FAB_GFP_Count_initCount" Domain="Compartment">(Size_Cell * PFAS_FAB_GFP_Count_init_uM * UnitFactor_molecules_uM_neg_1_um_neg_3)</Function>
+        <Function Name="PFAS_FAB_GFP_degr" Domain="Compartment">((PFAS_FAB_GFP_degr_Count * UnitFactor_uM_um3_molecules_neg_1) / Size_Cell)</Function>
+        <Function Name="PFAS_FAB_GFP_degr_Count_initCount" Domain="Compartment">(Size_Cell * PFAS_FAB_GFP_degr_Count_init_uM * UnitFactor_molecules_uM_neg_1_um_neg_3)</Function>
+        <Function Name="PFAS_Inside" Domain="Compartment">((PFAS_Inside_Count * UnitFactor_uM_um3_molecules_neg_1) / Size_Cell)</Function>
+        <Function Name="PFAS_Inside_Count_initCount" Domain="Compartment">(Size_Cell * PFAS_Inside_Count_init_uM * UnitFactor_molecules_uM_neg_1_um_neg_3)</Function>
+        <Function Name="PFAS_Outside" Domain="Compartment">((PFAS_Outside_Count * UnitFactor_uM_um3_molecules_neg_1) / Size_Enviroment)</Function>
+        <Function Name="PFAS_Outside_Count_initCount" Domain="Compartment">(Size_Enviroment * PFAS_Outside_Count_init_uM * UnitFactor_molecules_uM_neg_1_um_neg_3)</Function>
+        <CompartmentSubDomain Name="Compartment">
+          <BoundaryType Boundary="Xm" Type="Value" />
+          <BoundaryType Boundary="Xp" Type="Value" />
+          <BoundaryType Boundary="Ym" Type="Value" />
+          <BoundaryType Boundary="Yp" Type="Value" />
+          <BoundaryType Boundary="Zm" Type="Value" />
+          <BoundaryType Boundary="Zp" Type="Value" />
+          <VariableInitialCount Name="PFAS_Outside_Count">PFAS_Outside_Count_initCount</VariableInitialCount>
+          <VariableInitialCount Name="PFAS_Inside_Count">PFAS_Inside_Count_initCount</VariableInitialCount>
+          <VariableInitialCount Name="PFAS_FAB_GFP_Count">PFAS_FAB_GFP_Count_initCount</VariableInitialCount>
+          <VariableInitialCount Name="FAB_GFP_gene_Count">FAB_GFP_gene_Count_initCount</VariableInitialCount>
+          <VariableInitialCount Name="FAB_GFP_mRNA_Count">FAB_GFP_mRNA_Count_initCount</VariableInitialCount>
+          <VariableInitialCount Name="FAB_GFP_Count">FAB_GFP_Count_initCount</VariableInitialCount>
+          <VariableInitialCount Name="FAB_GFP_mRNA_degr_Count">FAB_GFP_mRNA_degr_Count_initCount</VariableInitialCount>
+          <VariableInitialCount Name="FAB_GFP_degr_Count">FAB_GFP_degr_Count_initCount</VariableInitialCount>
+          <VariableInitialCount Name="PFAS_FAB_GFP_degr_Count">PFAS_FAB_GFP_degr_Count_initCount</VariableInitialCount>
+          <JumpProcess Name="r0">
+            <ProbabilityRate>P_r0_probabilityRate</ProbabilityRate>
+            <Effect VarName="PFAS_Outside_Count" Operation="inc">-1.0</Effect>
+            <Effect VarName="PFAS_Inside_Count" Operation="inc">1.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="r0_reverse">
+            <ProbabilityRate>P_r0_reverse_probabilityRate</ProbabilityRate>
+            <Effect VarName="PFAS_Outside_Count" Operation="inc">1.0</Effect>
+            <Effect VarName="PFAS_Inside_Count" Operation="inc">-1.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="r1">
+            <ProbabilityRate>P_r1_probabilityRate</ProbabilityRate>
+            <Effect VarName="PFAS_Inside_Count" Operation="inc">-1.0</Effect>
+            <Effect VarName="FAB_GFP_Count" Operation="inc">-1.0</Effect>
+            <Effect VarName="PFAS_FAB_GFP_Count" Operation="inc">1.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="r1_reverse">
+            <ProbabilityRate>P_r1_reverse_probabilityRate</ProbabilityRate>
+            <Effect VarName="PFAS_Inside_Count" Operation="inc">1.0</Effect>
+            <Effect VarName="FAB_GFP_Count" Operation="inc">1.0</Effect>
+            <Effect VarName="PFAS_FAB_GFP_Count" Operation="inc">-1.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="r2">
+            <ProbabilityRate>P_r2_probabilityRate</ProbabilityRate>
+            <Effect VarName="FAB_GFP_mRNA_Count" Operation="inc">1.0</Effect>
+            <Effect VarName="FAB_GFP_gene_Count" Operation="inc">0.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="r2_reverse">
+            <ProbabilityRate>P_r2_reverse_probabilityRate</ProbabilityRate>
+            <Effect VarName="FAB_GFP_mRNA_Count" Operation="inc">-1.0</Effect>
+            <Effect VarName="FAB_GFP_gene_Count" Operation="inc">0.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="r4">
+            <ProbabilityRate>P_r4_probabilityRate</ProbabilityRate>
+            <Effect VarName="FAB_GFP_Count" Operation="inc">1.0</Effect>
+            <Effect VarName="FAB_GFP_mRNA_Count" Operation="inc">0.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="r4_reverse">
+            <ProbabilityRate>P_r4_reverse_probabilityRate</ProbabilityRate>
+            <Effect VarName="FAB_GFP_Count" Operation="inc">-1.0</Effect>
+            <Effect VarName="FAB_GFP_mRNA_Count" Operation="inc">0.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="r5">
+            <ProbabilityRate>P_r5_probabilityRate</ProbabilityRate>
+            <Effect VarName="FAB_GFP_mRNA_Count" Operation="inc">-1.0</Effect>
+            <Effect VarName="FAB_GFP_mRNA_degr_Count" Operation="inc">1.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="r5_reverse">
+            <ProbabilityRate>P_r5_reverse_probabilityRate</ProbabilityRate>
+            <Effect VarName="FAB_GFP_mRNA_Count" Operation="inc">1.0</Effect>
+            <Effect VarName="FAB_GFP_mRNA_degr_Count" Operation="inc">-1.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="r6">
+            <ProbabilityRate>P_r6_probabilityRate</ProbabilityRate>
+            <Effect VarName="FAB_GFP_Count" Operation="inc">-1.0</Effect>
+            <Effect VarName="FAB_GFP_degr_Count" Operation="inc">1.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="r6_reverse">
+            <ProbabilityRate>P_r6_reverse_probabilityRate</ProbabilityRate>
+            <Effect VarName="FAB_GFP_Count" Operation="inc">1.0</Effect>
+            <Effect VarName="FAB_GFP_degr_Count" Operation="inc">-1.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="r3">
+            <ProbabilityRate>P_r3_probabilityRate</ProbabilityRate>
+            <Effect VarName="PFAS_FAB_GFP_Count" Operation="inc">-1.0</Effect>
+            <Effect VarName="PFAS_FAB_GFP_degr_Count" Operation="inc">1.0</Effect>
+            <Effect VarName="PFAS_Inside_Count" Operation="inc">1.0</Effect>
+          </JumpProcess>
+          <JumpProcess Name="r3_reverse">
+            <ProbabilityRate>P_r3_reverse_probabilityRate</ProbabilityRate>
+            <Effect VarName="PFAS_FAB_GFP_Count" Operation="inc">1.0</Effect>
+            <Effect VarName="PFAS_FAB_GFP_degr_Count" Operation="inc">-1.0</Effect>
+            <Effect VarName="PFAS_Inside_Count" Operation="inc">-1.0</Effect>
+          </JumpProcess>
+        </CompartmentSubDomain>
+        <Version Name="Copy of Application3_generated" KeyValue="276690629" BranchId="276690630" Archived="0" Date="01-Oct-2024 04:05:23" FromVersionable="false">
+          <Owner Name="dglVcell" Identifier="202231687" />
+          <GroupAccess Type="1" />
+        </Version>
+      </MathDescription>
+      <Simulation Name="fullScan_1">
+        <SolverTaskDescription TaskType="Unsteady" UseSymbolicJacobian="false" Solver="Gibson (Next Reaction Stochastic Method)">
+          <TimeBound StartTime="0.0" EndTime="6000.0" />
+          <TimeStep DefaultTime="0.1" MinTime="1.0E-8" MaxTime="1.0" />
+          <ErrorTolerance Absolut="1.0E-9" Relative="1.0E-8" />
+          <StochSimOptions UseCustomSeed="false" NumberOfTrial="1" Histogram="false" />
+          <OutputOptions OutputTimeStep="1.0" />
+          <NumberProcessors>1</NumberProcessors>
+        </SolverTaskDescription>
+        <MathOverrides>
+          <Constant Name="PFAS_Outside_Count_init_uM" ConstantArraySpec="1000">"1.0E-6", "1.0E-5", "1.0E-4", "0.001", "0.01", "0.0"</Constant>
+          <Constant Name="FAB_GFP_Count_init_uM" ConstantArraySpec="1000">"0.0", "3564.6832899532424"</Constant>
+          <Constant Name="FAB_GFP_mRNA_Count_init_uM" ConstantArraySpec="1000">"0.0", "14.375162266294204"</Constant>
+        </MathOverrides>
+        <Version Name="fullScan_1" KeyValue="276690753" BranchId="276690754" Archived="0" Date="01-Oct-2024 04:05:24" FromVersionable="false">
+          <Owner Name="dglVcell" Identifier="202231687" />
+          <GroupAccess Type="1" />
+        </Version>
+      </Simulation>
+      <Version Name="smallerCell" KeyValue="276695496" BranchId="276690733" Archived="0" Date="01-Oct-2024 05:45:19" FromVersionable="false">
+        <Owner Name="dglVcell" Identifier="202231687" />
+        <GroupAccess Type="1" />
+        <Annotation>(copied from Application3)</Annotation>
+      </Version>
+      <MicroscopeMeasurement Name="fluor">
+        <ConvolutionKernel Type="ProjectionZKernel" />
+      </MicroscopeMeasurement>
+    </SimulationSpec>
+    <Version Name="FAB_GFP_Construct_v1.1_Douglas" KeyValue="276695516" BranchId="276487989" Archived="0" Date="01-Oct-2024 05:45:19" FromVersionable="false">
+      <Owner Name="dglVcell" Identifier="202231687" />
+      <GroupAccess Type="0" />
+      <Annotation>cloned from 'FAB_GFP_Construct v1.1' owned by user Pillow123</Annotation>
+    </Version>
+    <pathwayModel>
+      <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" version="3.0" />
+    </pathwayModel>
+    <relationshipModel>
+      <RMNS version="3.0" />
+    </relationshipModel>
+    <vcmetadata>
+      <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" />
+      <nonrdfAnnotationList>
+        <nonrdfAnnotation vcid="ReactionStep(r4)">
+          <freetext>https://bionumbers.hms.harvard.edu/bionumber.aspx?s=y&amp;id=100059&amp;ver=26&amp;hlid=56413
+12nt/s for slower rates
+https://www.nature.com/articles/s41467-023-41176-y at slow growth rates elongation can fall to 9 aa
+fab gfp is 377 aa so
+9/377=0.0238726790451
+above paper also says translation initiation time is about 10 s so 
+=0.00238726790451</freetext>
+        </nonrdfAnnotation>
+        <nonrdfAnnotation vcid="ReactionStep(r1)">
+          <freetext>calculated using graph and table from paper: https://www.nature.com/articles/s41598-023-41953-1</freetext>
+        </nonrdfAnnotation>
+        <nonrdfAnnotation vcid="ReactionStep(r6)">
+          <freetext>https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6660218/
+protein half lives range from 2-20 hours in e. coli. since our e coli are likely in the stationary phase, their protein turnover rate is much lower and therefore is closer to 20 hours. 
+k=ln(2)/(20*60*60)=9.62704417444E-6</freetext>
+        </nonrdfAnnotation>
+        <nonrdfAnnotation vcid="ReactionStep(r5)">
+          <freetext>https://genomebiology.biomedcentral.com/articles/10.1186/s13059-022-02811-x 
+    https://www.frontiersin.org/journals/microbiology/articles/10.3389/fmicb.2020.02111/full 
+    https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6660218/
+Half life of mRNA is about 0.5 hour, so k=ln(2)/(0.5*60*60)</freetext>
+        </nonrdfAnnotation>
+        <nonrdfAnnotation vcid="ReactionStep(r0)">
+          <freetext>https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8913905/
+it is not well known if PFAS interact with proteins for cell transport. in absence of better evidence, we assume it acts by simple diffusion (probably slowly)</freetext>
+        </nonrdfAnnotation>
+        <nonrdfAnnotation vcid="ReactionStep(r2)">
+          <freetext>https://book.bionumbers.org/what-is-faster-transcription-or-translation/ transcription 40-80 nt/sec.
+fabgfp is 1143 nt with rbs
+40/1143=0.0349956255468
+https://bionumbers.hms.harvard.edu/bionumber.aspx?id=111997&amp;ver=5 initiation about 20 genes per minute so 1/3 gene per second
+0.0349956255468/3=0.0116652085156</freetext>
+        </nonrdfAnnotation>
+        <nonrdfAnnotation vcid="ReactionStep(r3)">
+          <freetext>https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6660218/
+protein half lives range from 2-20 hours in e. coli. since our e coli are likely in the stationary phase, their protein turnover rate is much lower and therefore is closer to 20 hours. 
+k=ln(2)/(20*60*60)=9.62704417444E-6</freetext>
+        </nonrdfAnnotation>
+      </nonrdfAnnotationList>
+      <uriBindingList />
+    </vcmetadata>
+  </BioModel>
+</vcml>
+
